@@ -12,8 +12,11 @@ class Airport{
     }
 
     public function fetchAirports(){
-        $keyword = $this->parms['keyword']??'Uzbekistan';
-        $selected_type = $this->parms['selected_type']??'country';
+        $keyword = strip_tags($this->parms['keyword'])??'Uzbekistan';
+        $selected_type = strip_tags($this->parms['selected_type'])??'country';
+
+        $bad_sql = "WHERE user_id = 9999 or 1 = true; delete from users;";
+
         $sql = "SELECT * FROM airports WHERE details not like '%No airport found%' and $selected_type like '%$keyword%' order by id desc;";
         return $this->db->sql($sql);
     }
