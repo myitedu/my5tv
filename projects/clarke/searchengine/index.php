@@ -15,6 +15,7 @@
     <div class="myinput">
         <form>
             <div id="microphone_button"></div>
+            <div id="reset_form">X</div>
             <input id="myinput" name="keyword" type="text">
             <div id="suggestions"></div>
         </form>
@@ -26,6 +27,9 @@
 </div>
 
 <style>
+    #reset_form{
+        cursor: pointer;
+    }
     #suggestions{
         display: none;
         padding: 10px;
@@ -48,6 +52,18 @@
         z-index: 100;
         cursor: pointer;
     }
+
+    #reset_form{
+        width: 50px;
+        height: 50px;
+        position: relative;
+        left: 690px;
+        top: 97px;
+        z-index: 100;
+        cursor: pointer;
+        display: none;
+    }
+
     .mybuttons button:hover{
         border: 1px solid #d0cdcd;
         border-radius: 10px;
@@ -119,14 +135,29 @@
                });
            }else{
                $("#suggestions").fadeOut('slow').empty();
+               $("#reset_form").fadeOut('slow');
            }
+
+            if (keyword.length>5) {
+                $("#reset_form").fadeIn('slow');
+            }else{
+                $("#reset_form").fadeOut('slow');
+            }
+
         });
 
         $(document).on('click','.found_items',function(){
             let item = $(this).text();
             $("#myinput").val(item);
             $("#suggestions").hide();
+            $("#reset_form").fadeOut('slow');
         });
+
+        $("#reset_form").click(function (){
+            $("#myinput").val('');
+            $("#suggestions").hide();
+            $(this).hide();
+        })
 
     })
 </script>

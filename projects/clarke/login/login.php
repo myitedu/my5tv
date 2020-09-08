@@ -14,6 +14,7 @@
 <?php
 $error = $_GET['error']??0;
 $msg = $_GET['msg']??null;
+echo password_hash('business', PASSWORD_BCRYPT)
 ?>
 <div class="container-fluid">
     <div id="login_form">
