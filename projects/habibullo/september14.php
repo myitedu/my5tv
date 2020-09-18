@@ -17,7 +17,7 @@
                 <th colspan="4" id="result">0</th>
             </tr>
             <tr>
-                <td>C</td>
+                <td id="reset">C</td>
                 <td>&percnt;/&minus;</td>
                 <td class="operator">%</td>
                 <td class="operator">&divide;</td>
@@ -26,7 +26,7 @@
                 <td class="num">7</td>
                 <td class="num">8</td>
                 <td class="num">9</td>
-                <td class="operator">&times;</td>
+                <td class="operator">x</td>
             </tr>
             <tr>
                 <td class="num">4</td>
@@ -41,7 +41,7 @@
                 <td class="operator">&plus;</td>
             </tr>
             <tr>
-                <td colspan="2">0</td>
+                <td class="num" colspan="2">0</td>
                 <td>.</td>
                 <td class="equal">=</td>
             </tr>
@@ -90,24 +90,65 @@
     $(function () {
         let num = '';
         let operator = '';
-        let number1 = ;
-        let number2 = ;
+        let number1 = '';
+        let number2 = '';
+
         $(".num").click(function () {
             let number = $(this).text();
            num = number;
-
+           if (operator==''){
+               number1+=num;
+           }else{
+               number2+=num;
+           }
+            $("#result").html(number1+operator+number2);
         });
+
         $(".operator").click(function () {
             let oper = $(this).text();
             operator = oper;
+
+            if (operator=='x'){
+                operator='*';
+            }
+            if (operator=='÷'){
+                operator='/';
+            }
+            if (operator=='−'){
+                operator='-';
+            }
+
+
+            $("#result").html(operator);
+
             if (num == ''){
                 return false;
             }
         });
 
+
+
+
         $(".equal").click(function () {
-            $("#result").html(operator);
+            //let result = eval("number1 + operator + number2");
+            let result = eval(number1 + " "+operator+" " + number2);
+            $("#result").html(result);
+            reset_calucator();
         });
+
+        $("#reset").click(function () {
+            reset_calucator(1);
+        });
+
+        function reset_calucator(display_reset=0) {
+            num = '';
+            number1 = '';
+            number2 = '';
+            operator = '';
+            if (display_reset==1) {
+                $("#result").html(0);
+            }
+        }
 
 
     });
