@@ -9,6 +9,67 @@
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
     <script src="/js/jquery-3.5.1.js"></script>
     <link rel="stylesheet" href="css/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $( function() {
+                $( ".santa" ).draggable();
+
+                let position = null;
+
+                $( ".mybreadcrumb" ).droppable({
+                    drop: function( event, ui ) {
+                        position = $(this).position();
+                        console.log("left: " + position.left + ", top: " + position.top );
+                       $('#santa2').fadeOut('slow');
+                    }
+
+                });
+
+                $(".mynavbar").droppable({
+                    drop: function( event, ui ) {
+                        position = $(this).position();
+                        console.log("left: " + position.left + ", top: " + position.top );
+                        $('#santa2').fadeIn('fast');
+                    }
+
+                });
+
+
+
+
+                $(document).keydown(function(e) {
+                    switch (e.which) {
+                        case 37:
+                            $('.santa').stop().animate({
+                                left: '-=100px'
+                            }); //left arrow key
+                            console.log('left arrow');
+                            break;
+                        case 38:
+                            $('.santa').stop().animate({
+                                top: '-=100px'
+                            }); //up arrow key
+                            console.log('up arrow');
+                            break;
+                        case 39:
+                            $('.santa').stop().animate({
+                                left: '+=100px'
+                            }); //right arrow key
+                            console.log('right arrow');
+                            break;
+                        case 40:
+                            $('.santa').stop().animate({
+                                top: '+=100px'
+                            }); //bottom arrow key
+                            console.log('bottom arrow');
+                            break;
+                    }
+                })
+
+
+            } );
+        </script>
 </head>
 <body>
     <div class="container-fluid">
@@ -19,7 +80,7 @@
                 ?>
             </div>
             <div>
-                <img class="santa" src="https://lh3.googleusercontent.com/proxy/-FuWHCrAWjMxkO1IsKvV54hW30fCF_XfmjURKrN89q3jX-1miGrY7gNKTjXG4u2YiHFM9db207PCo9eskj3ZkKU">
+                <img class="santa" src="https://www.animatedimages.org/data/media/359/animated-santa-claus-image-0420.gif">
 
                 <audio class="myaudio" controls>
                     <source src="../../audio/jingle-bells-country.mp3" type="audio/mpeg">
@@ -31,6 +92,7 @@
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item"><a href="#">Library</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Data</li>
+                        <li class="breadcrumb-item active" aria-current="page"><button id="mybtn" class="btn btn-success">Move</button></li>
                     </ol>
                 </nav>
 
@@ -64,7 +126,7 @@
         </div>
     </div>
     <div class="snow_on_bottom">
-        <img src="../../img/kids_playing_snow.png">
+        <img id="santa2" src="../../img/kids_playing_snow.png">
     </div>
     <script src="/bootstrap/js/bootstrap.js"></script>
 </body>

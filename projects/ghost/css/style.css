@@ -37,12 +37,19 @@ body{
     padding:20px;
 }
 
+.santa_moved{
+    display: none;
+}
 
 .santa{
     position: absolute;
     z-index: 1000;
-    left: 29%;
-    top: 0px;
+    left: 80%;
+    top: 9px;
+    width: 280px;
+}
+.santa:hover{
+    cursor: move;
 }
 .myaudio{
     position: absolute;
@@ -61,4 +68,10 @@ body{
     position: relative;
     width: 650px;
     height: 200px;
+}
+.basketball{
+    position: absolute;
+    left: 450px;
+    top:200px;
+
 }
