@@ -8,7 +8,7 @@
     <title>Welcome to our class</title>
 </head>
 <?php
-exit;
+
 $class = 'noerror';
 $email = $_GET['email']??null;
 if ($email) {
