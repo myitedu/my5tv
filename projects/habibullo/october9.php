@@ -24,8 +24,10 @@ if ($specialist){
 <h2 class="title">All Specialists</h2>
   <div class="display">
 
-      <h5><?php echo $specialist; ?></h5>
+      <h5>Information about: <span class="specialist_title"><?php echo $specialist; ?></span></h5>
       <img class="close_button" src="https://lh3.googleusercontent.com/proxy/LEg3pizEap_r-OuTi0wKP4XdFYPBF-IDXdSGXjG7MwpREScsSx00gTpco3o73jZk5QqdLZdJrnj1LWGhOr-0Q0urY4etUNVZZQ">
+      <img class="cartoon" src="http://static.skaip.org/img/emoticons/180x180/f6fcff/manshrug.gif">
+
       <iframe class="myiframe" src="https://en.wikipedia.org/wiki/<?php echo $specialist; ?>"></iframe>
 
   </div>
@@ -39,6 +41,18 @@ if ($specialist){
   <div class="box special_force">Army</div>
 </div>
 <style>
+    .specialist_title{
+        color: #921515;
+        font-weight: bolder;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    .cartoon{
+        width: 162px;
+        position: absolute;
+        left: 6px;
+        top: 40px;
+        cursor: pointer;
+    }
     .close_button{
         width: 50px;
         position: absolute;
@@ -53,15 +67,17 @@ if ($specialist){
     }
     .display{
         width: 70%;
-        height: 200px;
+        height: auto;
         margin: auto;
-        border: 1px outset darkmagenta;
+        border: 5px double #010f43;
         background-color: lightgrey;
         position: absolute;
         top: 180px;
         left: 140px;
         z-index: 100;
         display: <?php echo $display;?>;
+        border-radius: 20px;
+        padding: 5px;
     }
     .title{
         color: #baffa4;
@@ -124,11 +140,12 @@ if ($specialist){
     .box:hover{
         opacity: 1.0;
         cursor: pointer;
+        border: 4px dotted #850101;
     }
     .box{
         width: 250px;
         height: 250px;
-        border: 4px double #96efb8;
+        border: 4px double #02214f;
         background-color: #9b538b;
         display: inline-block;
         padding: 2px;
@@ -138,7 +155,7 @@ if ($specialist){
         line-height: 245px;
         color: yellow;
         font-size: 150%;
-        box-shadow: 5px 5px 5px 5px #4f4747;
+        box-shadow: 5px 5px 5px 5px #00001f;
         text-shadow: 2px 2px #05185b;
         font-weight: bolder;
         font-family: "Lucida Handwriting";
@@ -146,7 +163,7 @@ if ($specialist){
     }
     body{
         background-color: rgb(0, 0, 0);
-        background-image: url("https://cdn3.vectorstock.com/i/1000x1000/54/42/black-dotted-background-vector-8415442.jpg");
+        background-image: url("https://htmlcolors.com/gradients-images/55-dark-blue-gradient.jpg");
     }
 </style>
 </body>
