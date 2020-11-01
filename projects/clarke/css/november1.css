@@ -1,0 +1,39 @@
+#mytable{
+    margin: 5px auto;
+    width: 70%;
+
+}
+.primary_table td, th{
+    border: 2px solid #211d1d !important;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: "Lucida Handwriting";
+}
+.primary_table{
+    background-color: whitesmoke;
+    border: 5px solid black !important;
+}
+body{
+    background-color: #0c5460;
+    color: lightblue;
+}
+.mytitle{
+    color: yellow;
+    text-align: center;
+}
+.container-fluid{
+    text-align: center;
+}
+
+form{
+    text-align: center;
+}
+
+.myformtable td:first-child{
+    text-align: right;
+    color: yellowgreen;
+}
+.myformtable td:last-child{
+    text-align: left;
+    color: #9828ee;
+}
