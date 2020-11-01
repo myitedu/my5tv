@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<!-- saved from url=(0021)http://zet.netgon.ru/ -->
+<html lang="en-US" style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths csstransformspreserve3d"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="icon" href="http://zet.netgon.ru/wp-content/uploads/2016/11/apple-touch-icon-180x180-80x80.png" sizes="32x32">
+<link rel="icon" href="http://zet.netgon.ru/wp-content/uploads/2016/11/apple-touch-icon-180x180.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="http://zet.netgon.ru/wp-content/uploads/2016/11/apple-touch-icon-180x180-180x180.png">
+<meta name="msapplication-TileImage" content="http://zet.netgon.ru/wp-content/uploads/2016/11/apple-touch-icon-180x180.png">
+<title>ZET – ZET WordPress Theme Demo</title>
+<link rel="dns-prefetch" href="http://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="http://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="ZET » Feed" href="http://zet.netgon.ru/feed/">
+<link rel="alternate" type="application/rss+xml" title="ZET » Comments Feed" href="http://zet.netgon.ru/comments/feed/">
+		<script type="text/javascript" async="" src="./zetone_files/watch.js"></script><script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/zet.netgon.ru\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.15"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./zetone_files/wp-emoji-release.min.js" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="bootstrap-css" href="./zetone_files/bootstrap.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="magnificpopup-css" href="./zetone_files/magnific-popup.css" type="text/css" media="all">
+<link rel="stylesheet" id="component-css" href="./zetone_files/component.css" type="text/css" media="all">
+<link rel="stylesheet" id="timeline-css" href="./zetone_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="scrolltotop-css" href="./zetone_files/scrolltotop.css" type="text/css" media="all">
+<link rel="stylesheet" id="zet_fonts-css" href="./zetone_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="zet_style-css" href="./zetone_files/style(1).css" type="text/css" media="all">
+<style id="zet_style-inline-css" type="text/css">
+.section-intro {background: url(http://zet.netgon.ru/wp-content/uploads/2016/11/banner.jpg);background-repeat: no-repeat;background-size: contain;background-position: right;}@media only screen and (max-width: 480px) { 
+								.section-intro { 
+								   background-size: cover;
+	   							   background-position: left center;
+	   							}
+							}
+.event .thumb.company1 {background: url(http://zet.netgon.ru/wp-content/uploads/2016/11/company3.png);background-repeat: no-repeat;background-position: center;}
+.event .thumb.company2 {background: url(http://zet.netgon.ru/wp-content/uploads/2016/11/company2.png);background-repeat: no-repeat;background-position: center;}
+.event .thumb.company3 {background: url(http://zet.netgon.ru/wp-content/uploads/2016/11/company1.png);background-repeat: no-repeat;background-position: center;}
+.event .thumb.company-edu1 {background: url(http://zet.netgon.ru/wp-content/uploads/2016/11/education1.png);background-repeat: no-repeat;background-position: center;}
+.event .thumb.company-edu2 {background: url(http://zet.netgon.ru/wp-content/uploads/2016/11/education2.png);background-repeat: no-repeat;background-position: center;}
+.event .thumb.company-edu3 {background: url(http://zet.netgon.ru/wp-content/uploads/2016/11/education3.png);background-repeat: no-repeat;background-position: center;}
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+var AjaxHandler = {"ajaxurl":"http:\/\/zet.netgon.ru\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./zetone_files/jquery.js"></script>
+<script type="text/javascript" src="./zetone_files/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="./zetone_files/modernizr.custom.js"></script>
+<link rel="https://api.w.org/" href="http://zet.netgon.ru/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://zet.netgon.ru/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://zet.netgon.ru/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 4.9.15">
+<link rel="canonical" href="http://zet.netgon.ru/">
+<link rel="shortlink" href="http://zet.netgon.ru/">
+<link rel="alternate" type="application/json+oembed" href="http://zet.netgon.ru/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fzet.netgon.ru%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://zet.netgon.ru/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fzet.netgon.ru%2F&amp;format=xml">
+<meta property="og:title" content="Resume page"><meta property="og:type" content="article"><meta property="og:url" content="http://zet.netgon.ru/"><meta property="og:image" content=""><meta property="og:site_name" content="ZET"><meta property="og:description" content=""><link rel="icon" href="http://zet.netgon.ru/wp-content/uploads/2016/11/apple-touch-icon-180x180-80x80.png" sizes="32x32">
+<link rel="icon" href="http://zet.netgon.ru/wp-content/uploads/2016/11/apple-touch-icon-180x180.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="http://zet.netgon.ru/wp-content/uploads/2016/11/apple-touch-icon-180x180-180x180.png">
+<meta name="msapplication-TileImage" content="http://zet.netgon.ru/wp-content/uploads/2016/11/apple-touch-icon-180x180.png">
+		<style type="text/css" id="wp-custom-css">
+			/*
+#section-portfolio{ display: none; }
+*/
+
+/*
+.blog-post-mediablock > img {
+	display: none;
+}
+*/		</style>
+	</head>
+<body class="home page-template page-template-page-resume page-template-page-resume-php page page-id-4617 wp-custom-logo" data-spy="scroll" data-target="#top-navigation" data-gr-c-s-loaded="true">
+<div id="page-wrapper">
+  <div class="responsive-menu">
+    <span class="responsive-menu-heading">
+      John Smith    </span>
+    <a id="menu-toggle" href="http://zet.netgon.ru/#" class="responsive-menu-toggle">
+              <img src="./zetone_files/menu-button.svg" alt="menu">
+          </a>
+  </div>
+
+      
+
+
+<!-- data for Intro and About sections -->
+<header id="page-sidebar-wrapper" class="header-sidebar">
+  <div class="wrapper-header">
+    <div class="wrapper-nav">
+      <nav id="top-navigation">
+        <div class="logo-wrapper">
+          <a href="http://zet.netgon.ru/" class="custom-logo-link" rel="home"><img width="166" height="166" src="./zetone_files/logo.png" class="custom-logo" alt="ZET" srcset="http://zet.netgon.ru/wp-content/uploads/2016/11/logo.png 166w, http://zet.netgon.ru/wp-content/uploads/2016/11/logo-80x80.png 80w" sizes="(max-width: 166px) 100vw, 166px"></a>        </div>
+        <ul id="menu-all-pages-flat" class="nav top-menu"><li id="menu-item-4945" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4945"><a title="" target="_self" rel="" href="http://zet.netgon.ru/#section-intro">Home</a></li>
+<li id="menu-item-4946" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4946 active"><a title="" target="_self" rel="" href="#section-about">About me</a></li>
+<li id="menu-item-4947" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4947"><a title="" target="_self" rel="" href="#section-skills">Skills</a></li>
+<li id="menu-item-4948" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4948"><a title="" target="_self" rel="" href="#section-experience">Experience</a></li>
+<li id="menu-item-4949" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4949"><a title="" target="_self" rel="" href="#section-education">Education</a></li>
+<li id="menu-item-4950" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4950"><a title="" target="_self" rel="" href="#section-portfolio">Portfolio</a></li>
+<li id="menu-item-4951" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4951"><a title="" target="_self" rel="" href="#section-contact">Contact</a></li>
+<li id="menu-item-4952" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4952"><a title="" target="_self" rel="" href="#section-about">Blog</a></li>
+</ul>      </nav>
+    </div>
+    <div class="wrapper-copyrights">
+      <div class="block-copyright">
+        ©        John Smith<br>
+        all rights reserved      </div>
+    </div>
+  </div>
+</header>
+    <main id="page-content-wrapper" class="main-onepage">
+        <!-- section INTRO -->
+        <section id="section-intro" class="section-intro _overlay-black">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="section-content">
+                            <h1>Hello, I′m                                <span>John Smith</span>
+                            </h1>
+                            <h2>UX/UI designer / web developer</h2><br>
+                            <a href="http://zet.netgon.ru/#section-contact" class="btn btn-cta">Hire me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END section INTRO-->
+        <!-- section ABOUT-->
+        <section id="section-about" class="section-about">
+            <div class="container">
+                <!-- heading section-->
+                <div class="section-heading">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="blog-title">
+                                About me                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- END heading section-->
+                <!-- section content-->
+                <div class="section-content">
+                    <!-- content block - About me-->
+                    <div class="block-about-me">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-6">
+                                <div class="about-avatar-wrapper">
+                                    <img width="300" height="300" src="https://avatars2.githubusercontent.com/u/3628405?s=460&u=5cda8646f23059bc3bf68627901f2add8c116603&v=4" class="img-responsive about-avatar wp-post-image" alt="&lt;?php esc_attr(John Smith);?&gt;" srcset="https://avatars2.githubusercontent.com/u/3628405?s=460&u=5cda8646f23059bc3bf68627901f2add8c116603&v=4 300w, https://avatars2.githubusercontent.com/u/3628405?s=460&u=5cda8646f23059bc3bf68627901f2add8c116603&v=4 80w, https://avatars2.githubusercontent.com/u/3628405?s=460&u=5cda8646f23059bc3bf68627901f2add8c116603&v=4 180w, https://avatars2.githubusercontent.com/u/3628405?s=460&u=5cda8646f23059bc3bf68627901f2add8c116603&v=4 166w, https://avatars2.githubusercontent.com/u/3628405?s=460&u=5cda8646f23059bc3bf68627901f2add8c116603&v=4 350w" sizes="(max-width: 300px) 100vw, 300px">                                    <button class="btn btn-cta btn-cta-solid" data-resume="http://zet.netgon.ru/wp-content/themes/zet/uploads/resume.pdf">Download resume as .pdf</button>
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-sm-6">
+                                <ul class="about-me-list">
+                                    <li><span>Name:</span>&nbsp;John Smith</li>
+                                    <li><span>Email:</span>&nbsp;john.smith@example.com</li>
+                                    <li><span>Phone:</span>&nbsp;(123)-456-7890</li>
+                                    <li><span>Date of birth:</span>&nbsp;14 September 1988</li>
+                                    <li><span>Address:</span>&nbsp;Russia, Izhevsk</li>
+                                    <li><span>Nationality:</span>&nbsp;United Kingdom</li>
+                                    <li><span>WHAT DO I KNOW:</span><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu ultrices libero. Curabitur vulputate vestibulum elementum.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END content block - About me-->
+                    <!-- content block - My advantages-->
+                    <div class="block-my-advantages">
+                        <div class="row">
+                                                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img width="150" height="150" src="./zetone_files/web-development-166x166.png" class="img-responsive advantage-icon wp-post-image" alt="" srcset="https://avatars2.githubusercontent.com/u/3628405?s=460&u=5cda8646f23059bc3bf68627901f2add8c116603&v=4 166w, https://avatars2.githubusercontent.com/u/3628405?s=460&u=5cda8646f23059bc3bf68627901f2add8c116603&v=4 80w, https://avatars2.githubusercontent.com/u/3628405?s=460&u=5cda8646f23059bc3bf68627901f2add8c116603&v=4 300w, https://avatars2.githubusercontent.com/u/3628405?s=460&u=5cda8646f23059bc3bf68627901f2add8c116603&v=4 180w, https://avatars2.githubusercontent.com/u/3628405?s=460&u=5cda8646f23059bc3bf68627901f2add8c116603&v=4490w" sizes="(max-width: 150px) 100vw, 150px">                                        <span class="advantage-heading">FRONTEND</span>
+                                    </div>
+                                                                        <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img width="150" height="150" src="./zetone_files/competitive-chart-166x166.png" class="img-responsive advantage-icon wp-post-image" alt="" srcset="http://zet.netgon.ru/wp-content/uploads/2016/11/competitive-chart-166x166.png 166w, http://zet.netgon.ru/wp-content/uploads/2016/11/competitive-chart-80x80.png 80w, http://zet.netgon.ru/wp-content/uploads/2016/11/competitive-chart-300x300.png 300w, http://zet.netgon.ru/wp-content/uploads/2016/11/competitive-chart-180x180.png 180w, http://zet.netgon.ru/wp-content/uploads/2016/11/competitive-chart.png 490w" sizes="(max-width: 150px) 100vw, 150px">                                        <span class="advantage-heading">COMPETITIVE</span>
+                                    </div>
+                                                                        <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img width="150" height="150" src="./zetone_files/creative-process-166x166.png" class="img-responsive advantage-icon wp-post-image" alt="" srcset="http://zet.netgon.ru/wp-content/uploads/2016/11/creative-process-166x166.png 166w, http://zet.netgon.ru/wp-content/uploads/2016/11/creative-process-80x80.png 80w, http://zet.netgon.ru/wp-content/uploads/2016/11/creative-process-300x300.png 300w, http://zet.netgon.ru/wp-content/uploads/2016/11/creative-process-180x180.png 180w, http://zet.netgon.ru/wp-content/uploads/2016/11/creative-process.png 490w" sizes="(max-width: 150px) 100vw, 150px">                                        <span class="advantage-heading">CREATIVE</span>
+                                    </div>
+                                                                        <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img width="150" height="150" src="./zetone_files/optimization-clock-166x166.png" class="img-responsive advantage-icon wp-post-image" alt="" srcset="http://zet.netgon.ru/wp-content/uploads/2016/11/optimization-clock-166x166.png 166w, http://zet.netgon.ru/wp-content/uploads/2016/11/optimization-clock-80x80.png 80w, http://zet.netgon.ru/wp-content/uploads/2016/11/optimization-clock-300x300.png 300w, http://zet.netgon.ru/wp-content/uploads/2016/11/optimization-clock-180x180.png 180w, http://zet.netgon.ru/wp-content/uploads/2016/11/optimization-clock.png 490w" sizes="(max-width: 150px) 100vw, 150px">                                        <span class="advantage-heading">RIGHT ON TIME</span>
+                                    </div>
+                                                                        <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img width="150" height="150" src="./zetone_files/work-team-166x166.png" class="img-responsive advantage-icon wp-post-image" alt="" srcset="http://zet.netgon.ru/wp-content/uploads/2016/11/work-team-166x166.png 166w, http://zet.netgon.ru/wp-content/uploads/2016/11/work-team-80x80.png 80w, http://zet.netgon.ru/wp-content/uploads/2016/11/work-team-300x300.png 300w, http://zet.netgon.ru/wp-content/uploads/2016/11/work-team-180x180.png 180w, http://zet.netgon.ru/wp-content/uploads/2016/11/work-team.png 490w" sizes="(max-width: 150px) 100vw, 150px">                                        <span class="advantage-heading">Team Work</span>
+                                    </div>
+                                                                        <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img width="150" height="150" src="./zetone_files/code-design-166x166.png" class="img-responsive advantage-icon wp-post-image" alt="" srcset="http://zet.netgon.ru/wp-content/uploads/2016/11/code-design-166x166.png 166w, http://zet.netgon.ru/wp-content/uploads/2016/11/code-design-80x80.png 80w, http://zet.netgon.ru/wp-content/uploads/2016/11/code-design-300x300.png 300w, http://zet.netgon.ru/wp-content/uploads/2016/11/code-design-180x180.png 180w, http://zet.netgon.ru/wp-content/uploads/2016/11/code-design.png 490w" sizes="(max-width: 150px) 100vw, 150px">                                        <span class="advantage-heading">Webmaster</span>
+                                    </div>
+                                                            </div>
+                    </div>
+                    <!-- END content block - My advantages-->
+                </div>
+                <!-- END section content-->
+            </div>
+        </section>
+        <!-- END section ABOUT-->
+        <!-- section SKILLS-->
+        <section id="section-skills" class="section-skills color-bg">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="blog-title">Skills</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-content">
+
+                    <!-- get data for Professional Skills section -->
+                                        <!-- ****************************************  -->
+                    <div class="block-my-skills">
+                        <div class="row">
+                            <div class="col-md-12">
+                                                                    <h3>JUST MY AWESOME SKILLS</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu ultrices libero. Curabitur vulputate vestibulum elementum. Suspendisse id neque a nibh mollis blandit. Quisque varius eros ac purus dignissim.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-circles-skills">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6">
+                                <div class="skill-wrapper">
+                                    <div id="circle1" data-progress-percent="84" class="circle-skill"><canvas width="126" height="126"></canvas><strong>84<i>%</i></strong></div>
+                                    <div class="circle-skill-heading">
+                                        <span class="my-skill-heading">
+                                            Web<br>
+                                            design                                        </span>
+                                        <span class="my-skill-exp">
+                                            7 years                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="skill-wrapper">
+                                    <div id="circle2" data-progress-percent="58" class="circle-skill"><canvas width="126" height="126"></canvas><strong>58<i>%</i></strong></div>
+                                    <div class="circle-skill-heading">
+                                        <span class="my-skill-heading">
+                                            UX<br>
+                                            design                                        </span>
+                                        <span class="my-skill-exp">
+                                            4 years                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="skill-wrapper">
+                                    <div id="circle3" data-progress-percent="78" class="circle-skill"><canvas width="126" height="126"></canvas><strong>78<i>%</i></strong></div>
+                                    <div class="circle-skill-heading">
+                                        <span class="my-skill-heading">
+                                            Html5<br>
+                                            css3                                        </span>
+                                        <span class="my-skill-exp">
+                                            7 years                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="block-my-knowledge">
+
+                        <!-- get data for Knowledge section -->
+                         
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                                                    <h3>KNOWLEDGE</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu ultrices libero. Curabitur vulputate vestibulum elementum. Suspendisse id neque a nibh mollis blandit. Quisque varius eros ac purus dignissim.</p>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <ul class="knowledge-list">
+                                                                            <li><i class="glyphicon glyphicon-ok"></i>Email design</li>
+                                                                            <li><i class="glyphicon glyphicon-ok"></i>User Experience design</li>
+                                                                            <li><i class="glyphicon glyphicon-ok"></i>User Interface design</li>
+                                                                            <li><i class="glyphicon glyphicon-ok"></i>Interruption design</li>
+                                                                    </ul>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <ul class="knowledge-list">
+                                                                            <li><i class="glyphicon glyphicon-ok"></i>E-commerce platform</li>
+                                                                            <li><i class="glyphicon glyphicon-ok"></i>Grid &amp; layout</li>
+                                                                            <li><i class="glyphicon glyphicon-ok"></i>Usability</li>
+                                                                            <li><i class="glyphicon glyphicon-ok"></i>Good sense of typography</li>
+                                                                    </ul>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <ul class="knowledge-list">
+                                                                            <li><i class="glyphicon glyphicon-ok"></i>Photo composition</li>
+                                                                            <li><i class="glyphicon glyphicon-ok"></i>Digital Painting</li>
+                                                                            <li><i class="glyphicon glyphicon-ok"></i>Photo manipulation skills</li>
+                                                                            <li><i class="glyphicon glyphicon-ok"></i>Color theory knowledge</li>
+                                                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="block-my-languages">
+                        <!-- get data for Language section -->
+                        
+                        <div class="row">
+                            <div class="col-md-12">
+                                                                    <h3>LANGUAGE SKILLS</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu ultrices libero. Curabitur vulputate vestibulum elementum. Suspendisse id neque a nibh mollis blandit. Quisque varius eros ac purus dignissim.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-skillbars">
+                        <div class="row">
+                                                            <div class="col-md-12">
+                                    <div id="skillbar1" class="skillbar-block">
+                                        <span class="hidden-xs skillbar-exp">60<i>%</i></span>
+                                        <div class="skillbar-wrapper">
+                                            <span class="skillbar-heading">
+                                                English Intermediate                                            </span>
+                                            <div data-progress-percent="60" class="skillbar-container">
+                                                <div class="bar-skill" style="left: 463.8px;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="col-md-12">
+                                    <div id="skillbar2" class="skillbar-block">
+                                        <span class="hidden-xs skillbar-exp">99<i>%</i></span>
+                                        <div class="skillbar-wrapper">
+                                            <span class="skillbar-heading">
+                                                Russian Native                                            </span>
+                                            <div data-progress-percent="99" class="skillbar-container">
+                                                <div class="bar-skill" style="left: 765.27px;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END section SKILLS-->
+        <!-- section EXPERIENCE-->
+        <section id="section-experience" class="section-experience">
+            <!-- get data for Experience section -->
+            
+            <div class="container">
+                <div class="section-heading">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="blog-title">Experience</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-content">
+                    <div class="block-my-experience">
+                        <div class="row">
+                            <div class="col-md-12">
+                                                                    <h3>7 YEARS EXPERIENCE</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu ultrices libero. Curabitur vulputate vestibulum elementum. Suspendisse id neque a nibh mollis blandit. Quisque varius eros ac purus dignissim.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-timeline">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="timeline">
+                                                                                <li class="event">
+                                                <input type="radio" name="exp-tl-group" checked="">
+                                                <label></label>
+                                                <div class="thumb company1">
+                                                    <span>
+                                                        2016 - Now                                                    </span>
+                                                </div>
+                                                <div class="content-perspective">
+                                                    <div class="content">
+                                                        <div class="content-inner">
+                                                            <h3>UX/UI designer in freelance</h3>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu ultrices libero. Curabitur vulputate vestibulum elementum.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                                                                    <li class="event">
+                                                <input type="radio" name="exp-tl-group">
+                                                <label></label>
+                                                <div class="thumb company2">
+                                                    <span>
+                                                        2012 - 2016                                                    </span>
+                                                </div>
+                                                <div class="content-perspective">
+                                                    <div class="content">
+                                                        <div class="content-inner">
+                                                            <h3>UX/UI designer in seo expert, LLC</h3>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu ultrices libero. Curabitur vulputate vestibulum elementum.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                                                                    <li class="event">
+                                                <input type="radio" name="exp-tl-group">
+                                                <label></label>
+                                                <div class="thumb company3">
+                                                    <span>
+                                                        2009 - 2012                                                    </span>
+                                                </div>
+                                                <div class="content-perspective">
+                                                    <div class="content">
+                                                        <div class="content-inner">
+                                                            <h3>Web designer in freelance</h3>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu ultrices libero. Curabitur vulputate vestibulum elementum.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                                                        </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END section EXPERIENCE-->
+        <!-- section EDUCATION-->
+        <section id="section-education" class="section-education color-bg">
+
+            <!-- get data for Education section -->
+                        <!-- ****************************************  -->
+            <div class="container">
+                <div class="section-heading">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="blog-title">Education</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-content">
+                    <div class="block-my-education">
+                        <div class="row">
+                            <div class="col-md-12">
+                                                                    <h3>JUST MY EDUCATION</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu ultrices libero. Curabitur vulputate vestibulum elementum. Suspendisse id neque a nibh mollis blandit. Quisque varius eros ac purus dignissim.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-timeline">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="timeline">
+                                                                                <li class="event">
+                                                <input type="radio" name="edu-tl-group" checked="">
+                                                <label></label>
+                                                <div class="thumb company-edu1">
+                                                    <span>
+                                                        2016 - Now                                                    </span>
+                                                </div>
+                                                <div class="content-perspective">
+                                                    <div class="content">
+                                                        <div class="content-inner">
+                                                            <h3>University of design: <span>Bachelor of Arts</span></h3>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu ultrices libero. Curabitur vulputate vestibulum elementum.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                                                                        <li class="event">
+                                                <input type="radio" name="edu-tl-group">
+                                                <label></label>
+                                                <div class="thumb company-edu2">
+                                                    <span>
+                                                        2012 - 2016                                                    </span>
+                                                </div>
+                                                <div class="content-perspective">
+                                                    <div class="content">
+                                                        <div class="content-inner">
+                                                            <h3>Boston State University: <span>Visual Art &amp; Design</span></h3>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu ultrices libero. Curabitur vulputate vestibulum elementum.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                                                                        <li class="event">
+                                                <input type="radio" name="edu-tl-group">
+                                                <label></label>
+                                                <div class="thumb company-edu3">
+                                                    <span>
+                                                        2009 - 2012                                                    </span>
+                                                </div>
+                                                <div class="content-perspective">
+                                                    <div class="content">
+                                                        <div class="content-inner">
+                                                            <h3>Izhevsk state University: <span>CAD</span></h3>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu ultrices libero. Curabitur vulputate vestibulum elementum.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                                                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END section EDUCATION-->
+        <!-- section PORTFOLIO-->
+        <section id="section-portfolio" class="section-portfolio">
+
+            <!-- get data for Portfolio section -->
+                        <div class="container">
+                <div class="section-heading">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="blog-title">Portfolio</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                            <div class="section-content">
+                    <div id="portfolio-masonry-grid" class="masonry" style="position: relative; height: 538.625px;">
+                        <div class="portfolio-grid-sizer masonry-brick"></div>
+                                                                            <div class="portfolio-item item-wide masonry-brick" style="position: absolute; left: 0%; top: 0px;">
+                                <a href="./zetone_files/item1.jpg" title="Hand Grip E-commerce" class="portfolio-item-wrapper">
+                                    <img width="800" height="600" src="./zetone_files/item1.jpg" class="img-responsive wp-post-image" alt="" srcset="http://zet.netgon.ru/wp-content/uploads/2016/11/item1.jpg 800w, http://zet.netgon.ru/wp-content/uploads/2016/11/item1-300x225.jpg 300w, http://zet.netgon.ru/wp-content/uploads/2016/11/item1-768x576.jpg 768w, http://zet.netgon.ru/wp-content/uploads/2016/11/item1-240x180.jpg 240w, http://zet.netgon.ru/wp-content/uploads/2016/11/item1-180x135.jpg 180w, http://zet.netgon.ru/wp-content/uploads/2016/11/item1-166x125.jpg 166w" sizes="(max-width: 800px) 100vw, 800px">                                    <div class="portfolio-item-caption">
+                                        <h3>Hand Grip E-commerce                                            <span>IronArms, LLC</span>
+                                        </h3>
+                                    </div>
+                                </a>
+                            </div>
+                                                        <div class="portfolio-item masonry-brick" style="position: absolute; left: 39.9332%; top: 0px;">
+                                <a href="./zetone_files/item2.jpg" title="Vollax" class="portfolio-item-wrapper">
+                                    <img width="800" height="600" src="./zetone_files/item2.jpg" class="img-responsive wp-post-image" alt="" srcset="http://zet.netgon.ru/wp-content/uploads/2016/11/item2.jpg 800w, http://zet.netgon.ru/wp-content/uploads/2016/11/item2-300x225.jpg 300w, http://zet.netgon.ru/wp-content/uploads/2016/11/item2-768x576.jpg 768w, http://zet.netgon.ru/wp-content/uploads/2016/11/item2-240x180.jpg 240w, http://zet.netgon.ru/wp-content/uploads/2016/11/item2-180x135.jpg 180w, http://zet.netgon.ru/wp-content/uploads/2016/11/item2-166x125.jpg 166w" sizes="(max-width: 800px) 100vw, 800px">                                    <div class="portfolio-item-caption">
+                                        <h3>Vollax                                            <span>Voyatech, Inc</span>
+                                        </h3>
+                                    </div>
+                                </a>
+                            </div>
+                                                        <div class="portfolio-item masonry-brick" style="position: absolute; left: 59.9833%; top: 0px;">
+                                <a href="./zetone_files/item3.jpg" title="Zontom" class="portfolio-item-wrapper">
+                                    <img width="800" height="600" src="./zetone_files/item3.jpg" class="img-responsive wp-post-image" alt="" srcset="http://zet.netgon.ru/wp-content/uploads/2016/11/item3.jpg 800w, http://zet.netgon.ru/wp-content/uploads/2016/11/item3-300x225.jpg 300w, http://zet.netgon.ru/wp-content/uploads/2016/11/item3-768x576.jpg 768w, http://zet.netgon.ru/wp-content/uploads/2016/11/item3-240x180.jpg 240w, http://zet.netgon.ru/wp-content/uploads/2016/11/item3-180x135.jpg 180w, http://zet.netgon.ru/wp-content/uploads/2016/11/item3-166x125.jpg 166w" sizes="(max-width: 800px) 100vw, 800px">                                    <div class="portfolio-item-caption">
+                                        <h3>Zontom                                            <span>Howdexon, LLC</span>
+                                        </h3>
+                                    </div>
+                                </a>
+                            </div>
+                                                        <div class="portfolio-item masonry-brick" style="position: absolute; left: 79.9499%; top: 0px;">
+                                <a href="./zetone_files/item4.jpg" title="Duo Home" class="portfolio-item-wrapper">
+                                    <img width="800" height="600" src="./zetone_files/item4.jpg" class="img-responsive wp-post-image" alt="" srcset="http://zet.netgon.ru/wp-content/uploads/2016/11/item4.jpg 800w, http://zet.netgon.ru/wp-content/uploads/2016/11/item4-300x225.jpg 300w, http://zet.netgon.ru/wp-content/uploads/2016/11/item4-768x576.jpg 768w, http://zet.netgon.ru/wp-content/uploads/2016/11/item4-240x180.jpg 240w, http://zet.netgon.ru/wp-content/uploads/2016/11/item4-180x135.jpg 180w, http://zet.netgon.ru/wp-content/uploads/2016/11/item4-166x125.jpg 166w" sizes="(max-width: 800px) 100vw, 800px">                                    <div class="portfolio-item-caption">
+                                        <h3>Duo Home                                            <span>Soloit, LLC</span>
+                                        </h3>
+                                    </div>
+                                </a>
+                            </div>
+                                                        <div class="portfolio-item masonry-brick" style="position: absolute; left: 39.9332%; top: 179px;">
+                                <a href="./zetone_files/item5.jpg" title="S-Fresh" class="portfolio-item-wrapper">
+                                    <img width="800" height="600" src="./zetone_files/item5.jpg" class="img-responsive wp-post-image" alt="" srcset="http://zet.netgon.ru/wp-content/uploads/2016/11/item5.jpg 800w, http://zet.netgon.ru/wp-content/uploads/2016/11/item5-300x225.jpg 300w, http://zet.netgon.ru/wp-content/uploads/2016/11/item5-768x576.jpg 768w, http://zet.netgon.ru/wp-content/uploads/2016/11/item5-240x180.jpg 240w, http://zet.netgon.ru/wp-content/uploads/2016/11/item5-180x135.jpg 180w, http://zet.netgon.ru/wp-content/uploads/2016/11/item5-166x125.jpg 166w" sizes="(max-width: 800px) 100vw, 800px">                                    <div class="portfolio-item-caption">
+                                        <h3>S-Fresh                                            <span>Triscom, Inc</span>
+                                        </h3>
+                                    </div>
+                                </a>
+                            </div>
+                                                        <div class="portfolio-item item-wide masonry-brick" style="position: absolute; left: 59.9833%; top: 179px;">
+                                <a href="./zetone_files/item6.jpg" title="Whiteeco" class="portfolio-item-wrapper">
+                                    <img width="800" height="600" src="./zetone_files/item6.jpg" class="img-responsive wp-post-image" alt="" srcset="http://zet.netgon.ru/wp-content/uploads/2016/11/item6.jpg 800w, http://zet.netgon.ru/wp-content/uploads/2016/11/item6-300x225.jpg 300w, http://zet.netgon.ru/wp-content/uploads/2016/11/item6-768x576.jpg 768w, http://zet.netgon.ru/wp-content/uploads/2016/11/item6-240x180.jpg 240w, http://zet.netgon.ru/wp-content/uploads/2016/11/item6-180x135.jpg 180w, http://zet.netgon.ru/wp-content/uploads/2016/11/item6-166x125.jpg 166w" sizes="(max-width: 800px) 100vw, 800px">                                    <div class="portfolio-item-caption">
+                                        <h3>Whiteeco                                            <span>Itelectronics, LLC</span>
+                                        </h3>
+                                    </div>
+                                </a>
+                            </div>
+                                                        <div class="portfolio-item masonry-brick" style="position: absolute; left: 39.9332%; top: 359px;">
+                                <a href="./zetone_files/item7.jpg" title="Funplus" class="portfolio-item-wrapper">
+                                    <img width="800" height="600" src="./zetone_files/item7.jpg" class="img-responsive wp-post-image" alt="" srcset="http://zet.netgon.ru/wp-content/uploads/2016/11/item7.jpg 800w, http://zet.netgon.ru/wp-content/uploads/2016/11/item7-300x225.jpg 300w, http://zet.netgon.ru/wp-content/uploads/2016/11/item7-768x576.jpg 768w, http://zet.netgon.ru/wp-content/uploads/2016/11/item7-240x180.jpg 240w, http://zet.netgon.ru/wp-content/uploads/2016/11/item7-180x135.jpg 180w, http://zet.netgon.ru/wp-content/uploads/2016/11/item7-166x125.jpg 166w" sizes="(max-width: 800px) 100vw, 800px">                                    <div class="portfolio-item-caption">
+                                        <h3>Funplus                                            <span>Spanlex, Inc</span>
+                                        </h3>
+                                    </div>
+                                </a>
+                            </div>
+                                                        <div class="portfolio-item masonry-brick" style="position: absolute; left: 0%; top: 359px;">
+                                <a href="./zetone_files/item8.jpg" title="Zentech" class="portfolio-item-wrapper">
+                                    <img width="800" height="600" src="./zetone_files/item8.jpg" class="img-responsive wp-post-image" alt="" srcset="http://zet.netgon.ru/wp-content/uploads/2016/11/item8.jpg 800w, http://zet.netgon.ru/wp-content/uploads/2016/11/item8-300x225.jpg 300w, http://zet.netgon.ru/wp-content/uploads/2016/11/item8-768x576.jpg 768w, http://zet.netgon.ru/wp-content/uploads/2016/11/item8-240x180.jpg 240w, http://zet.netgon.ru/wp-content/uploads/2016/11/item8-180x135.jpg 180w, http://zet.netgon.ru/wp-content/uploads/2016/11/item8-166x125.jpg 166w" sizes="(max-width: 800px) 100vw, 800px">                                    <div class="portfolio-item-caption">
+                                        <h3>Zentech                                            <span>IronArms, LLC</span>
+                                        </h3>
+                                    </div>
+                                </a>
+                            </div>
+                                                        <div class="portfolio-item masonry-brick" style="position: absolute; left: 19.9666%; top: 359px;">
+                                <a href="./zetone_files/item9.jpg" title="Loteco" class="portfolio-item-wrapper">
+                                    <img width="800" height="600" src="./zetone_files/item9.jpg" class="img-responsive wp-post-image" alt="" srcset="http://zet.netgon.ru/wp-content/uploads/2016/11/item9.jpg 800w, http://zet.netgon.ru/wp-content/uploads/2016/11/item9-300x225.jpg 300w, http://zet.netgon.ru/wp-content/uploads/2016/11/item9-768x576.jpg 768w, http://zet.netgon.ru/wp-content/uploads/2016/11/item9-240x180.jpg 240w, http://zet.netgon.ru/wp-content/uploads/2016/11/item9-180x135.jpg 180w, http://zet.netgon.ru/wp-content/uploads/2016/11/item9-166x125.jpg 166w" sizes="(max-width: 800px) 100vw, 800px">                                    <div class="portfolio-item-caption">
+                                        <h3>Loteco                                            <span>IronArms, LLC</span>
+                                        </h3>
+                                    </div>
+                                </a>
+                            </div>
+                                                </div>
+                </div>
+                    </section> 
+        <!-- END section PORTFOLIO-->
+        <!-- section CONTACT-->
+        <!-- get data for Contact section -->
+                <section id="section-contact" class="section-contact color-bg">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="blog-title">Contact</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-content">
+                    <div class="row">
+                        <div class="col-md-12">
+                                                            <h3>LET'S KEEP IN TOUCH</h3>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu ultrices libero. Curabitur vulputate vestibulum elementum. Suspendisse id neque a nibh mollis blandit. Quisque varius eros ac purus dignissim.</p>
+                        </div>
+                    </div>
+                    <div class="block-my-contact-form">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="block-my-contacts">
+
+                                    <figure class="my-contact">
+                                                                                    <img src="./zetone_files/mail-envelope.svg" alt="Email">
+                                                                                <figcaption>
+                                            <span class="my-contact-heading">Email</span>
+                                            <span class="my-contact-data">john.smith@example.com</span>
+                                        </figcaption>
+                                    </figure>
+
+                                    <figure class="my-contact">
+                                                                                    <img src="./zetone_files/skype-logo.svg" alt="Skype">
+                                                                                <figcaption>
+                                            <span class="my-contact-heading">Skype</span>
+                                            <span class="my-contact-data">johnsmith</span>
+                                        </figcaption>
+                                    </figure>
+
+                                    <figure class="my-contact">
+                                                                                    <img src="./zetone_files/smartphone-outline.svg" alt="Phone">
+                                                                                <figcaption>
+                                            <span class="my-contact-heading">Phone</span>
+                                            <span class="my-contact-data">(123)-456-7890</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+
+                                                                <div class="block-my-social">
+                                    <h3>I′m in the social networks</h3>
+                                    <ul class="social-links-list">
+
+                                                                                    <li>
+                                                <a href="https://vk.com/johnsmith" class="my-social-link">
+                                                    <img src="./zetone_files/vkontakte-logo.svg" alt="VK">
+                                                </a>
+                                            </li>
+                                        
+                                                                                    <li>
+                                                <a href="https://facebook.com/johnsmith" class="my-social-link">
+                                                    <img src="./zetone_files/facebook-logotype-button.svg" alt="Facebook">
+                                                </a>
+                                            </li>
+                                        
+                                                                                    <li>
+                                                <a href="https://www.linkedin.com/johnsmith" class="my-social-link">
+                                                    <img src="./zetone_files/linkedin.svg" alt="Linkedin">
+                                                </a>
+                                            </li>
+                                        
+                                                                                    <li>
+                                                <a href="https://dribbble.com/johnsmith" class="my-social-link">
+                                                    <img src="./zetone_files/dribbble.svg" alt="Dribble">
+                                                </a>
+                                            </li>
+                                        
+                                                                                    <li>
+                                                <a href="https://twitter.com/johnsmith" class="my-social-link">
+                                                    <img src="./zetone_files/twitter-logo.svg" alt="Twitter">
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <form id="contact-form" method="POST" class="contact-form"><input type="text" name="visitor-name" placeholder="Your name" pattern="^[a-zA-Z][a-zA-Z0-9-_.]{1,20}$"><input type="email" name="visitor-email" placeholder="Your email"><textarea name="visitor-message" placeholder="Your message"></textarea><button id="contact-form-btn" type="button" name="submit" data-style="fill" data-horizontal="" class="progress-button"><span class="content"><span class="content">Send</span><span class="progress"><span class="progress-inner"></span></span></span><span class="progress"><span class="progress-inner"></span></span></button><input type="hidden" name="user" value="John Smith"><input type="hidden" name="user_email" value="john.smith@example.com"><input type="hidden" name="user_url" value="ZET"></form>                            </div>
+                            <!-- response text for conctact form -->
+                            <div class="response_form_text">
+                                <span id="error_validation_text">
+                                    All fields should be filled                                </span>
+                                <span id="error_sending_text">
+                                    Something went wrong. Please contact me directly by my email.                                </span>
+                                <span id="success_text">
+                                    Thanks for your message! I will reply you as soon as possible.                                </span>
+                            </div>
+                            <!-- bPopup plugin container -->
+                            <div class="callback_pop_up pop_up">
+                                <span class="b-close"><i class="glyphicon glyphicon-remove-circle"></i></span>
+                                <div class="response-content"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END section CONTACT-->
+        <!-- overlay for responsive menu-->
+        <div id="page-content-overlay"></div>
+    </main>
+</div>
+<!-- smooth scroll to top button-->
+<a id="sstt" href="http://zet.netgon.ru/#" class="sstt is-single is-visible"><span class="glyphicon glyphicon-chevron-up"></span></a>
+<script type="text/javascript" src="./zetone_files/bootstrap.min.js"></script>
+<script type="text/javascript" src="./zetone_files/jquery.smooth-scroll.min.js"></script>
+<script type="text/javascript" src="./zetone_files/circle-progress.js"></script>
+<script type="text/javascript" src="./zetone_files/imagesloaded.min.js"></script>
+<script type="text/javascript" src="./zetone_files/scrolltotop.min.js"></script>
+<script type="text/javascript" src="./zetone_files/common.js"></script>
+<script type="text/javascript" src="./zetone_files/masonry.min.js"></script>
+<script type="text/javascript" src="./zetone_files/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="./zetone_files/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="./zetone_files/classie.js"></script>
+<script type="text/javascript" src="./zetone_files/progressButton.js"></script>
+<script type="text/javascript" src="./zetone_files/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="./zetone_files/jquery.bpopup.min.js"></script>
+<script type="text/javascript" src="./zetone_files/wp-embed.min.js"></script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function (d, w, c) {
+       (w[c] = w[c] || []).push(function() {
+           try {
+               w.yaCounter41735989 = new Ya.Metrika({
+                   id:41735989,
+                   clickmap:true,
+                   trackLinks:true,
+                   accurateTrackBounce:true,
+                   trackHash:true
+               });
+           } catch(e) { }
+       });
+
+       var n = d.getElementsByTagName("script")[0],
+           s = d.createElement("script"),
+           f = function () { n.parentNode.insertBefore(s, n); };
+       s.type = "text/javascript";
+       s.async = true;
+       s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+       if (w.opera == "[object Opera]") {
+           d.addEventListener("DOMContentLoaded", f, false);
+       } else { f(); }
+   })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/41735989" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+</body></html>

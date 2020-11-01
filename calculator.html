@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bizning Calculator</title>
+    <meta name="author" content="Jon Toshmatov">
+    <meta name="description" content="Bu sahifa MYITEDU darslaridan o'rganish mashgulotlari">
+    <meta name="keywords" content="MYITEDU, MY5, PHP, HTML, Python, Dasturlashni O'rganing">
+    <link rel="stylesheet" href="css/calculator.css">
+    <link rel="stylesheet" href="vendor/components/font-awesome/css/all.css">
+    <link rel="stylesheet" href="vendor/twbs/bootstrap/dist/css/bootstrap.css">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/calculator.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div id="calculcator">
+        <div class="title">Mening Kalkyulyatorim</div>
+        <table class="table table-bordered">
+            <tr>
+                <td class="result" colspan="4">0</td>
+            </tr>
+            <tr>
+                <td class="sign">AC</td>
+                <td class="sign">&plus;/&minus;</td>
+                <td class="sign">&percnt;</td>
+                <td class="sign">&divide;</td>
+            </tr>
+            <tr>
+                <td class="num">7</td>
+                <td class="num">8</td>
+                <td class="num">9</td>
+                <td class="sign">&times;</td>
+            </tr>
+            <tr>
+                <td class="num">4</td>
+                <td class="num">5</td>
+                <td class="num">6</td>
+                <td class="sign">&minus;</td>
+            </tr>
+            <tr>
+                <td class="num">1</td>
+                <td class="num">2</td>
+                <td class="num">3</td>
+                <td class="sign">&plus;</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="num">0</td>
+                <td class="sign">&dot;</td>
+                <td class="sign">&equals;</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<style>
+    .title{
+        color: wheat;
+        font-size: 120%;
+    }
+    .num:hover{
+        background-color: #f8a6a6;
+    }
+    #calculcator {
+        width: 500px;
+        margin: 100px 0 0 0;
+        padding: 5px;
+    }
+
+    #calculcator {
+        text-align: center;
+        padding: 5px;
+    }
+
+    #calculcator table td {
+        cursor: pointer;
+    }
+
+    #calculcator table {
+        background-color: white;
+    }
+
+    #calculcator table tr:not(:first-child) td:last-child {
+        background-color: orange;
+        border-right: none;
+    }
+
+    #calculcator table tr:first-child {
+        height: 100px !important;
+        background-color: darkslategrey;
+        color: white;
+        font-size: 250%;
+        text-align: right;
+    }
+
+    #calculcator table tr:first-child td {
+        border: none !important;
+        height: 50px !important;
+    }
+
+    #calculcator table tr:last-child td {
+        border: none !important;
+    }
+
+    body {
+        background-color: black;
+        font-size: 30px;
+    }
+
+</style>
+<script src="vendor/twbs/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>

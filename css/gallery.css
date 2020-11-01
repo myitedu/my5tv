@@ -1,0 +1,38 @@
+body{
+    background-color: black;
+}
+#gallery{
+    width: 1380px;
+    height: 650px;
+    margin: 20px auto;
+    background-color: #450014;
+    border: darkred;
+    border-radius: 5px;
+    pading:5px;
+    text-align: center;
+
+}
+.gallery_title{
+    text-align: center;
+    color: #0a2998;
+}
+.photo{
+    width: 20%;
+    height: 200px;
+    border: 4px solid darkgoldenrod;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    background-color: #e6e6e6;
+}
+.photo img{
+    width: 100%;
+    height: 180px;
+    opacity: 0.4;
+}
+
+.photo img:hover{
+    opacity: 1.0;
+    cursor: pointer;
+}

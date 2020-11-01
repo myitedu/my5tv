@@ -1,0 +1,45 @@
+.jonlogo{
+    width: 150px;
+}
+body{
+    background-color: #f1e5f1;
+}
+.w-100{
+    height: 500px;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    padding:0px;
+    margin:0px;
+}
+#jonheader, #joncarousel{
+    border-bottom: 12px solid darkred;
+}
+#joncards{
+    text-align: center;
+}
+.mycards{
+    display: inline-block;
+    height: auto;
+    width: 33% !important;
+}
+.mycards img{
+    height: 200px;
+}
+.mycards:first-child{
+    float: left;
+}
+.mycards:nth-child(2){
+    float: left;
+    width: 34% !important;
+}
+.mycards:last-child{
+    float: right;
+}
+#jonmenu{
+    width: 25%;
+    float: right;
+    text-align: right;
+}
