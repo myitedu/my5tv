@@ -131,6 +131,7 @@
         top: 87px;
         z-index: 5;
         left: 230px;
+        display: none;
 
     }
     #calculator{
