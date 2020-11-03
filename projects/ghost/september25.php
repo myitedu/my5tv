@@ -13,12 +13,66 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
         $(function (){
-            $(".santa").mouseover(function (){
-               $(".basketball").fadeOut("slow");
-            });
+            $( ".santa" ).draggable();
         })
 
+        let jon = setInterval(call_me, 1000);
+        let counter = 0;
+        function call_me(){
+            counter++;
+            let num = Math.floor(Math.random() * 100);
+            $('.santa').stop().animate({
+                left: '-=100px',
+                top: '+='+num+'px'
+            });
 
+            $(".basketball").stop().animate({
+                left: '-=100px',
+                top: '+='+num+'px'
+            });
+
+/*
+            $('.santa').stop().animate({
+                top: '-='+num+'px'
+            });
+            $('.santa').stop().animate({
+                top: '+='+num+'px'
+            });
+
+ */
+
+
+
+
+            let position = $('.santa').position();
+            let leftp = position.left;
+            let topp = position.top;
+            if (leftp<260){
+
+                $('.santa').stop().animate({
+                    left: '+=10'+num+'px'
+                });
+                $('.santa').css("top",""+num+"px");
+
+                $(".basketball").stop().animate({
+                    left: '=100px',
+                    top: '=100px'
+                });
+                return false;
+            }
+            if (top>500){
+                $('.santa').stop().animate({
+                    top: '-='+num+'px',
+                    left: '-=100px'
+                });
+                $('.santa').css("top",""+num+"px");
+                $(".basketball").stop().animate({
+                    left: '=100px',
+                    top: '='+num+'px'
+                });
+            }
+            console.log(topp);
+        }
 
 
     </script>
