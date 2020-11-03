@@ -131,7 +131,11 @@ $icons = [
 </script>
 </body>
 <<<<<<< HEAD
+<<<<<<< HEAD
 </html>
 =======
 </html>
 >>>>>>> cf10fec5ddfc2e8a4cf3d4a8a98bc3158ef08286
+=======
+</html>
+>>>>>>> dd8690d95a59c87b72c5cca79ed0981633e092af

@@ -14,6 +14,7 @@
 <body>
 <?php include "phpcode.php"; ?>
 <div class="joncontainer">
+<<<<<<< HEAD
     <?php include "jonheader.php"; ?>
     <?php include "jonmenu.php"; ?>
     <?php include "contactus_post.php"; ?>
@@ -144,6 +145,20 @@
     }
 
     .navbar {
+=======
+    <?php include "jonheader.php";?>
+    <?php include "jonmenu.php";?>
+
+    <div id="contactus">
+        <img src="https://www.carscoops.com/wp-content/uploads/2019/04/f0a676c9-2002-mercedes-g-class-kahn-tuning-0-1024x555.jpg">
+    </div>
+
+    <?php include "jonmodal.php";?>
+</div>
+    <?php include "jonfooter.php";?>
+<style>
+    .navbar{
+>>>>>>> dd8690d95a59c87b72c5cca79ed0981633e092af
         background-color: <?php echo $navbar;?> !important;
     }
 </style>

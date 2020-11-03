@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<<<<<<< HEAD
     <title>Our Blogs</title>
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
     <script src="js/jquery-3.5.1.js"></script>
@@ -76,3 +77,30 @@ $blogs = $db->sql($sql);
 <script src="bootstrap/js/bootstrap.js"></script>
 </body>
 </html>
+=======
+    <title>Document</title>
+</head>
+<body>
+<?php
+date_default_timezone_set("America/New_York");
+$mydate = $_GET['datetime']??date('Y-m-d');
+$oneday = 24 * 3600;
+$onemonth = $oneday * 30;
+$oneyear = $onemonth * 12;
+
+$total_year =  time() / $oneyear;
+
+echo time()." = ".round($total_year)." years";
+
+?>
+
+<form>
+    <p>
+        <input type="date" name="datetime" value="<?=$mydate?>" placeholder="Enter Your DOB">
+        <button type="submit">GO</button>
+    </p>
+</form>
+</body>
+</html>
+
+>>>>>>> dd8690d95a59c87b72c5cca79ed0981633e092af
