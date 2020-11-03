@@ -85,11 +85,13 @@ $odd_color = $_GET['odd_color']??'blue';
            let color = $(this).val();
           $("#even_color_input").val(color);
         });
+
         $("#odd_color").change(function (){
             let color = $(this).val();
             $("#odd_color_input").val(color);
         });
     });
+
 </script>
 
 
