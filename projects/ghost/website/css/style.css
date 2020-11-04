@@ -1,0 +1,62 @@
+body{
+    background-color: #d4d7d9 ;
+    background-image: url("https://lh3.googleusercontent.com/proxy/mkyiA3STMlcnBtsPrmxg5FLRdOr67zSY6K-0qzR5uXvpFacZBdrC3AILuJBfdU-nbmeSv1CKVnEHa-wtX-xgnEJruw8yk7GnlMknLq5C6o_Fi8cgrKFTKQX8wZ3scA");
+}
+.container-fluid{
+    width: 800px;
+    margin: auto;
+}
+.logo{
+    width: 150px;
+}
+.topcontent{
+    width: 100%;
+    height: 500px;
+    background-color: #000b22;
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: 13px solid #8d1a1a;
+    box-shadow: 5px 5px 5px 5px #1c0101;
+    margin-top: -63px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#myheader{
+    margin-top: 20px;
+    border: 3px solid #06042c;
+    border-bottom: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    background-image: url("https://media.istockphoto.com/vectors/white-halftone-spotted-background-vector-id950485678?b=1&k=6&m=950485678&s=612x612&w=0&h=udpbk2c66MBCId-tYRuvu98p9Z_CyQw5ZvkCq9Zq4v4=");
+    background-size: 100% 100%;
+}
+#myheader2{
+    height: 37px;
+    background-color: #0b2560;
+    border-bottom: 2px solid #141a3a;
+
+}
+
+#hanging_chains{
+    text-align: center;
+    position: relative;
+    top: -50px;
+    z-index: 10;
+}
+
+.mytext{
+    position: relative;
+    top: 217px;
+    left: 234px;
+    width: 265px;
+    height: 60px;
+    color: #cab9b9;
+    font-size: 2.3em;
+    font-weight: bolder;
+    font-family: "Arial Rounded MT Bold";
+    text-align: center;
+    text-shadow: 2px 2px #4b3d3d;
+}
