@@ -17,7 +17,7 @@
 <div class="container-fluid">
 <div id="myheader">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><img class="logo" src="../img/logo.png"></a>
+        <a class="navbar-brand" href="#"><img class="logo" src="/img/logo.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -97,7 +97,7 @@
                                     <span class="online_icon"></span>
                                 </div>
                                 <div class="user_info">
-                                    <span>Tom Johnson</span>
+                                    <span>Bek Dostmuhamedov</span>
                                     <p>Tom is online</p>
                                 </div>
                             </div>
@@ -242,7 +242,7 @@
         width: 150px;
     }
     #myheader{
-        width: 897px;
+        width: 988px;
         margin: 20px auto 10px auto;
         border-radius: 30px;
     }
