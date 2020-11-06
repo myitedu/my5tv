@@ -152,6 +152,7 @@
         function imageIsLoaded(e) {
             let html = "<img src='"+e.target.result+"'>";
             //$(".result2").css({ 'background-image': "url(" + e.target.result + ")" });
+            console.log(html);
             $(".result2").html(html);
 
         }
