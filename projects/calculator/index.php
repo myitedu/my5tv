@@ -28,25 +28,25 @@
                 <td class="operator">AC</td>
                 <td class="operator">%/-</td>
                 <td class="operator">%</td>
-                <td class="operator">/</td>
+                <td id="divide" class="operator">/</td>
             </tr>
             <tr>
                 <td class="number">7</td>
                 <td class="number">8</td>
                 <td class="number">9</td>
-                <td class="operator">x</td>
+                <td id="multiply" class="operator">x</td>
             </tr>
             <tr>
                 <td class="number">4</td>
                 <td class="number">5</td>
                 <td class="number">6</td>
-                <td class="operator">-</td>
+                <td id="minus" class="operator">-</td>
             </tr>
             <tr>
                 <td class="number">1</td>
                 <td class="number">2</td>
                 <td class="number">3</td>
-                <td class="operator">+</td>
+                <td id="plus" class="operator">+</td>
             </tr>
             <tr>
                 <td class="number" colspan="2">0</td>

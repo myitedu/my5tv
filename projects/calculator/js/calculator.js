@@ -4,26 +4,39 @@ $(function (){
     let operator = '';
     let formula = '';
     let numbers = '';
+    let operator_id = '';
+
     $(".number").click(function (){
         if (operator=='') {
             numbers = number1 += $(this).text();
-
         }else{
             numbers = number2 += $(this).text();
         }
         $("#display").html(numbers);
-
-        if (number1!='' && operator!='' && number2!=''){
-            formula = eval(number1 +''+operator+''+ number2);
+        if (operator_id) {
+            $("#" + operator_id).css("background-color", "#ed9231");
         }
-    });
-
-    $(".operator").click(function (){
-        operator = $(this).text();
-
         if (operator=='x'){
             operator = '*';
         }
+        formula = eval(number1 +''+operator+''+ number2);
+    });
+
+    $(".operator").click(function (){
+        operator_id = $(this).attr('id');
+
+        let has_id = $(this).attr("id");
+        if (typeof has_id !== 'undefined'){
+            $(this).addClass("clicked_operator")
+            alert("id bor" + has_id);
+        }else{
+            $("#"+has_id).removeClass("clicked_operator")
+            alert("NO ID"+has_id);
+        }
+
+
+
+        operator = $(this).text();
 
         if (operator=='='){
             calculate();
