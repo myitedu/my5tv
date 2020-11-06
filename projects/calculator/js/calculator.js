@@ -28,10 +28,8 @@ $(function (){
         let has_id = $(this).attr("id");
         if (typeof has_id !== 'undefined'){
             $(this).addClass("clicked_operator")
-            alert("id bor" + has_id);
         }else{
             $("#"+has_id).removeClass("clicked_operator")
-            alert("NO ID"+has_id);
         }
 
 
