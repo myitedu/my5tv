@@ -2,6 +2,25 @@ let number = '';
 let number1 = '';
 let number2 = '';
 let sign = '';
+<<<<<<< HEAD
+let mynumber = '';
+
+$(function () {
+
+    $(".num").click(function () {
+        number = $(this).text();
+        if (sign!==''){
+            number1+=number;
+        }else{
+            number2+=number;
+        }
+
+        display_result(number1+sign+number2);
+
+    });
+
+
+=======
 let formula = '';
 $(function () {
     //Raqamlarni bosganizda bajaralyotgan harakat
@@ -17,9 +36,14 @@ $(function () {
         formula = eval(number2 + sign + number1);
     });
     //Belgilarni bosganizda bajaraliyotgan harakat
+>>>>>>> f2974b2955e11c483b192b27957a7240592f3557
     $(".sign").click(function () {
         //Bosilgan beligini toplash
         sign = $(this).text();
+<<<<<<< HEAD
+        if (sign==='='){
+            calcualte();
+=======
         //Belgilarni HTML entity formatida oddiy mathematika operator
         //beligisiga konvertatsiya qilish
         if (sign === '÷') {
@@ -37,12 +61,28 @@ $(function () {
         if (sign === '=') {
             display_result(formula);
             Ac_button(false);
+>>>>>>> f2974b2955e11c483b192b27957a7240592f3557
         }
     });
+
 });
+<<<<<<< HEAD
+
+
+function calcualte(){
+   let result = eval()
+}
+
+
+
+
+
+function display_result(num){
+=======
 //Mathetika operatsiyasini natijasini ekranga chiqarish funktsiyasi
 function display_result(num) {
     //result degan class div ichiga HTML formatida print qilish
+>>>>>>> f2974b2955e11c483b192b27957a7240592f3557
     $(".result").html(num);
 }
 //Kalkyulatrni qayta o'rnatish funktsiyasi

@@ -1,0 +1,77 @@
+.logo{
+    width: 66px;
+}
+.bg-dark {
+    background-color: #0c5299 !important;
+}
+.container-fluid{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.mynavbar{
+    border-top: 2px solid #4c0202;
+    border-bottom: 10px solid #d01313;
+}
+body{
+    background-color: #ebf3ff;
+    background-image: url("https://thumbs.gfycat.com/SourJitteryBilby-small.gif");
+
+}
+.breadcrumb{
+    background-color: #d5d5d5;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom: 2px dotted #8f8f95;
+    box-shadow: 7px 14px 15px 3px darkgrey;
+    z-index: 60;
+    height: 60px;
+}
+#jon{
+    position: fixed;
+    width: 100%;
+}
+#mycontent{
+    padding-top: 168px;
+    padding:20px;
+}
+
+.santa_moved{
+    display: none;
+}
+
+.santa{
+    position: absolute;
+    z-index: 1000;
+    left: 80%;
+    top: 9px;
+    width: 280px;
+}
+.santa:hover{
+    cursor: move;
+}
+.myaudio{
+    position: absolute;
+    z-index: 1000;
+    left: 75%;
+    top: 104px;
+}
+.snow_on_bottom{
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 70%;
+    text-align: right;
+}
+.snow_on_bottom img{
+    position: relative;
+    width: 650px;
+    height: 200px;
+}
+.basketball{
+    position: absolute;
+    left: 450px;
+    top:200px;
+
+}
