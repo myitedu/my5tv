@@ -25,6 +25,7 @@ $(function (){
     $(".operator").click(function (){
         operator_id = $(this).attr('id');
 
+
         let has_id = $(this).attr("id");
         if (typeof has_id !== 'undefined'){
             $(this).addClass("clicked_operator")
@@ -38,9 +39,12 @@ $(function (){
 
         if (operator=='='){
             calculate();
+            $(".operator").removeClass("clicked_operator");
+            return false;
         }
 
         if (operator == 'AC'){
+            $(".operator").removeClass("clicked_operator");
             reset();
             return false;
         }

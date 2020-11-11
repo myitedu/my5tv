@@ -18,21 +18,27 @@
     <script src="js/scripts.js"></script>
 </head>
 <body>
-
 <?php
 include_once "database.php";
 $db = new \Database\database("myitedu");
-
-$from_user_id = 1;
-$to_user_id = 2;
-
+$owner_user_id = $_GET['f']??null;
+$to_user_id = $_GET['t']??null;
+if (empty($owner_user_id) || empty($to_user_id)){
+    exit("Either to_user or from_user is missing");
+}
 $sql = "SELECT c.id, c.from_user_id, c.to_user_id, c.message, c.created_at, c.read_at, c.status,
 u.first_name, u.last_name, u.email, u.avatar
 FROM chats AS c
 JOIN users AS u
 ON c.from_user_id = u.id
-WHERE (c.to_user_id = $from_user_id AND c.from_user_id = $to_user_id ) OR (c.to_user_id = $to_user_id  AND c.from_user_id = $from_user_id);";
+WHERE (c.to_user_id = $owner_user_id AND c.from_user_id = $to_user_id ) OR (c.to_user_id = $to_user_id  AND c.from_user_id = $owner_user_id);";
 $messages = $db->sql($sql);
+
+$sql = "SELECT u.id, u.name, u.avatar FROM users AS u
+RIGHT JOIN chats AS c
+ON u.id = c.from_user_id
+GROUP BY u.id;";
+$users = $db->sql($sql);
 
 /*
 echo "<pre>";
@@ -42,8 +48,6 @@ echo "</pre>";
 exit;
 */
 ?>
-
-
 <div class="container-fluid">
     <div id="myheader">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -84,8 +88,6 @@ exit;
             </div>
         </nav>
     </div>
-
-
     <div class="row justify-content-center h-100">
         <div class="col-md-4 col-xl-3 chat">
             <div class="card mb-sm-3 mb-md-0 contacts_card">
@@ -99,71 +101,36 @@ exit;
                 </div>
                 <div class="card-body contacts_body">
                     <ui class="contacts">
-                        <li class="active">
+
+                        <?php foreach ($users as $user){
+                            $active_class = null;
+
+                            if ($user['id'] == $to_user_id){
+                                $active_class = "active";
+                            }
+
+                            ?>
+                        <li class="user_list <?php echo $active_class;?>" data-user_id="<?php echo $user['id']; ?>">
                             <div class="d-flex bd-highlight">
                                 <div class="img_cont">
-                                    <img src="https://avatars2.githubusercontent.com/u/3628405?s=460&u=5cda8646f23059bc3bf68627901f2add8c116603&v=4"
+                                    <img src="<?php echo $user['avatar']; ?>"
                                          class="rounded-circle user_img">
                                     <span class="online_icon"></span>
                                 </div>
                                 <div class="user_info">
-                                    <span>Jon Toshmatov</span>
+                                    <?php
+                                    echo "<span>{$user['name']}</span>";
+                                    ?>
+                                    <span></span>
                                     <p>Jon is online</p>
                                 </div>
                             </div>
                         </li>
-                        <li>
-                            <div class="d-flex bd-highlight">
-                                <div class="img_cont">
-                                    <img src="https://2.bp.blogspot.com/-8ytYF7cfPkQ/WkPe1-rtrcI/AAAAAAAAGqU/FGfTDVgkcIwmOTtjLka51vineFBExJuSACLcBGAs/s320/31.jpg"
-                                         class="rounded-circle user_img">
-                                    <span class="online_icon offline"></span>
-                                </div>
-                                <div class="user_info">
-                                    <span>Zarina Malikova</span>
-                                    <p>Zarin aleft 7 mins ago</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="d-flex bd-highlight">
-                                <div class="img_cont">
-                                    <img src="https://i.pinimg.com/originals/ac/b9/90/acb990190ca1ddbb9b20db303375bb58.jpg"
-                                         class="rounded-circle user_img">
-                                    <span class="online_icon"></span>
-                                </div>
-                                <div class="user_info">
-                                    <span>Bek Dostmuhamedov</span>
-                                    <p>Tom is online</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="d-flex bd-highlight">
-                                <div class="img_cont">
-                                    <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg"
-                                         class="rounded-circle user_img">
-                                    <span class="online_icon offline"></span>
-                                </div>
-                                <div class="user_info">
-                                    <span>Irina Sokolova</span>
-                                    <p>Irina left 30 mins ago</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="d-flex bd-highlight">
-                                <div class="img_cont">
-                                    <img src="https://static.turbosquid.com/Preview/001214/650/2V/boy-cartoon-3D-model_D.jpg"
-                                         class="rounded-circle user_img">
-                                    <span class="online_icon offline"></span>
-                                </div>
-                                <div class="user_info">
-                                    <span>Miss G</span>
-                                    <p>Miss G left 50 mins ago</p>
-                                </div>
-                            </div>
-                        </li>
+                        <?php
+                        }
+                        ?>
+
+
                     </ui>
                 </div>
                 <div class="card-footer"></div>
@@ -198,12 +165,10 @@ exit;
                     </div>
                 </div>
                 <div class="card-body msg_card_body">
-
-
                     <?php
                     foreach ($messages as $message) {
 
-                    if ($message['from_user_id'] == $to_user_id && $message['to_user_id'] == $from_user_id) {
+                    if ($message['from_user_id'] == $to_user_id && $message['to_user_id'] == $owner_user_id) {
 
                             ?>
                             <div class="d-flex justify-content-start mb-4">
@@ -218,8 +183,7 @@ exit;
                             </div>
                             <?php
                         }
-
-                        if ($message['to_user_id'] == $to_user_id && $message['from_user_id'] == $from_user_id) {
+                        if ($message['to_user_id'] == $to_user_id && $message['from_user_id'] == $owner_user_id) {
                             ?>
 
                             <div class="d-flex justify-content-end mb-4">
@@ -236,9 +200,6 @@ exit;
                         }
                     }
                     ?>
-
-
-
                 </div>
             </div>
             <div class="card-footer">
@@ -248,6 +209,8 @@ exit;
                     </div>
                     <textarea id="your_message" name="" class="form-control type_msg" placeholder="Type your message..."></textarea>
                     <div id="btn_send" class="input-group-append">
+                        <input type="hidden" id="owner_user_id" value="<?php echo $owner_user_id;?>">
+                        <input type="hidden" id="inp_to_user_id" value="<?php echo $to_user_id;?>">
                         <span class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
                     </div>
                 </div>
@@ -257,6 +220,10 @@ exit;
 </div>
 </div>
 <style>
+    .user_list:hover{
+        background-color: #0c5460;
+        cursor: pointer;
+    }
     .logo {
         width: 150px;
     }
