@@ -30,4 +30,15 @@ $(document).ready(function(){
     });
 
 
+    window.addEventListener("contextmenu", e => {
+        const origin = {
+            left: e.pageX,
+            top: e.pageY
+        };
+
+        console.log(origin);
+        e.preventDefault();
+    });
+
+
 });

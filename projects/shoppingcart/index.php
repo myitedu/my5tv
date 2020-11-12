@@ -24,16 +24,14 @@ $id = $parms['id']??0;
 $qty = $parms['qty']??0;
 $action = $parms['action']??null;
 
-
-
-if (empty($_SESSION['products']['qty'])){
-    $_SESSION['products']['qty'] = 0;
-}
-
 if ($action == 'empty'){
     $db = new \Database\database("myitedu");
     $sql = "DELETE FROM shopping_cart;";
     $product = $db->sql($sql);
+    unset($_SESSION['products']['qty']);
+    session_destroy();
+    header("Location: index.php");
+    exit;
 }
 
 if ($qty == 'delete'){
@@ -41,26 +39,6 @@ if ($qty == 'delete'){
     $sql = "DELETE FROM shopping_cart WHERE product_id = $id;";
     $product = $db->sql($sql);
 }
-
-if ($qty>0) {
-    $_SESSION['products']['qty'] += $qty;
-    $db = new \Database\database("myitedu");
-    $sql = "SELECT * FROM shopping_cart WHERE product_id = $id;";
-    $product = $db->sql($sql);
-
-    if (!empty($product)){
-        $db = new \Database\database("myitedu");
-        $sql = "UPDATE shopping_cart SET qty = $qty, user_id = 99 WHERE product_id = $id;";
-        $product2 = $db->sql($sql);
-    }else{
-        $db = new \Database\database("myitedu");
-        $sql = "INSERT INTO shopping_cart (product_id, qty, user_id) VALUES($id, $qty, 99);";
-        $product3 = $db->sql($sql);
-    }
-
-
-}
-
 
 
 function display_select_options($maxlimit=0)
@@ -82,7 +60,12 @@ function display_select_options($maxlimit=0)
 
     </div>
 
-    <div data-toggle="modal" data-target="#staticBackdrop" class="shopping_cart">99</div>
+    <div data-toggle="modal" data-target="#staticBackdrop" class="shopping_cart">
+        <?php
+        $session_qty = $_SESSION['products']['qty']??0;
+        echo $session_qty;
+        ?>
+    </div>
 
     <h4>Our Products</h4>
 
@@ -129,15 +112,12 @@ function display_select_options($maxlimit=0)
                 if ($product['qty']){
                 ?>
                 <td>
-                    <form>
-                        <select name="qty">
+                        <select id="qty_<?php echo $product['id']?>" name="qty">
                             <?php
                             display_select_options($product['qty']);
                             ?>
                         </select>
-                        <input name="id" type="hidden" value="<?php echo $product['id']?>">
-                        <input value="" class="product" type="submit" name="sbt_btn">
-                    </form>
+                        <input data-product_id="<?php echo $product['id']?>" value="" class="product" type="submit" name="sbt_btn">
                 </td>
                 <?php
                 }else{
@@ -266,6 +246,49 @@ function display_select_options($maxlimit=0)
         $(".product_icon").mouseout(function (){
             $(".large_image_window").empty().hide();
         });
+
+
+        $(".shopping_cart").click(function (){
+            let data = {};
+            $.post("http://myitedu.uz/projects/shoppingcart/shopping_cart.php", data, function (response){
+                $("#modal_body").html(response);
+            });
+
+        });
+
+
+
+        $(document).on('click','.remove_item_icon', function(){
+           let product_id = $(this).data("product_id");
+           let data = {'product_id':product_id};
+           let result = null;
+           $.post("http://myitedu.uz/projects/shoppingcart/delete_items.php", data, function (response){
+
+               if (response==1){
+                   $.post("http://myitedu.uz/projects/shoppingcart/shopping_cart.php", data, function (response){
+                       $("#modal_body").html(response);
+                       $(".shopping_cart").text(11);
+                   });
+               }
+
+           });
+
+
+
+        });
+
+        $(".product").click(function (){
+            let product_id = $(this).data('product_id');
+            let qty = $("#qty_"+product_id).val();
+            let data = {
+                'product_id': product_id,
+                'qty' : qty,
+                'user_id': 99
+            };
+            $.post("http://myitedu.uz/projects/shoppingcart/add_shopping_cart.php", data, function (qty){
+                   $(".shopping_cart").text(qty);
+            });
+        })
 
 
     });
