@@ -1,7 +1,5 @@
 <?php
-include_once "database.php";
-$db = new \Database\database("myitedu");
-print_r($_POST);
+include_once "connectdb.php";
 
 $owner_user_id =$_POST['owner_user_id']??null;
 $to_user_id = $_POST['to_user_id']??null;

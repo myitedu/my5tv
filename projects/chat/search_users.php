@@ -1,6 +1,5 @@
 <?php
-include_once "database.php";
-$db = new \Database\database("myitedu");
+include_once "connectdb.php";
 $keyword = $_POST['keyword'] ?? null;
 if (empty($keyword)) {
     exit(0);

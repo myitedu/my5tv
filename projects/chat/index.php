@@ -23,8 +23,7 @@
 </head>
 <body>
 <?php
-include_once "database.php";
-$db = new \Database\database("myitedu");
+include_once "connectdb.php";
 $owner_user_id = $_GET['f']??null;
 $to_user_id = $_GET['t']??null;
 if (empty($owner_user_id) || empty($to_user_id)){
