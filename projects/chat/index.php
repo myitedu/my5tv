@@ -16,6 +16,10 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/scripts.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
 </head>
 <body>
 <?php
@@ -27,7 +31,7 @@ if (empty($owner_user_id) || empty($to_user_id)){
     exit("Either to_user or from_user is missing");
 }
 $sql = "SELECT c.id, c.from_user_id, c.to_user_id, c.message, c.created_at, c.read_at, c.status,
-u.first_name, u.last_name, u.email, u.avatar
+u.first_name, u.last_name, u.email, u.avatar, u.name
 FROM chats AS c
 JOIN users AS u
 ON c.from_user_id = u.id
@@ -93,7 +97,7 @@ exit;
             <div class="card mb-sm-3 mb-md-0 contacts_card">
                 <div class="card-header">
                     <div class="input-group">
-                        <input type="text" placeholder="Search..." name="" class="form-control search">
+                        <input id="inpt_user_search" type="text" placeholder="Search..." name="" class="form-control search">
                         <div class="input-group-prepend">
                             <span class="input-group-text search_btn"><i class="fas fa-search"></i></span>
                         </div>
@@ -120,9 +124,9 @@ exit;
                                 <div class="user_info">
                                     <?php
                                     echo "<span>{$user['name']}</span>";
+                                    echo "<span></span>";
+                                    echo "<p>{$user['name']} is online</p>";
                                     ?>
-                                    <span></span>
-                                    <p>Jon is online</p>
                                 </div>
                             </div>
                         </li>
@@ -141,7 +145,7 @@ exit;
                 <div class="card-header msg_head">
                     <div class="d-flex bd-highlight">
                         <div class="img_cont">
-                            <img src="https://avatars2.githubusercontent.com/u/3628405?s=460&u=5cda8646f23059bc3bf68627901f2add8c116603&v=4"
+                            <img title="Jon Toshmatov" src="https://avatars2.githubusercontent.com/u/3628405?s=460&u=5cda8646f23059bc3bf68627901f2add8c116603&v=4"
                                  class="rounded-circle user_img">
                             <span class="online_icon"></span>
                         </div>
@@ -161,6 +165,7 @@ exit;
                             <li><i class="fas fa-users"></i> Add to close friends</li>
                             <li><i class="fas fa-plus"></i> Add to group</li>
                             <li><i class="fas fa-ban"></i> Block</li>
+                            <li id="btn_clear_chat"><i class="fas fa-bank"></i>Clear Chat</li>
                         </ul>
                     </div>
                 </div>
@@ -173,7 +178,7 @@ exit;
                             ?>
                             <div class="d-flex justify-content-start mb-4">
                                 <div class="img_cont_msg">
-                                    <img src="<?php echo $message['avatar']?>"
+                                    <img data-toggle="tooltip" data-placement="top"  title="<?php echo $message['name']?>" src="<?php echo $message['avatar']?>"
                                          class="rounded-circle user_img_msg">
                                 </div>
                                 <div class="msg_cotainer">
@@ -192,7 +197,7 @@ exit;
                                     <span class="msg_time_send">8:55 AM, Today</span>
                                 </div>
                                 <div class="img_cont_msg">
-                                    <img src="<?php echo $message['avatar']?>"
+                                    <img data-toggle="tooltip" data-placement="top"  title="<?php echo $message['name']?>"  src="<?php echo $message['avatar']?>"
                                          class="rounded-circle user_img_msg">
                                 </div>
                             </div>
@@ -200,6 +205,9 @@ exit;
                         }
                     }
                     ?>
+
+                    <div id="bottom"></div>
+
                 </div>
             </div>
             <div class="card-footer">
@@ -207,7 +215,7 @@ exit;
                     <div class="input-group-append">
                         <span class="input-group-text attach_btn"><i class="fas fa-paperclip"></i></span>
                     </div>
-                    <textarea id="your_message" name="" class="form-control type_msg" placeholder="Type your message..."></textarea>
+                    <input id="your_message" name="" class="form-control type_msg" placeholder="Type your message...">
                     <div id="btn_send" class="input-group-append">
                         <input type="hidden" id="owner_user_id" value="<?php echo $owner_user_id;?>">
                         <input type="hidden" id="inp_to_user_id" value="<?php echo $to_user_id;?>">
