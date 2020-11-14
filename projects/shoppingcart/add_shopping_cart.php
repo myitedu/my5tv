@@ -17,7 +17,7 @@ $sql = "SELECT * FROM shopping_cart WHERE product_id = $product_id;";
 $product = $db->sql($sql);
 
 if (empty($_SESSION['products']['qty'])){
-    $_SESSION['products']['qty'] = 1;
+    $_SESSION['products']['qty'] = 0;
 }
 
 
@@ -25,18 +25,18 @@ if (empty($_SESSION['products']['qty'])){
 
 if (!empty($product)){
     $session_qty = $_SESSION['products']['qty'];
-    echo "Updating: ";
     $sql = "UPDATE shopping_cart SET qty = $qty, user_id = $user_id WHERE product_id = $product_id;";
     $product = $db->sql($sql);
-    echo $session_qty;
+    echo $_SESSION['products']['qty'];
     exit;
 }else{
     $session_qty = $_SESSION['products']['qty'];
-    echo "Inserting: ";
     $sql = "INSERT INTO shopping_cart (product_id, qty, user_id) VALUES($product_id, $qty, $user_id);";
     $product = $db->sql($sql);
-    echo $session_qty;
+
     $_SESSION['products']['qty']++;
+
+    echo $_SESSION['products']['qty'];
     exit;
 }
 

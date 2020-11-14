@@ -1,0 +1,90 @@
+.displayed_img{
+    width: 100%;
+}
+
+.large_image_window{
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    left: 15%;
+    top: 25%;
+    display: none;
+}
+
+.new_price{
+    color: #0f5403;
+}
+.old_price{
+    text-decoration: line-through;
+    color: #969090;
+}
+.discount_icon{
+    width: 30px;
+    position: relative;
+    right: 5px;
+    top: 5px;
+}
+.product {
+    background-image: url("https://cdn3.iconfinder.com/data/icons/ecommerce-flat-style-2/512/e_-_Commerce_-_Flat_Style_2-05-128.png");
+    background-size: 100% 100%;
+    background-position: center;
+    width: 29px;
+    position: relative;
+    top: 9px;
+}
+
+.shopping_cart {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 100;
+    background-image: url("https://i.pinimg.com/originals/5d/26/a1/5d26a173f443cbd190e34481438d474b.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    line-height: 38px;
+    color: red;
+    font-weight: bolder;
+    border: none !important;
+    cursor: pointer;
+}
+
+.sh_add_btn {
+    width: 30px;
+}
+
+tr:hover {
+    background-color: #b3e096 !important;
+    cursor: pointer;
+}
+
+th {
+    background-color: #033b6e;
+    color: whitesmoke;
+}
+
+tr:nth-child(even) {
+    background-color: lightgrey;
+}
+
+.product_icon {
+    width: 70px;
+}
+
+h4 {
+    color: lightgreen;
+}
+
+table {
+    background-color: whitesmoke;
+}
+
+.container-fluid {
+    text-align: center;
+}
+
+body {
+
+    color: #6b6262;
+}
