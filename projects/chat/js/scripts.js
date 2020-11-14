@@ -37,7 +37,7 @@ $(document).ready(function(){
             'to_user_id': inp_to_user_id,
         };
         let sent = $.post("clearchat.php", data, function (response){
-            window.location = "http://myitedu.uz/projects/chat/index.php?f="+owner_user_id+"&t="+inp_to_user_id;
+            window.location = "index.php?f="+owner_user_id+"&t="+inp_to_user_id;
         });
     }
 
