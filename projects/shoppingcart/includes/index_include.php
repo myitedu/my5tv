@@ -11,7 +11,6 @@ $qty = $parms['qty']??0;
 $action = $parms['action']??null;
 
 if ($action == 'empty'){
-    $db = new \Database\database("myitedu");
     $sql = "DELETE FROM shopping_cart;";
     $product = $db->sql($sql);
     unset($_SESSION['products']['qty']);
@@ -21,7 +20,6 @@ if ($action == 'empty'){
 }
 
 if ($qty == 'delete'){
-    $db = new \Database\database("myitedu");
     $sql = "DELETE FROM shopping_cart WHERE product_id = $id;";
     $product = $db->sql($sql);
 }
