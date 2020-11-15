@@ -1,9 +1,19 @@
 <div id="checkout">
     <h2>Secure checkout</h2>
     <p>Choose your preferred payment method</p>
-    <input value="cc" type="radio" name="credit_type">
-    <input value="paypal" type="radio" name="credit_type">
-    <input value="pay" type="radio" name="credit_type">
+    <label>
+        <input value="cc" class="credit_types ct_cc" type="radio" name="credit_type" value="small">
+        <img src="https://pngimg.com/uploads/credit_card/credit_card_PNG19.png">
+    </label>
+    <label>
+        <input value="cc" class="credit_types ct_cc" type="radio" name="credit_type" value="small">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRxJVLtfGJ-EXUPR7U2X25F9LwjEWL0RLGI2Q&usqp=CAU">
+    </label>
+    <label>
+        <input value="cc" class="credit_types ct_cc" type="radio" name="credit_type" value="small">
+        <img src="https://i0.wp.com/mobilepaymentmagazine.com/wp-content/uploads/apple-pay-logo.png?resize=300%2C144">
+    </label>
+
     <table class="table table-bordered checkout_table">
         <tr>
             <td colspan="2">
@@ -33,6 +43,13 @@
     </table>
 </div>
 <style>
+
+    #checkout label img{
+        width: 60px;
+        height: 45px;
+        border: 1px solid #8c8c8c;
+    }
+
     .checkout_button button{
         width: 99%;
     }
@@ -60,5 +77,23 @@
         border: 1px solid grey;
         text-align: center;
         display: none;
+    }
+
+    /* HIDE RADIO */
+    [type=radio] {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    /* IMAGE STYLES */
+    [type=radio] + img {
+        cursor: pointer;
+    }
+
+    /* CHECKED STYLES */
+    [type=radio]:checked + img {
+        outline: 2px solid #f00;
     }
 </style>

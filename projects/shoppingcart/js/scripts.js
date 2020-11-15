@@ -42,6 +42,7 @@ $(function () {
 
     $("#checkout_button").click(function (){
        $("#checkout").fadeIn("slow");
+        $("#staticBackdrop").animate({ scrollTop: $("#staticBackdrop")[0].scrollHeight}, 750);
     });
 
 });
