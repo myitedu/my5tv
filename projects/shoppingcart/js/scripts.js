@@ -10,7 +10,7 @@ $(function () {
     });
     $(".shopping_cart").click(function () {
         let data = {};
-        $.post("http://myitedu.uz/projects/shoppingcart/shopping_cart.php", data, function (response) {
+        $.post("shopping_cart.php", data, function (response) {
             $("#modal_body").html(response);
         });
     });
@@ -18,8 +18,8 @@ $(function () {
         let product_id = $(this).data("product_id");
         let data = {'product_id': product_id};
         let result = null;
-        $.post("http://myitedu.uz/projects/shoppingcart/delete_items.php", data, function (qty) {
-                $.post("http://myitedu.uz/projects/shoppingcart/shopping_cart.php", data, function (response) {
+        $.post("delete_items.php", data, function (qty) {
+                $.post("shopping_cart.php", data, function (response) {
                     $("#modal_body").html(response);
                     $(".shopping_cart").text(qty);
                 });
@@ -34,7 +34,7 @@ $(function () {
             'qty': qty,
             'user_id': 99
         };
-        $.post("http://myitedu.uz/projects/shoppingcart/add_shopping_cart.php", data, function (qty) {
+        $.post("add_shopping_cart.php", data, function (qty) {
             $(".shopping_cart").text(qty);
         });
     })

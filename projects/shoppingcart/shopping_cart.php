@@ -1,6 +1,5 @@
 <?php
-include_once "database.php";
-$db = new \Database\database("myitedu");
+include_once "includes/index_include.php";
 $sql = "SELECT *, sc.qty AS sqty, sc.id AS product_id FROM shopping_cart AS sc
 JOIN products AS p
 ON sc.product_id = p.id WHERE sc.user_id = 99;";

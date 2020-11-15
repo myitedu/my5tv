@@ -1,7 +1,6 @@
 <?php
 session_start();
-include_once "database.php";
-$db = new \Database\database("myitedu");
+include_once "includes/index_include.php";
 $qty = $_POST['qty']??null;
 $product_id  = $_POST['product_id']??null;
 $user_id = $_POST['user_id']??99;
