@@ -38,4 +38,10 @@ $(function () {
             $(".shopping_cart").text(qty);
         });
     })
+
+
+    $("#checkout_button").click(function (){
+       $("#checkout").fadeIn("slow");
+    });
+
 });

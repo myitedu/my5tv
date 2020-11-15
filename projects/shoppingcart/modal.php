@@ -9,11 +9,12 @@
                 </button>
             </div>
             <div id="modal_body" class="modal-body">
-                edwedwedwedwe
+
             </div>
+            <?php include_once "checkout.php";?>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Understood</button>
+                <button type="button" class="btn btn-primary" id="checkout_button">Checkout</button>
             </div>
         </div>
     </div>
@@ -26,5 +27,12 @@
     }
     .remove_item_icon{
         width: 40%;
+    }
+    #checkout{
+        margin: auto;
+        width: 95%;
+        padding: 5px;
+        background-color: cornsilk;
+
     }
 </style>
