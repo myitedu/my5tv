@@ -10,8 +10,6 @@ if (empty($qty) || empty($product_id)){
 }
 
 
-
-$db = new \Database\database("myitedu");
 $sql = "SELECT * FROM shopping_cart WHERE product_id = $product_id;";
 $product = $db->sql($sql);
 
