@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set("America/New_York");
 include_once "connectdb.php";
 $keyword = $_POST['keyword'] ?? null;
 if (empty($keyword)) {

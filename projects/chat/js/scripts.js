@@ -42,8 +42,7 @@ $(document).ready(function(){
     }
 
 
-
-    $(".user_list").click(function (){
+    $(document).on("click", ".user_list", function (){
        let user_id = $(this).data('user_id');
        let owner_user_id = $("#owner_user_id").val();
        if (user_id == owner_user_id){
@@ -92,11 +91,12 @@ $(document).ready(function(){
        }
     });
 
-    $(function () {
+
         $('[data-toggle="tooltip"]').tooltip()
-    })
 
 
+    $(".msg_card_body").animate({ scrollTop: $(".msg_card_body")[0].scrollHeight}, 150);
+    $("#your_message").focus();
 });
 
 

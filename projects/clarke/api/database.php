@@ -9,7 +9,6 @@
 
         public function __construct($dbname='dbq')
         {
-            date_default_timezone_set("America/New_York");
             mysqli_report(MYSQLI_REPORT_STRICT);
             $servername = "127.0.0.1";
             $username = "root";

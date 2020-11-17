@@ -23,6 +23,7 @@
 </head>
 <body>
 <?php
+date_default_timezone_set("America/New_York");
 include_once "connectdb.php";
 $owner_user_id = $_GET['f']??null;
 $to_user_id = $_GET['t']??null;
@@ -37,11 +38,20 @@ ON c.from_user_id = u.id
 WHERE (c.to_user_id = $owner_user_id AND c.from_user_id = $to_user_id ) OR (c.to_user_id = $to_user_id  AND c.from_user_id = $owner_user_id);";
 $messages = $db->sql($sql);
 
-$sql = "SELECT u.id, u.name, u.avatar FROM users AS u
-RIGHT JOIN chats AS c
-ON u.id = c.from_user_id
-GROUP BY u.id;";
+$sql = "SELECT u.id, u.name, u.avatar, c.from_user_id, c.to_user_id, c.message 
+FROM users AS u, chats AS c 
+WHERE (u.id = c.from_user_id OR u.id = c.to_user_id) and u.id != $owner_user_id
+GROUP BY name;";
 $users = $db->sql($sql);
+
+$sql = "SELECT id, name, avatar FROM users WHERE id= $owner_user_id OR id=$to_user_id;";
+$owners = $db->sql($sql);
+$owner = [];
+foreach ($owners as $item){
+    $owner[$item['id']] = $item;
+}
+$host = $owner[$owner_user_id];
+$guest = $owner[$to_user_id];
 
 /*
 echo "<pre>";
@@ -51,7 +61,7 @@ echo "</pre>";
 exit;
 */
 ?>
-<div class="container-fluid">
+<div class="container-fluid" id="mychat">
     <div id="myheader">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#"><img class="logo" src="/img/logo.png"></a>
@@ -92,7 +102,7 @@ exit;
         </nav>
     </div>
     <div class="row justify-content-center h-100">
-        <div class="col-md-4 col-xl-3 chat">
+        <div class="chat_left chat">
             <div class="card mb-sm-3 mb-md-0 contacts_card">
                 <div class="card-header">
                     <div class="input-group">
@@ -139,17 +149,17 @@ exit;
                 <div class="card-footer"></div>
             </div>
         </div>
-        <div class="col-md-8 col-xl-6 chat">
+        <div class="chat_right chat">
             <div class="card">
                 <div class="card-header msg_head">
                     <div class="d-flex bd-highlight">
                         <div class="img_cont">
-                            <img title="Jon Toshmatov" src="https://avatars2.githubusercontent.com/u/3628405?s=460&u=5cda8646f23059bc3bf68627901f2add8c116603&v=4"
+                            <img title="<?php echo $host['name'];?>" src="<?php echo $host['avatar'];?>"
                                  class="rounded-circle user_img">
                             <span class="online_icon"></span>
                         </div>
                         <div class="user_info">
-                            <span>Chat with Jon Toshmatov</span>
+                            <span>Chat with <?php echo $guest['name'];?></span>
                             <p>1767 Messages</p>
                         </div>
                         <div class="video_cam">
@@ -171,7 +181,22 @@ exit;
                 <div class="card-body msg_card_body">
                     <?php
                     foreach ($messages as $message) {
+                        //8:40 AM, Today
+                        $sent_day= date('d', strtotime($message['created_at']));
+                        $today = date('d');
 
+                        $date1=date_create(date('Y-m-d'));
+                        $date2=date_create(date('Y-m-d', strtotime($message['created_at'])));
+                        $diff=date_diff($date1,$date2);
+                        $timestamp = $message['created_at'];
+                        if ($diff->days==0){
+                            $hour = date("h:i A", strtotime($message['created_at']));
+                            $timestamp = "$hour, Today";
+                        }
+                        if ($diff->days==1){
+                            $hour = date("h:i A", strtotime($message['created_at']));
+                            $timestamp = "$hour, Yesterday";
+                        }
                     if ($message['from_user_id'] == $to_user_id && $message['to_user_id'] == $owner_user_id) {
 
                             ?>
@@ -182,7 +207,7 @@ exit;
                                 </div>
                                 <div class="msg_cotainer">
                                     <?php echo $message['message'];?>
-                                    <span class="msg_time">8:40 AM, Today</span>
+                                    <span class="msg_time"><?php echo $timestamp;?></span>
                                 </div>
                             </div>
                             <?php
@@ -193,7 +218,7 @@ exit;
                             <div class="d-flex justify-content-end mb-4">
                                 <div class="msg_cotainer_send">
                                     <?php echo $message['message'];?>
-                                    <span class="msg_time_send">8:55 AM, Today</span>
+                                    <span class="msg_time_send"><?php echo $timestamp;?></span>
                                 </div>
                                 <div class="img_cont_msg">
                                     <img data-toggle="tooltip" data-placement="top"  title="<?php echo $message['name']?>"  src="<?php echo $message['avatar']?>"
@@ -220,13 +245,31 @@ exit;
                         <input type="hidden" id="inp_to_user_id" value="<?php echo $to_user_id;?>">
                         <span class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
                     </div>
+                    <div>
+                        <br>
+                        <?php echo $host['name'];?> is typing:
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-</div>
 <style>
+    .chat_left{
+        float: left;
+        position: relative;
+        top: -42px;
+        width: 30%;
+    }
+    .chat_right{
+        float: right;
+        width: 70%;
+    }
+    #mychat{
+        width: 1000px;
+        margin: auto;
+        padding:5px;
+    }
     .user_list:hover{
         background-color: #0c5460;
         cursor: pointer;
@@ -236,8 +279,8 @@ exit;
     }
 
     #myheader {
-        width: 988px;
-        margin: 20px auto 10px auto;
+        width: 1000px;
+        margin: 6px 39px 7px -14px;
         border-radius: 30px;
     }
 
