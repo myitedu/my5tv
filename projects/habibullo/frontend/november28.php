@@ -16,15 +16,18 @@
     <header>
         <div class="topheader">
             <div class="topheader1"></div>
-            <div class="topheader2"></div>
+            <div class="topheader2">
+                <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Disney_Institute_logo.svg/1024px-Disney_Institute_logo.svg.png">
+            </div>
         </div>
 
         <nav>
-            <a href="#"> HOME </a>
-            <a href="#"> ABOUT </a>
-            <a href="#"> OUR COURSES </a>
+            <a href="#">HOME</a>
+            <a href="#">ABOUT</a>
+            <a href="#">OUR COURSES</a>
         </nav>
     </header>
+    <div class="myslides"></div>
 </div>
 </body>
 </html>

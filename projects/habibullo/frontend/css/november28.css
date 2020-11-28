@@ -1,9 +1,15 @@
+body{
+    background-color: black;
+}
 #mywrapper{
-    width: 100%;
+    width: 1200px;
     height: 100%;
+    /*
     background-image: url("../img/template.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+     */
+    margin: auto;
 }
 html, body{
     width: 100%;
@@ -13,18 +19,50 @@ html, body{
 }
 .topheader{
     width: 100%;
-    height: 82px;
+    height: 100px;
     background-color: #ffffff;
-    opacity: 0.8;
+    opacity: 0.9;
 
 }
 .topheader1{
     width: 100%;
-    height: 22px;
+    height: 28px;
     background-color: grey;
 }
 .topheader2{
     width: 100%;
-
     background-color: white;
+}
+nav{
+    width: 100%;
+    height: 50px;
+    background-color: #0c66b3;
+    border-top: 10px solid #0c3916;
+}
+nav a:hover{
+    text-decoration: none;
+    color: #de4444;
+}
+nav a{
+    border-right: 1px solid white;
+    font-size: 26px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+    color: #fdf7f7;
+    font-family: "Apple Color Emoji";
+}
+.myslides{
+    width: 100%;
+    height: 500px;
+    background-image: url("https://insights.dice.com/wp-content/uploads/2020/06/shutterstock_669170791.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-top: 1px solid #1e1d21;
+    border-bottom: 1px solid #282424;
+}
+.logo{
+    width: 150px;
+    margin: 5px;
+
 }
