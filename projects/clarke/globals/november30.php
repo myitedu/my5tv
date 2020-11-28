@@ -1,4 +1,5 @@
 <?php
+session_start();
 date_default_timezone_set("America/New_York");
 ?>
 <!doctype html>
@@ -12,15 +13,15 @@ date_default_timezone_set("America/New_York");
 </head>
 <body>
 <?php
-$name = $_COOKIE['name']??null;
-$last_time_your_were_here = $_COOKIE['last_time_your_were_here']??null;
+echo $_SESSION['city'];
+echo "<hr>";
+echo "<pre>";
+print_r($GLOBALS);
+echo "</pre>";
+
 ?>
 <h3>Welcome to November 30 File</h3>
-<hr>
-<p>Welcome, <?php echo $name;?></p>
-<hr>
-Last time you were here was <?php echo $last_time_your_were_here;?>
-<hr>
+
 <nav>
     <a href="november30.php">HOME</a> |
     <a href="november28.php">November 28</a>

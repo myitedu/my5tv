@@ -1,5 +1,7 @@
 <?php
+session_start();
 date_default_timezone_set("America/New_York");
+$_SESSION['city'] = "New York";
 ?>
 <!doctype html>
 <html lang="en">
