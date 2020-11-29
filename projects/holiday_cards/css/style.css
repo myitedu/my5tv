@@ -1,0 +1,99 @@
+#holiday_cards{
+    width: 800px;
+    height: 700px;
+    margin: auto;
+    border: 10px solid black;
+    background-color: #000000;
+}
+body{
+    background-color: #05272f;
+}
+.template{
+    width: 781px;
+    height: 681px;
+    z-index: 0;
+    position: relative;
+    top: -306px;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding:0px;
+}
+.card_body{
+    width: 420px;
+    height: 300px;
+    position: relative;
+    left: 201px;
+    top: 168px;
+    z-index: 10;
+}
+.td_signature{
+    text-align: right;
+    padding:5px;
+    font-family: "Lucida Handwriting";
+}
+.td_title{
+    text-align: center;
+    padding:5px;
+    font-family: "Lucida Handwriting";
+
+}
+.td_person_name:first-letter{
+    font-family: "Hanging Letters";
+    color: darkred;
+    font-weight: bolder;
+}
+.td_person_name > div{
+    font-family: "Hanging Letters";
+    font-size: 25px;
+    color: #a02626;
+    text-align: center;
+}
+.td_wish{
+    max-height: 190px;
+    overflow: auto;
+}
+.mytable{
+    z-index: 80;
+    position: relative;
+}
+.img_envelope img{
+    width: 100%;
+}
+.img_envelope{
+    position: absolute;
+    z-index: 100;
+    width: 200px;
+    left: -140px;
+    top: 300px;
+    cursor: pointer;
+}
+.modal{
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    z-index: 1050;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+    background-color: #a7a7a7;
+    border: 2px double black;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px 5px #322f2f;
+    text-align: center;
+}
+.pick_date{
+    display: none;
+}
+.send_button{
+    display: none;
+}
+.pick_date input{
+    width: 100px;
+    display: inline-block;
+    margin: 10px;
+}
