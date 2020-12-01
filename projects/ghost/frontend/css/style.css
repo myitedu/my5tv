@@ -88,8 +88,10 @@ section h3:first-letter{
     width: 100%;
     text-align: center;
     font-size: 24px;
-    color: #e0bf42;
+    color: #ff9800;
+    text-shadow: 1px 2px #7a0d0d;
     font-family: "Lucida Handwriting";
+
 
 }
 footer{
