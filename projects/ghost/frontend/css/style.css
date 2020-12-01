@@ -1,0 +1,102 @@
+body {
+    background-color: #210a15;
+}
+#mywrapper {
+    width: 800px;
+    height: auto;
+    margin: auto;
+    background-color: #d0bb7d;
+    border: 5px solid #6d6467;
+    padding: 0px;
+    background-image: url("https://www.freeimageslive.com/galleries/backdrops/textures/preview/cardboard.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 20px;
+}
+#header {
+    width: 90%;
+    padding: 0px;
+    padding-top: 3px;
+    margin: auto;
+    height: 55px;
+    margin-top: 20px;
+    background-color: #210a15;
+    border-radius: 10px;
+    text-align: center;
+    border: 5px double #4e0505;
+
+}
+#header nav{
+    margin-top: 7px;
+    margin-bottom: 2px;
+}
+#header nav a{
+    margin-right:10px;
+    text-decoration: none;
+    font-family: "American Typewriter";
+    color: #f3a164;
+    background-image: url("/img/medieval_buttons.png");
+    width: 150px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#header nav a:hover{
+    text-decoration: none;
+    color: #9d5827;
+}
+.mydivider{
+    text-align: center;
+}
+.mydivider img{
+    width: 70%;
+    height: 70px;
+}
+section{
+    width: 90%;
+    height: auto;
+    border: 2px double #9f8c8c;
+    margin: 20px auto 20px auto;
+    padding: 5px;
+    box-shadow: 6px 5px 9px 0px grey;
+    background-color: #e9d0b16b;
+    border-radius: 10px;
+    font-family: "Century Gothic";
+}
+section h3:first-letter{
+    font-size: 35px;
+    font-family: "Lucida Handwriting";
+    color: #691313;
+    font-weight: bolder;
+    padding-right: 3px;
+}
+#up_down_buttons{
+    width: 70px;
+    height: 100px;
+    position: fixed;
+    top: 48%;
+    right: 5%;
+}
+#up_down_buttons img{
+    width: 100%;
+    cursor: pointer;
+}
+.title{
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    color: #e0bf42;
+    font-family: "Lucida Handwriting";
+
+}
+footer{
+    width: 100%;
+    text-align: center;
+    color: #c1a418;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
