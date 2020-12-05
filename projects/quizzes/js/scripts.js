@@ -1,9 +1,10 @@
 $(function (){
     let total_number_questions = $(".package").length;
     let cid = '';
+    let current_id = '';
+    get_current_page();
     $(".btn_next").click(function (){
      let question_id = $(".package").attr("style");
-        let current_id = '';
         $(".package").each(function() {
             let style = $(this).css("display");
             if (style == 'block'){
@@ -20,8 +21,11 @@ $(function (){
      if (current_id==(total_number_questions-1)){
          $(this).hide();
      }
+     if (next_question_id>1){
+         $(".btn_previous").show();
+     }
+     console.log(next_question_id);
    });
-
     $(".btn_previous").click(function (){
 
         $(".package").each(function() {
@@ -35,24 +39,28 @@ $(function (){
         let prev_question_id = current_id;
         prev_question_id--;
 
+        if (prev_question_id<=1){
+            $(".btn_previous").hide();
+            $(".btn_next").show();
+        }
+
+        if (prev_question_id==0){
+            return false;
+        }
         $("#package_"+current_id).css("display","none");
         $("#package_"+prev_question_id).css("display","block");
         $(".current_page_number").html(prev_question_id);
-
-
-        console.log(prev_question_id);
-
-
-        /*
-        let prev_id = cid;
-        prev_id--;
-
-        console.log("cid: "+cid+" | prev_id: "+prev_id);
-
-
-        $(".package").css("display","none");
-        $("#package_"+prev_id).css("display","block");
-
-         */
     });
+
+    function get_current_page(){
+        $(".package").each(function() {
+            let style = $(this).css("display");
+            if (style == 'block'){
+                current_id = $(this).data("question_id");
+                return false;
+            }else{
+                current_id = 1;
+            }
+        });
+    }
 })

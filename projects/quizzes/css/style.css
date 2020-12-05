@@ -39,6 +39,7 @@ body{
 .btn_previous{
     float: left;
     margin: 3px;
+    display: none;
 }
 .btn_next{
     float: right;
