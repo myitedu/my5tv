@@ -10,7 +10,9 @@
 </head>
 <body>
 <?php
-$nums = [10,90,100,200,185];
+$nums = [rand(1,200),rand(1,200),30,45,50,60,90,rand(1,200)];
+//$nums = array_reverse($nums);
+shuffle($nums);
 $left = 100;
 $height = 200;
 ?>
