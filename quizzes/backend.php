@@ -1,14 +1,37 @@
 <?php
+require_once "database.php";
 $q = $_GET['q']??1;
-$title = "How are you buddy?";
+$q = (int) $q;
+$db = new \Database\database("myitedu");
+$sql = "SELECT q.id AS qid, q.question, q.quiz_id, a.question_id AS question_id, a.id AS aid, a.answers FROM questions AS q
+RIGHT JOIN answers AS a
+ON q.id = a.question_id
+WHERE q.quiz_id = 1;";
+$items = $db->sql($sql);
+$questions = [];
+foreach ($items as $item){
+    $questions[$item['qid']][] = $item;
+}
+$num = 0;
+foreach ($questions as $question_id=>$answers){
+    $num++;
+if ($num === $q){
 ?>
-<div id="question_1" class="question">
-    <div class="question_title"><?php echo $title;?></div>
-    <div class="question_counter"><?php echo $q;?> of 20 questions</div>
+<div data-total="<?php echo count($questions);?>" data-id="<?php echo $num;?>" id="<?php echo 'question_'.$num; ?>" class="question">
+    <div class="question_title"><?php echo $answers[0]['question'];?></div>
+    <div class="question_counter">
+         Question <span class="current_page_number"><?php echo $q."</span> of ".count($questions);?>
+    </div>
     <div class="error">An error has occured</div>
+    <?php foreach ($answers as $answer){?>
     <div class="answers">
         <table class="table answers_table">
-            <tr><td>&nbsp;</td><td><label title="Your answer"><input name="answer" type="radio"> Good </label></td></tr>
+            <tr><td>&nbsp;</td><td><label title="Your answer"><input name="answer" type="radio"> <?php echo $answer['answers'];?> </label></td></tr>
         </table>
     </div>
+    <?php }?>
 </div>
+<?php
+}
+}
+?>
