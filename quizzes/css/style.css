@@ -52,6 +52,7 @@ body{
 #left_button{
     float: left;
     transform: rotate(180deg);
+    display: none;
 }
 #right_button{
     float: right;
@@ -86,15 +87,20 @@ body{
     border: 1px dotted grey;
     border-radius: 10px;
 }
+.answers:hover{
+    background-color: #83bbf8;
+}
 .answers_table{
     width: 98%;
     margin: auto;
 }
 .answers_table td:first-child{
     text-align: right;
+    width: 30%;
 }
 .answers_table td:last-child{
     text-align: left;
+    width: auto;
 }
 .error{
     width: 80%;
