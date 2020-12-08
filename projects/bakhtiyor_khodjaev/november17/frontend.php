@@ -12,7 +12,7 @@
 <form method="post" action="backend.php">
 
     <p>
-        First Name: <input name="first_name" placeholder="Your Text">
+        Text: <input name="text" placeholder="Your Text">
         <button type="submit">GO</button>
     </p>
 </form>
