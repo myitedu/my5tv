@@ -119,3 +119,13 @@ body{
 .answers_table label:hover{
    border-bottom: 1px dotted blue;
 }
+.answered_class{
+    background-color: #9dacbc;
+}
+.hour_glass_image{
+    width: 30px;
+    visibility: hidden;
+}
+.time_out_class{
+    visibility: visible;
+}
