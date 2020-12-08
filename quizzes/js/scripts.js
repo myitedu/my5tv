@@ -44,7 +44,6 @@ $(function (){
            $("#left_button").show();
        }
     });
-
     let seconds = 0;
     let minute = 0;
     let hour = 0;
@@ -73,5 +72,4 @@ $(function (){
         $(".time_lapsed").html(hour + " hour "+minute+" mins and "+seconds+" seconds "+hour_glass_image);
 
     }
-
 });
