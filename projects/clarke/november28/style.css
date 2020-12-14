@@ -1,0 +1,48 @@
+#lorem{
+    background-color: yellow;
+    color: red;
+    padding: 5px;
+    font-weight: bolder;
+}
+footer{
+    width: 80%;
+    height: auto;
+    background-color: #c6cfea;
+    margin: 2px auto;
+    border: 5px solid black;
+    text-align: center;
+}
+.gototop_link img{
+    width: 35px;
+}
+.gototop_link{
+    position: relative;
+    left: 90%;
+    top: -50px;
+}
+.gotobottom_link img{
+    width: 35px;
+    -ms-transform: rotate(180deg); /* IE 9 */
+    transform: rotate(180deg);
+}
+.gotobottom_link{
+    position: relative;
+    top: 100px;
+    left: 90%;
+    top: -50px;
+}
+.article{
+    background-color: white;
+    padding:5px;
+    margin: 10px;
+    border: 2px solid #be4747;
+    border-radius: 10px;
+}
+#jon{
+    width: 80%;
+    height: auto;
+    background-color: #c6cfea;
+    margin: 20px auto;
+    border: 5px solid black;
+    text-align: center;
+}

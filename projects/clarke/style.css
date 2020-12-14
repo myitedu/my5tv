@@ -1,0 +1,23 @@
+.cities{
+    top: 100px;
+    left: 200px;
+    cursor: pointer;
+}
+.box{
+    text-align: center;
+}
+.second_frame{
+    width: 500px;
+    height: 250px;
+    margin: 100px auto;
+    border: 1px solid black;
+}
+#mainframe{
+    width: 1000px;
+    height: 750px;
+    margin: 100px auto;
+    border: 3px solid black;
+}
+.img_city{
+    width: 100%;
+}

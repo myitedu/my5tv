@@ -1,0 +1,76 @@
+body{
+    background-color: #2e6772;
+    font-family: "Times New Roman";
+}
+#mybill{
+    width: 350px;
+    height: auto;
+    background-color: white;
+    border: 1px solid darkgrey;
+    margin: auto;
+    padding:10px;
+}
+#title{
+    text-align: center;
+    font-size: 27px;
+    border-bottom: 2px dotted black;
+    padding-bottom: 5px;
+}
+#title2{
+    font-size: 10px;
+    padding:5px;
+}
+#title2 span:nth-child(1){
+    float: left;
+}
+#title2 span:nth-child(2){
+    float: right;
+}
+#title2 span:nth-child(3){
+    float: right;
+    padding-right: 50px;
+}
+.product_table td:last-child{
+    text-align: right;
+}
+#products{
+    border-top: 2px dotted black;
+    border-bottom: 2px dotted black;
+}
+.product_amount td:last-child{
+    text-align: right;
+}
+#amounts{
+    border-top: 2px dotted black;
+    border-bottom: 2px dotted black;
+    margin-top: 7px;
+}
+#thankyou{
+    text-align: center;
+    font-size: 24px;
+    text-transform: capitalize;
+    border-bottom: 2px dotted black;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+th, td{
+    border:none !important;
+}
+#barcode{
+    text-align: center;
+}
+#barcode img{
+    width: 70%;
+}
+.prod_name{
+    text-transform: uppercase;
+}
+.x_sign{
+    font-size: 17px;
+    text-transform: lowercase;
+    position: relative;
+    top: -2px;
+}
+.prod_cash:before{
+    content: "$";
+}

@@ -1,0 +1,118 @@
+.bottom_window{
+    width: 100%;
+    height: 34px;
+}
+.content_window{
+    width: 100%;
+    height: 326px;
+    border-bottom: 3px solid #4b4b4b;
+    background-color: white;
+    padding: 5px;
+}
+.title_window{
+    width: 100%;
+    height: 39px;
+    border-bottom: 3px solid #4b4b4b;
+}
+.text_menu{
+    width: auto;
+    height: 30px;
+    display: inline-block;
+    margin-right: 28px;
+    font-family: initial;
+    font-size: 15px;
+    font-weight: bold;
+}
+.icon_menu_cover:nth-child(13){
+    width: 67px;
+}
+.icon_menu_cover:nth-child(12){
+    width: 51px;
+    margin-right: 5px;
+}
+.icon_menu_cover:nth-child(9){
+    width: 47px;
+    margin-right: 10px;
+}
+.icon_menu_cover:nth-child(7){
+    width: 47px;
+    margin-right: 10px;
+
+}
+.icon_menu_cover:nth-child(6){
+    margin-left: 17px;
+    width: 47px;
+}
+.icon_menu_cover{
+    width: 37px;
+    margin-right: 13px;
+    height: 65px;
+    display: inline-block;
+    position: relative;
+    top: -67px;
+    left: 35px;
+    z-index: 100;
+    cursor: pointer;
+}
+.icons_window_bg{
+    background-color: red;
+    width: 91%;
+    height: 100%;
+    margin: auto;
+    background-image: url("../img/window_menu_icons_bg.png");
+    left: -7px;
+}
+.icons_window{
+    width: 100%;
+    height: 76px;
+    border-bottom: 3px solid #4b4b4b;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: #dfdfdf;
+    margin: auto;
+}
+.mwt_left{
+    background-color: #4a4a4a;
+    width: 50%;
+    float: left;
+}
+.mwt_right{
+    width: 50%;
+    float: right;
+    text-align: right;
+    padding-right: 3px;
+}
+.menu_window_top{
+    width: 100%;
+    height: 50%;
+    font-size: 17px;
+    color: white;
+    padding-left: 4px;
+    font-family: monospace;
+}
+.menu_window_bottom{
+    width: 100%;
+    height: 50%;
+    padding-left: 18px;
+ }
+.menu_window{
+    width: 100%;
+    height: 61px;
+    border-bottom: 3px solid #4b4b4b;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+#mywindow{
+    width: 800px;
+    height: 550px;
+    margin: auto;
+    background-color: lightgrey;
+    border: 7px solid #2e2d2d;
+    /*
+    background-image: url("../img/gedit_window.tiff.gif");
+    background-repeat: no-repeat;
+    background-size: 100% 100%; */
+    border-radius: 10px;
+}
