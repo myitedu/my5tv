@@ -16,8 +16,6 @@ class Calculate{
             ['name'=>'coffee','price'=>0.68, 'qty'=>8],
         ];
     }
-
-
 }
 $calulator = new Calculate();
 ?>
