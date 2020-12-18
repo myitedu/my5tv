@@ -64,7 +64,7 @@ $(function (){
             minute = 0;
         }
         let time_out_class = null;
-        if (time_limit>=600){
+        if (time_limit>=10){
             time_out_class = "time_out_class";
         }
         console.log(time_limit);

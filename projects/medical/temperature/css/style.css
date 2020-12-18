@@ -1,0 +1,21 @@
+#temperature{
+    background-image: url("../img/body_temperature.png");
+    background-size: 100% 100%;
+    width: 800px;
+    height: 650px;
+    margin: 50px auto;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+body{
+    background-color: #0b2e13;
+}
+#degree{
+    width: 30px;
+    min-height: 300px;
+    background-color: darkred;
+    position: relative;
+    top: 320px;
+    left: 664px;
+
+}
