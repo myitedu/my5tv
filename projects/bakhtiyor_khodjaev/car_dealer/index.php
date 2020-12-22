@@ -26,13 +26,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Link</a>
+                            <a class="nav-link" href="#aboutus">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
+                            <a class="nav-link" href="#service">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contactus">Contact Us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
@@ -46,8 +49,8 @@
             </div>
         </nav>
     </div>
-    <div id="bahacarousel">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div id="bahacarousel_home">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" id="home">
             <ol class="carousel-indicators">
                 <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
                 <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
@@ -74,8 +77,8 @@
             </a>
         </div>
     </div>
-    <div id="bahajumbotron">
-        <div class="jumbotron">
+    <div id="bahajumbotron_aboutus">
+        <div class="jumbotron" id="aboutus">
             <h1 class="display-4">Hello, world!</h1>
             <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
             <hr class="my-4">
@@ -85,8 +88,8 @@
             </p>
         </div>
     </div>
-    <div id="bahacards">
-        <div class="card mycard" style="width: 18rem;">
+    <div id="bahacards_service">
+        <div class="card mycard" id="service" style="width: 18rem;">
             <img src="https://www.motoringresearch.com/wp-content/uploads/2019/08/Online-reviews-vital-in-choosing-a-car-dealer.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -111,8 +114,13 @@
             </div>
         </div>
     </div>
-    <div id="bahacontact">
-
+    <div id="bahacontactus">
+        <div id="bahabox">
+            <div id="leftbox">
+                <iframe id="googlemap"></iframe>
+            </div>
+            <div id="rightbox"></div>
+        </div>
     </div>
 </div>
 

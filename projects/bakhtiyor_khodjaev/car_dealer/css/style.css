@@ -14,7 +14,7 @@ html, body{
     padding: 0px;
     margin: 0px;
 }
-#bahaheader, #bahacarousel, #bahacards, #bahajumbotron {
+#bahaheader, #bahacarousel{
     border-bottom: 10px solid #5c6ef7;
 }
 .mycard{
@@ -34,3 +34,11 @@ html, body{
     float: right;
     width: 33% !important;
 }
+#bahabox{
+    width: 950px;
+    height: 420px;
+    border: 1px solid black;
+    margin: 15px auto;;
+}
+
+
