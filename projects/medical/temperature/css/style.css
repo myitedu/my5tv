@@ -12,10 +12,30 @@ body{
 }
 #degree{
     width: 30px;
-    min-height: 300px;
+    min-height: 10px;
     background-color: darkred;
     position: relative;
-    top: 320px;
+    top: 616px;
     left: 664px;
+    bottom: 10px;
+    transition: height 1s ease-in-out;
+    transform: rotatex(180deg);
+    transform-origin: top;
+}
+#form{
+    width: 273px;
+    position: absolute;
+    top: 620px;
+    left: 60px;
+    text-align: center;
 
+}
+#form input, select{
+    width: auto;
+    height: 37px;
+    position: relative;
+    top: 3px;
+    border-radius: 10px;
+    border: none;
+    border: 1px double black;
 }
