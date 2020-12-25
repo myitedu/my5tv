@@ -21,5 +21,7 @@ $password = password_hash($password, PASSWORD_BCRYPT);
 $sql = "INSERT INTO users (email, password) VALUES('$email','$password');";
 $newaccount = $db->sql($sql);
 $_SESSION['user_logged_on'] = 1;
-header("Location: account.php");
+$msg = "Your account has been created successfully";
+header("Location: index.php?error=0&msg=".$msg);
+exit($msg);
 

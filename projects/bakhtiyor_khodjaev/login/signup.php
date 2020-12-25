@@ -25,8 +25,7 @@ $msg = $_GET['msg']??null;
             <?php
             if ($error){
             ?>
-            <div class="myalert">
-             <img src="https://4vector.com/i/free-vector-warning-sign-clip-art_116436_Warning_Sign_clip_art_medium.png">
+            <div class="myalert_error">
                 <span>
                     <?php echo $msg; ?>
                 </span>
@@ -74,7 +73,7 @@ $msg = $_GET['msg']??null;
     .myalert img{
         width: 20px;
     }
-    .myalert{
+    .myalert_error{
         width: 70%;
         text-align: center;
         border-radius: 10px;
@@ -85,7 +84,18 @@ $msg = $_GET['msg']??null;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         padding-top: 3px;
         color: darkred;
-
+    }
+    .myalert_info{
+        width: 70%;
+        text-align: center;
+        border-radius: 10px;
+        height: 30px;
+        background-color: #87f2f5;
+        margin: 2px auto;
+        font-size: 13px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        padding-top: 3px;
+        color: #031258;
     }
     .td_buttons{
         padding-top: 30px;
