@@ -14,9 +14,16 @@ html, body{
     padding: 0px;
     margin: 0px;
 }
-#bahaheader, #bahacarousel{
+#bahaheader{
+    position: fixed;
+    top: 0px;
+    z-index: 10000;
+    width: 100%;
+ }
+#bahaheader, #bahacarousel_home{
     border-bottom: 10px solid #5c6ef7;
 }
+
 .mycard{
     display: inline-block;
     width: 100%;
