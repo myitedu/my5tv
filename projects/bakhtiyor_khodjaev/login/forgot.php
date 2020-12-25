@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,9 +15,12 @@
 <?php
 $error = $_GET['error']??0;
 $msg = $_GET['msg']??null;
+$email = $_SESSION['email']??null;
+$question = $_SESSION['question']??null;
+$change_password = $_SESSION['change_password']??null;
 ?>
 <div class="container-fluid">
-    <form method="post" action="signup_backend.php">
+    <form method="post" action="forgot_backend.php">
         <div id="login">
             <div class="topheader"></div>
             <div class="middleheader">
@@ -24,41 +30,54 @@ $msg = $_GET['msg']??null;
 
             <?php
             if ($error){
-            ?>
-            <div class="myalert_error">
+                ?>
+                <div class="myalert_error">
                 <span>
                     <?php echo $msg; ?>
                 </span>
-            </div>
-            <?php
+                </div>
+                <?php
             }
 
-           // echo password_hash("abc123",PASSWORD_BCRYPT);
+            // echo password_hash("abc123",PASSWORD_BCRYPT);
             ?>
 
             <div class="loginform">
                 <table>
                     <tr>
-                        <td><input required="required" placeholder="Username" type="email" name="email"></td>
-                    </tr>
-                    <tr>
-                        <td><input placeholder="password" type="password" name="password"></td>
-                    </tr>
-                    <tr>
-                        <td><input placeholder="Confirm Password" type="password" name="password_confirm"></td>
+                        <td><input value="<?php echo $email;?>" required="required" placeholder="Your Email" type="email" name="email"></td>
                     </tr>
 
+                    <?php
+                    if ($question && empty($change_password)){
+                    ?>
+                        <tr>
+                            <td><?php echo $question;?></td>
+                        </tr>
+                        <tr>
+                            <td><input name="answer" placeholder="Your Answer" type="text"></td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
 
-                    <tr>
-                        <td colspan="2" class="td_links">
-                            <a href="forgot.php">Forgot Password/Username?</a>  | <a href="index.php">Login Now</a>
-                        </td>
-                    </tr>
+                    <?php
+                    if ($change_password){
+                        ?>
+                        <tr>
+                            <td><input name="password" placeholder="Your New Password" type="password"></td>
+                        </tr>
+                        <tr>
+                            <td><input name="password_confirm" placeholder="Confirm Password" type="password"></td>
+                        </tr>
+                        <?php
+                    }
+                    ?>
 
                     <tr>
                         <td colspan="2" class="td_buttons">
                             <button class="btn btn-dark" type="reset">RESET</button>
-                            <button class="btn btn-danger" type="submit">LOGIN</button>
+                            <button class="btn btn-danger" type="submit">Forgot Password</button>
                         </td>
                     </tr>
 

@@ -16,7 +16,7 @@ $user = $db->sql($sql);
 $user = $user[0]??null;
 
 if ($email!== $user['email']){
-    $msg = "Your username is incorrect, Please try again";
+    $msg = "This email is not registered, Please try again";
     header("Location: index.php?error=1&msg=".$msg);
     exit($msg);
 }
