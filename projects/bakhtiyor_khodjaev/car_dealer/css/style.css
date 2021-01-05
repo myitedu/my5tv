@@ -20,7 +20,10 @@ html, body{
     z-index: 10000;
     width: 100%;
  }
-#bahaheader, #bahacarousel_home{
+#bahaheader, #bahacarousel_home, #bahajumbotron_aboutus, #bahacards, #bahacontactus{
+    border-bottom: 10px solid #5c6ef7;
+}
+#bahacards_service{
     border-bottom: 10px solid #5c6ef7;
 }
 
@@ -41,11 +44,19 @@ html, body{
     float: right;
     width: 33% !important;
 }
-#bahabox{
+
+.bahabox{
     width: 950px;
-    height: 420px;
-    border: 1px solid black;
-    margin: 15px auto;;
+    height: 400px;
+    margin: 15px auto;
 }
+.leftbox{
+    width: 60%;
+    height: 300px;
+    margin: 50px auto;
+    background-color: #0a2998;
+}
+
+
 
 

@@ -1,2 +1,2 @@
 <?php
-$email = "jontoshmatov@yahoo.com";
+echo "hello world";

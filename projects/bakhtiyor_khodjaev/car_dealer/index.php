@@ -50,7 +50,7 @@
         </nav>
     </div>
     <div id="bahacarousel_home">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" id="home">
+        <div class="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" id="home">
             <ol class="carousel-indicators">
                 <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
                 <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
@@ -88,7 +88,7 @@
             </p>
         </div>
     </div>
-    <div id="bahacards_service">
+    <div id="bahacards">
         <div class="card mycard" id="service" style="width: 18rem;">
             <img src="https://www.motoringresearch.com/wp-content/uploads/2019/08/Online-reviews-vital-in-choosing-a-car-dealer.jpg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -115,11 +115,8 @@
         </div>
     </div>
     <div id="bahacontactus">
-        <div id="bahabox">
-            <div id="leftbox">
-                <iframe id="googlemap"></iframe>
-            </div>
-            <div id="rightbox"></div>
+        <div class="bahabox" id="contactus">
+            <div class="leftbox"></div>
         </div>
     </div>
 </div>
