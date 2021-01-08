@@ -73,7 +73,7 @@
         padding-left: 55px;
     }
     body{
-        background-image: url("https://i.ytimg.com/vi/lpN_bdqTYNU/maxresdefault.jpg");
+        background-image: url("img/cars_bg.jpg");
         background-repeat: no-repeat;
         background-size: 100%;
     }

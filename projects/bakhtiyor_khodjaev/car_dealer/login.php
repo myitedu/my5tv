@@ -145,7 +145,7 @@ $msg = $_GET['msg']??null;
     }
 
     input::placeholder{
-        color: red;
+        color: black;
         font-weight: bolder;
     }
 </style>
