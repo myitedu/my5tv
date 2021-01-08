@@ -25,23 +25,29 @@ $db = new \Database\database('myitedu');
 $sql = "SELECT u.id, u.email, sq.question, sq.answer FROM users AS u
 JOIN security_questions AS sq
 ON u.id = sq.user_id
-WHERE u.email = 'jontoshmatov@yahoo.com';";
+WHERE u.email = '$email';";
+
 $user = $db->sql($sql);
 $_SESSION['email'] = $email;
 $maxlength = count($user);
 $_SESSION['question'] = $user[rand(0,$maxlength-1)]['question'];
 
+
+
 if ($answer){
 $sql = "SELECT u.id, u.email, sq.question, sq.answer FROM users AS u
 JOIN security_questions AS sq
 ON u.id = sq.user_id
-WHERE u.email = 'jontoshmatov@yahoo.com' and sq.answer = '$answer';";
+WHERE u.email = '$email' and sq.answer = '$answer';";
 $question_answer = $db->sql($sql);
 if (!empty($question_answer)) {
     $_SESSION['change_password'] = true;
 }else{
     $_SESSION['change_password'] = false;
 }
+
 }
+
+
 header("Location: forgot.php");
 exit;

@@ -1,0 +1,38 @@
+Please note this is not a huge change in the code. Essentially, this is provided
+with two function replacements that are now deprecated -- and designed to keep
+PHPMailer-FE functional.
+
+Althought not necessary, it is advisable to include:
+
+phpmailer-fe.php
+class.phpmailer.php (or class.phpmailer-lite.php)
+
+in the _lib/ directory and set the basic settings.
+
+Strategies employed in this sample form:
+
+* phpmailer-fe.php is in the _lib/ directory
+* class.phpmailer.php is in the _lib/ directory
+  - means phpmailer-fe.php will use class.phpmailer.php to handle the sending of data
+* OR class.phpmailer-lite.php is in the _lib/ directory
+  - means phpmailer-fe.php will use class.phpmailer-lite.php to handle the sending of data
+* the reply email templates are in the _lib/ directory
+  - means that PHPMailer will use the images from its local _lib/_src/ directory
+  note: if you put the reply email templates in any other directory, change
+        the <img tag to an explicit URL for source
+* the landing pages templates are in the _lib/ directory
+  - phpmailer-fe.php will not substitute the image tags ...
+  note: if you put the landing pages templates in any other directory, change
+        the <img tag to an explicit URL for source
+
+* the sample forms are fully functional
+
+Reference documents are in the DOCS directory.
+
+Please note, the packaging of PHPMailer-FE has changed. PHPMailer-FE is now in
+the _lib directory off of the root (as are all other support files).
+
+Documentation is found at: http://www.worxware.com/kbn/?category_id=23
+
+Enjoy!
+Andy Prevost

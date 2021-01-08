@@ -5,17 +5,15 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Bakhtiyor Khodjaev's Website</title>
 </head>
 <body>
-<input placeholder="Your input">
-<span class="asterisk_input"></span>
 
-<style>
-    .asterisk_input:before{
-        content: " *****";
-        color: red;
-    }
-</style>
+<h1>Bakhtiyor's hobby</h1>
+
+<hr>
+<img src="https://media.timeout.com/images/105617718/630/472/image.jpg">
+
+
 </body>
 </html>

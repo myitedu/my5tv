@@ -1,0 +1,61 @@
+body{
+    background-color: #0a1b2b;
+}
+footer{
+    width: 100%;
+    height: auto;
+    background-color: darkred;
+    color: lightcyan;
+    text-align: center;
+    font-size: 14px;
+}
+#container{
+    width: 100%;
+    height: auto;
+    background-color: lightgoldenrodyellow;
+}
+#logo{
+    width: 170px;
+}
+#cards{
+    text-align: center;
+}
+.card{
+    display: inline-block;
+    margin: 10px;
+    background-color: lightcyan;
+}
+#airports_title{
+    text-align: center;
+    font-size: 30px;
+    color: darkblue;
+    font-family: "fantasy";
+    padding: 20px;
+}
+.table_airports{
+    background-color: #f0ffef;
+}
+tr:first-child{
+    background-color: #3b023b;
+}
+th{
+
+    color: #ecec24;
+}
+
+tr:hover{
+    background-color: darkorange;
+    cursor: pointer;
+}
+.social_icons{
+    width: 200px;
+    margin: 20px;
+}
+.airports_atags{
+    color: red;
+    text-decoration: none;
+    font-weight: bolder;
+}
+.airport_name_atags{
+    cursor: move;
+}

@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <script src="/js/jquery-3.5.1.js"></script>
 </head>
 <body>
 <?php
@@ -14,7 +15,7 @@ $error = $_GET['error']??0;
 $msg = $_GET['msg']??null;
 ?>
 <div class="container-fluid">
-    <form method="post" action="signup_backend.php">
+    <form id="signup_form" method="post" action="signup_backend.php">
         <div id="login">
             <div class="topheader"></div>
             <div class="middleheader">
@@ -42,10 +43,16 @@ $msg = $_GET['msg']??null;
                         <td><input required="required" placeholder="Username" type="email" name="email"></td>
                     </tr>
                     <tr>
-                        <td><input placeholder="password" type="password" name="password"></td>
+                        <td><input id="password1" placeholder="password" type="password" name="password">
+                            <span class="myinput1"></span>
+                            <input type="checkbox" name="show_password" id="show_password1">
+                        </td>
                     </tr>
                     <tr>
-                        <td><input placeholder="Confirm Password" type="password" name="password_confirm"></td>
+                        <td><input id="password2" placeholder="Confirm Password" type="password" name="password_confirm">
+                            <span class="myinput2"></span>
+                            <input type="checkbox" name="show_password" id="show_password2">
+                        </td>
                     </tr>
 
 
@@ -161,6 +168,65 @@ $msg = $_GET['msg']??null;
     body{
         background-color: #4c2e00;
     }
+</style>
+
+<script>
+    $(function () {
+        $("#show_password1").click(function () {
+            if (this.checked){
+                $("#password1").attr("type","text");
+            }else{
+                $("#password1").attr("type","password");
+            }
+        });
+
+
+        $("#show_password2").click(function () {
+            if (this.checked){
+                $("#password2").attr("type","text");
+            }else{
+                $("#password2").attr("type","password");
+            }
+        });
+        $("#signup_form").submit(function () {
+
+            let password = $("#password1").val();
+            let password2 = $("#password2").val();
+
+            if (password.length<6){
+                $(".myinput1").addClass("asterisk_input");
+                return false;
+            }else{
+                $(".myinput1").removeClass("asterisk_input");
+            }
+
+            if (password2.length<6){
+                $(".myinput2").addClass("asterisk_input");
+                return false;
+            }else{
+                $(".myinput2").removeClass("asterisk_input");
+            }
+
+
+
+        });
+
+
+
+
+
+    })
+</script>
+
+<style>
+
+    .asterisk_input:after{
+        content: " *";
+        color: red;
+        font-weight: bolder;
+    }
+
+
 </style>
 </body>
 </html>
