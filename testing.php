@@ -1,15 +1,21 @@
-0 - 10
-Sessions 0 0
-Cookies 0 0
-Global Variables 0 0
-OOP 6 4
-Functions 5 7
-Data Types 10 10
-File read and write 0 0
-Forms (Method, GET and POST) 10 10
-mysql 9 6
-Constants 9 9
-Loops 0 0
-Errors and Handling 6 6
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<input placeholder="Your input">
+<span class="asterisk_input"></span>
 
-constrol structures 2 2
+<style>
+    .asterisk_input:before{
+        content: " *****";
+        color: red;
+    }
+</style>
+</body>
+</html>
