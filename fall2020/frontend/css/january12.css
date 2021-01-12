@@ -1,0 +1,69 @@
+body{
+    background-color: black;
+}
+#myform{
+    width: 553px;
+    height: 582px;
+    background-color: lightgrey;
+    margin: 105px auto;
+    border: 5px solid white;
+}
+.form_table{
+    width: 80%;
+    margin: auto;
+}
+td{
+    padding: 5px;
+    padding-left: 3px;
+}
+.form_title {
+    text-align: center;
+    padding-top: 47px;
+    padding-bottom: 30px;
+    font-size: 25px;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+.form_table input{
+    width: 100%;
+    height: 30px;
+    border-radius: 2px;
+    border: none;
+    border: 1px solid darkgray;
+}
+.form_inputs{
+    text-align: left;
+}
+.form_label{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: fantasy;
+}
+.form_table input::placeholder{
+    padding-left: 5px;
+}
+
+.form_inputs_gender{
+    text-align: left;
+}
+
+.form_inputs_gender label:first-child{
+    float: left;
+    margin-right: 20px;
+}
+.form_inputs_gender label:last-child{
+    float: left;
+}
+.my_radio_input{
+    position: relative;
+    left: -50px;
+    margin-left: 30px;
+}
+.form_inputs_gender span{
+    position: relative;
+    top: -30px;
+    left: 35px;
+}
+.span_female{
+    padding-left: 12px;
+}
