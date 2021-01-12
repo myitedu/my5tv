@@ -3,7 +3,7 @@ body{
 }
 #myform{
     width: 553px;
-    height: 582px;
+    height: auto;
     background-color: lightgrey;
     margin: 105px auto;
     border: 5px solid white;
@@ -66,4 +66,11 @@ td{
 }
 .span_female{
     padding-left: 12px;
+}
+.form_inputs textarea{
+    height: 60px;
+    width: 100%;
+}
+.btn_submit{
+    margin-right: 40px;
 }

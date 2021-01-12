@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="myform">
-    <form>
+    <form method="post" action="backend.php">
         <table class="form_table">
             <tr>
                 <td class="form_title" colspan="2">Registration form</td>
@@ -63,6 +63,28 @@
                 <td class="form_inputs form_inputs_gender">
                     <label><input class="my_radio_input" value="male" type="radio" name="gender"><span class="span_male">Male</span></label>
                     <label><input class="my_radio_input" value="female" type="radio" name="gender"><span class="span_female">Female</span></label>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="form_label">Mobile</td>
+                <td class="form_inputs">
+                    <input type="tel" name="mobile" placeholder="Your Mobile Number">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="form_label">Address</td>
+                <td class="form_inputs">
+                    <textarea name="address" placeholder="Your Address"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="form_label">&nbsp;</td>
+                <td class="form_inputs">
+                    <button class="btn btn_submit" type="submit">Submit</button>
+                    <button class="btn btn_reset" type="reset">Reset</button>
                 </td>
             </tr>
 
