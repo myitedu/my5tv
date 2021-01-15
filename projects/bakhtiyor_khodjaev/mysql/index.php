@@ -27,6 +27,7 @@ FROM truckloads AS tl
 JOIN trucks as t
 ON tl.truck_id = t.id;";
 $loads = $db->sql($sql);
+echo $sql;
 ?>
 
 <h3>Truck Loads</h3>
@@ -46,19 +47,23 @@ $loads = $db->sql($sql);
                 <th>Delete</th>
             </tr>
             <?php
-            foreach ($loads as $load){
+            foreach ($loads as $row=>$load){
+                $row++;
                 ?>
                 <tr>
                     <td><?php echo $load['truck_id'];?></td>
-                    <td><?php echo $load['truck_company'];?></td>
-                    <td><?php echo $load['driver_name'];?></td>
-                    <td><?php echo $load['from'];?></td>
-                    <td><?php echo $load['to'];?></td>
-                    <td><?php echo $load['distance'];?> miles</td>
-                    <td>$<?php echo $load['fee'];?></td>
+                    <td class="form_update_data_<?php echo $row;?>" data-field="truck_company" contenteditable="true"><?php echo $load['truck_company'];?></td>
+                    <td class="form_update_data_<?php echo $row;?>" data-field="driver_name" contenteditable="true"><?php echo $load['driver_name'];?></td>
+                    <td class="form_update_data_<?php echo $row;?>" data-field="from" contenteditable="true"><?php echo $load['from'];?></td>
+                    <td class="form_update_data_<?php echo $row;?>" data-field="to" contenteditable="true"><?php echo $load['to'];?></td>
+                    <td class="form_update_data_<?php echo $row;?>" data-field="distance" contenteditable="true"><?php echo $load['distance'];?> miles</td>
+                    <td class="form_update_data_<?php echo $row;?>" data-field="fee" contenteditable="true">$<?php echo $load['fee'];?></td>
                     <td>$<?php echo $load['taxes'];?></td>
                     <td>$<?php echo $load['profit'];?></td>
-                    <td><button data-truckloadsid="<?php echo $load['truckloadsid'];?>" data-truckid="<?php echo $load['truckid'];?>" class="btn btn-danger btn_delete">Delete</button></td>
+                    <td>
+                        <button data-row="<?php echo $row;?>" data-truckloadsid="<?php echo $load['truckloadsid'];?>" data-truckid="<?php echo $load['truckid'];?>" class="btn btn-success btn_update">Update</button>
+                        <button data-truckloadsid="<?php echo $load['truckloadsid'];?>" data-truckid="<?php echo $load['truckid'];?>" class="btn btn-danger btn_delete">Delete</button>
+                    </td>
                 </tr>
                 <?php
             }
@@ -113,6 +118,24 @@ $loads = $db->sql($sql);
            });
            return false;
 
+        });
+
+        $(".btn_update").click(function () {
+            var truckloadsid = $(this).data('truckloadsid');
+            var truckid = $(this).data('truckid');
+            let row = $(this).data('row');
+            let parms = $(".form_update_data_"+row);
+            let formdata = '';
+            parms.each(function (item) {
+               let value = $(".form_update_data_"+row).eq(item).text();
+               let field = $(this).data('field');
+               formdata += field+":"+value+",";
+            });
+            $.post("update.php",{formdata:formdata,'truckloadsid':truckloadsid, 'truckid':truckid}, function (response) {
+                document.location =  "index.php";
+            });
+
+            return false;
         });
     });
 </script>
