@@ -5,63 +5,34 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Form - 2</title>
+    <title>Document</title>
 </head>
 <body>
-<div id="myform">
-    <table class="mytable">
-        <tr>
-            <td class="first_col">Your E-mail: </td>
-            <td><input name="email" type="email" placeholder="Enter your email here"></td>
-        </tr>
-        <tr>
-            <td class="my_col">Your Photo: </td>
-            <td><input name="your_photo" type="file" placeholder="Upload your photo"></td>
-        </tr>
-        <tr>
-            <td class="my_col">Pick Your Country</td>
-            <td>
-                USA <input value="usa" type="radio" name="country"> |
-                Canada <input value="canada" type="radio" name="country"> |
-                Russia <input value="russia" type="radio" name="country"> |
-                Uzbekistan <input value="uzbekistan" type="radio" name="country"> |
-            </td>
-        </tr>
-
-        <tr>
-            <td class="my_col">Pick your color</td>
-            <td>
-                Red <input value="red" type="checkbox" name="color"> |
-                Green <input value="green" type="checkbox" name="color"> |
-                Blue <input value="blue" type="checkbox" name="color"> |
-                Yellow <input value="yellow" type="checkbox" name="color"> |
-            </td>
-        </tr>
-    </table>
+<div id="living_room">
+    <iframe id="my_youtube" src="https://www.youtube.com/embed/-uvp7_qVGDY" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
 </div>
 
 <style>
-    .mytable{
-        background-color: #f4f6f8;
-        width: 500px;
-        margin: 100px auto;
+    #living_room{
+        width: 870px;
+        height: 520px;
+        margin: auto;
+        background-image: url(https://cdn2.expertreviews.co.uk/sites/expertreviews/files/2019/12/jvc_fire_tv_edition.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        border: 10px double darkblue;
     }
 
-    td{
-        border: 1px solid darkgray;
-    }
+    #my_youtube{
+        width: 335px;
+        height: 207px;
+        position: relative;
+        top: 111px;
+        left: 260px;
+        border: none;
 
-    .first_col{
-        text-align: center;
-        color: green;
     }
-    .my_col{
-        text-align: center;
-        color: #0b2560;
-    }
-
 </style>
-
 
 </body>
 </html>
