@@ -42,7 +42,7 @@ $msg = $_GET['msg']??null;
             <div class="loginform">
                 <table>
                     <tr>
-                        <td><input placeholder="Username" type="text" name="username"></td>
+                        <td><input placeholder="Username" type="text" name="email"></td>
                         <td><input placeholder="Password" type="password" name="password"></td>
                     </tr>
                     <tr>

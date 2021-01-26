@@ -12,6 +12,7 @@
 <body>
 
 <div id="baha_container">
+    <form method="post" action="newaccount_backend.php">
     <div class="newaccount">
         <div id="topheader"></div>
         <div class="middleheader">
@@ -20,8 +21,8 @@
         <div class="accountform">
             <table>
                 <tr>
-                    <td><input placeholder="First name" type="text" name="first name"></td>
-                    <td><input placeholder="Last name" type="text" name="last name"></td>
+                    <td><input placeholder="First name" type="text" name="first_name"></td>
+                    <td><input placeholder="Last name" type="text" name="last_name"></td>
                 </tr>
                 <tr>
                     <td colspan="2" class="email"><input placeholder="Email Address" type="email" name="email address"></td>
@@ -34,7 +35,7 @@
                 </tr>
                 <tr>
                     <td colspan="2" class="links">
-                        <a href="#">Forgot Password?</a>  | <a href="login.php">Log In</a>
+                        <a href="#">Forgot Password?</a>  | <a href="index.php">Log In</a>
                     </td>
                 </tr>
                 <tr>
@@ -45,6 +46,7 @@
             </table>
         </div>
     </div>
+    </form>
 </div>
 
 <style>
