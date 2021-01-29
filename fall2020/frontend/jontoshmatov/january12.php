@@ -17,16 +17,16 @@
             </tr>
 
             <tr>
-                <td class="form_label">First Name</td>
+                <td class="form_label">First Name <span class="required_fields">*</span></td>
                 <td class="form_inputs">
-                    <input type="text" placeholder="Your First Name">
+                    <input required="required" type="text" placeholder="Your First Name">
                 </td>
             </tr>
 
             <tr>
-                <td class="form_label">Last Name</td>
+                <td class="form_label">Last Name <span class="required_fields">*</span></td>
                 <td class="form_inputs">
-                    <input type="text" name="last_name" placeholder="Your Last Name">
+                    <input required="required" type="text" name="last_name" placeholder="Your Last Name">
                 </td>
             </tr>
 
@@ -38,16 +38,16 @@
             </tr>
 
             <tr>
-                <td class="form_label">Email</td>
+                <td class="form_label">Email <span class="required_fields">*</span></td>
                 <td class="form_inputs">
-                    <input type="email" name="email" placeholder="Your Email Address">
+                    <input required="required" type="email" name="email" placeholder="Your Email Address">
                 </td>
             </tr>
 
             <tr>
-                <td class="form_label">Password</td>
+                <td class="form_label">Password <span class="required_fields">*</span></td>
                 <td class="form_inputs">
-                    <input type="password" name="password" placeholder="Your Password">
+                    <input required="required" type="password" name="password" placeholder="Your Password">
                 </td>
             </tr>
 
@@ -79,6 +79,9 @@
                     <textarea name="address" placeholder="Your Address"></textarea>
                 </td>
             </tr>
+            <tr>
+                <td style="text-align: center; font-size: 12px; color: #726f6f" colspan="2">All the fields with <span class="required_fields">*</span> are required.</td>
+            </tr>
 
             <tr>
                 <td class="form_label">&nbsp;</td>
@@ -87,6 +90,7 @@
                     <button class="btn btn_reset" type="reset">Reset</button>
                 </td>
             </tr>
+
 
 
 

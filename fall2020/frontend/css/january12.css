@@ -74,3 +74,7 @@ td{
 .btn_submit{
     margin-right: 40px;
 }
+.required_fields{
+    color: red;
+    font-size: 22px;
+}
