@@ -27,7 +27,7 @@
         let mybox = $(".mybox");
         let left = mybox.position().left;
         let top = mybox.position().top;
-        let speed = 100;
+        let speed = 300;
         /*
         $(".btn_click").click(function(){
            let dir = $(this).data('dir');
@@ -50,7 +50,7 @@
             }
 
         });
-         */
+
 
 
         $("body").keydown(function(event){
@@ -77,6 +77,7 @@
 
 
         });
+         */
 
 
         //38 = top
@@ -85,6 +86,28 @@
         //39 = right
 
 
+        $(".btn_click").click(function(){
+            let dir = $(this).data('dir');
+
+            if (dir == 'left'){
+                left-=speed;
+                mybox.animate({left:left + "px"});
+                //$("div").animate({left: '250px'});
+            }
+            if (dir == 'right'){
+                left+=speed;
+                mybox.animate({left:left + "px"});
+            }
+            if (dir == 'top'){
+                top-=speed;
+                mybox.animate({top:top + "px"});
+            }
+            if (dir == 'bottom'){
+                top+=speed;
+                mybox.animate({top:top + "px"});
+            }
+
+        });
 
 
 
