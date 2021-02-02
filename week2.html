@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <style>
+        div.a {
+            width: 150px;
+            height: 80px;
+            background-color: yellow;
+            -ms-transform: rotate(20deg); /* IE 9 */
+            transform: rotate(20deg);
+            background-image: url("https://img.huffingtonpost.com/asset/5cd4e79720000032009632e4.jpeg?ops=scalefit_720_noupscale&format=webp");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        div.b {
+            width: 150px;
+            height: 80px;
+            background-color: yellow;
+            -ms-transform: skewY(20deg); /* IE 9 */
+            transform: skewY(20deg);
+
+        }
+
+        div.c {
+            width: 150px;
+            height: 80px;
+            background-color: yellow;
+            -ms-transform: scaleY(1.5); /* IE 9 */
+            transform: scaleY(1.5);
+        }
+    </style>
 </head>
 <body>
+
+<h1>The transform Property</h1>
+
+<h2>transform: rotate(20deg):</h2>
+<div class="a">Hello World!</div>
+<br>
+
+<h2>transform: skewY(20deg):</h2>
+<div class="b">Hello World!</div>
+<br>
+
+<h2>transform: scaleY(1.5):</h2>
+<div class="c">Hello World!</div>
 
 </body>
 </html>

@@ -35,12 +35,12 @@
                 </tr>
                 <tr>
                     <td colspan="2" class="links">
-                        <a href="#">Forgot Password?</a>  | <a href="index.php">Log In</a>
+                        <a href="#">Forgot Password?</a>  | <a href="login.php">Log In</a>
                     </td>
                 </tr>
                 <tr>
                     <td colspan="2" class="button">
-                        <button class="btn btn-danger" type="submit">Sign Up</button>
+                       <button class="btn btn-danger" type="submit"> <a href="login.php">Sign Up</a></button>
                     </td>
                 </tr>
             </table>
@@ -75,7 +75,7 @@
         padding-left: 55px;
     }
     body{
-        background-image: url("img/cars_bg.jpg");
+        background-image: url("https://i.ytimg.com/vi/lpN_bdqTYNU/maxresdefault.jpg");
         background-repeat: no-repeat;
         background-size: 100%;
     }
@@ -116,6 +116,10 @@
         background-color: black;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
+    }
+    input::placeholder{
+        color: black;
+        font-weight: bolder;
     }
 </style>
 
