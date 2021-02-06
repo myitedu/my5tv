@@ -10,27 +10,35 @@ $prices = [1.24, 1.45, 0.65, 1.87];
 
 $students = ['Jasurbek','Azamatjon','Abror','Javohir','Bahodir','Mirzokhid','Shavkat','Sarvar','Sardor','Jon'];
 
+$persons = [
+    [
+        'name' => 'Jon',
+        'country' => 'USA'
+    ],
+    [
+        'name' => 'Zarina',
+        'country' => 'Uzbekistan'
+    ],
+    [
+        'name' => 'Temur',
+        'country' => 'Russia'
+    ],
+];
+
 //$result = array_reverse($cars);
 //$result = array_flip($cars);
 //$result = array_sum($prices);
 //$result = array_merge($cars, $cars2);
 //$result = array_slice($cars,1); //kesish degani
 //$result = array_chunk($cars,2);
-$tavvakal= array_rand($students);
-$result = $tavvakal.") ".$students[$tavvakal];
+//$tavvakal= array_rand($students);
+//$result = $tavvakal.") ".$students[$tavvakal];
+ //$result = array_search('huyndai',$cars);
+//$result = $cars[2];
 
-if ($tavvakal == 4){
-    echo "<hr>WOHOOO, Bahopdir yutdi!<hr>";
-}
-
-if ($tavvakal == 0){
-    echo "<hr>WOHOOO, Jasurbek yutdi!<hr>";
-}
-
-
-if ($tavvakal == 2){
-    echo "<hr>WOHOOO, Abror yutdi!<hr>";
-}
+//$result = array_column($persons,"country");
+$result = array_
+sort($result);
 
 
 echo "<pre>";
