@@ -9,40 +9,15 @@
 </head>
 <body>
 <?php
-$numbers = range(1, 10000);
+$numbers = [1,2,3,4,5=>[1,2,3,4,5],6,7,8,9];
 
-foreach ($numbers as $number){
-    if ($number%2===0){
-        echo "<div class='even_numbers'>$number</div>";
-    }else{
-        echo "<div class='odd_numbers'>$number</div>";
-    }
+print_r($numbers);
+echo "<hr>";
 
-}
+echo count($numbers[5]);
 ?>
 
-<style>
-    .even_numbers{
-        color: red;
-        background-color: yellow;
-        padding: 5px;
-        margin: 5px;
-        border: 1px solid black;
-        width: auto;
-        text-align: center;
-        display: inline-block;
-    }
-    .odd_numbers{
-        color: #f3e188;
-        background-color: #1717ee;
-        padding: 5px;
-        margin: 5px;
-        border: 1px solid black;
-        width: auto;
-        text-align: center;
-        display: inline-block;
-    }
-</style>
+
 
 
 </body>
