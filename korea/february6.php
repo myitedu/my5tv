@@ -1,24 +1,38 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
 <?php
-$numbers = [1,2,3,4,5=>[1,2,3,4,5],6,7,8,9];
+//Create a PHP file
+//Create a new array and call it cars
+//Add your favorite cars to the array
+//display them in the browsers by seperating each car with ;
 
-print_r($numbers);
-echo "<hr>";
+$cars = ['audi','alfa romeo','bmw','mercedes','volvo','toyota','honda','nissan','huyndai'];
+$cars2 = ['nexia','chevy captiva','gm traverse','cobalt','jiguli'];
+$prices = [1.24, 1.45, 0.65, 1.87];
 
-echo count($numbers[5]);
-?>
+$students = ['Jasurbek','Azamatjon','Abror','Javohir','Bahodir','Mirzokhid','Shavkat','Sarvar','Sardor','Jon'];
+
+//$result = array_reverse($cars);
+//$result = array_flip($cars);
+//$result = array_sum($prices);
+//$result = array_merge($cars, $cars2);
+//$result = array_slice($cars,1); //kesish degani
+//$result = array_chunk($cars,2);
+$tavvakal= array_rand($students);
+$result = $tavvakal.") ".$students[$tavvakal];
+
+if ($tavvakal == 4){
+    echo "<hr>WOHOOO, Bahopdir yutdi!<hr>";
+}
+
+if ($tavvakal == 0){
+    echo "<hr>WOHOOO, Jasurbek yutdi!<hr>";
+}
 
 
+if ($tavvakal == 2){
+    echo "<hr>WOHOOO, Abror yutdi!<hr>";
+}
 
 
-</body>
-</html>
+echo "<pre>";
+print_r($result);
+echo "</pre>";
