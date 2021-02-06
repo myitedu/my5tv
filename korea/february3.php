@@ -20,9 +20,7 @@
  * Object - Class, Interface, Abstract Class, method, private, protected, public, static..
  * Resources - Database connection, file connection, cache, session ulanadigan aloqalar etc.
  */
-$name = "It is a long established fact that a reader will be distracted by the readable content of a page when 
-looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of 
-letters,";
+$name = false;
 //$name = strtolower($name); // lower and upper case
 //$name = str_replace("@","#",$name,$total);//Find and replace
 //$name = str_ireplace("jon", "***", $name, $total);
@@ -41,9 +39,9 @@ letters,";
 //$name = ucfirst($name);
 //$name = str_split($name,10);
 //$name = ucwords($name);
-$name = wordwrap($name,50,"<br>");
+
 echo "<pre>";
-print_r($name);
+var_dump($name);
 echo "</pre>";
 ?>
 </body>
