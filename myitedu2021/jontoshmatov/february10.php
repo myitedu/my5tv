@@ -1,22 +1,53 @@
 <?php
-$car = "Audi";
-const HP = 250;
-$engine = "V12";
-$yurish = drive('Alfa Romeo', 'V8');
-echo $yurish;
-const COLOR="Purple";
+#echo "Min: " . min(2, 87,23,5, 7);
+#echo "<hr>";
+#echo "Max: " . max(354, 87,1000,5, 7);
+//$num = -3883.7;
+//echo abs($num);
+//$num = 25.4;
+//echo round($num);
+//echo rand(1,5);
+//$num = 6.3;
+//echo floor($num);
+/*if (){
+
+}elseif(){
+
+}elseif(){
+
+}elseif(){
+
+}elseif(){
+
+}elseif(){
+
+}elseif(){
+
+}else{
+
+}*/
 
 
-function drive($car='Nexia', $engine){
+$car = 'Nexia';
 
+switch ($car){
+    case 'BMW':
+        echo 'This is a German car';
+        break;
 
+    case 'Honda':
+        echo 'This is a Japanese car';
+        break;
 
-    if (HP > 400){
-        return "This is a sports car with $engine";
-    }else{
-        return "This is a regular car $engine";
-    }
-    return "$car is driving.";
+    case 'Nexia':
+        echo uzbek_cars();
+        break;
+
+    default:
+        echo 'This is other car';
+        break;
 }
 
-echo "<hr>".COLOR."<hr>";
+function uzbek_cars(){
+    return "All cars are made in either Andjian or Samarkand";
+}
