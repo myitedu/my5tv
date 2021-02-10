@@ -1,5 +1,4 @@
 <?php
-
 //For Loop
 /*
 for($i=1; $i<=100; $i++){
@@ -14,7 +13,6 @@ function find_even_numbers($number){
     return ($number % 2 === 0); //Boolean TRUE or FALSE;
 }
 */
-
 //While  Loop
 /*
 $i = 1;
@@ -47,3 +45,28 @@ function find_even_numbers($number){
     return ($number % 2 === 0); //Boolean TRUE or FALSE;
 }
 */
+
+$numbers = range(1,100);
+/*
+foreach ($numbers as $num=>$i){
+    if (find_even_numbers($i)){
+        echo "Even:  $i <hr>";
+    }else{
+        echo "$i <hr>";
+    }
+}*/
+
+for ($i=1; $i<=count($numbers); $i++){
+
+
+    if ($i>50){
+        continue;
+        echo "Shart 1: $i <hr>";
+
+    }else{
+        echo "$i<hr>";
+    }
+
+}
+
+
