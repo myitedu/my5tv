@@ -1,25 +1,10 @@
 <?php
-$arrays =
-[
-    'USA',
-    'Russia',
-    'Uzbekistan'=>[
-        'Tashkent' => ['Mirzo Ulugbek','Olmazor','Yunusobod','Chilonzor'],
-        'Ferghana'=> ['Margilan','Kokand','Navbahor'],
-        'Samarkand'
-    ],
-    'Brazil'
-];
-echo "Before the code dies <hr>";
-exit('I have a mesage.. our enemies have 4 batalion and 3 tanks');
-echo "After the code died";
+//$numbers = array('Audi','BMW','Honda','Toyota');
+$cars = ['Audi','BMW','Honda','Toyota','Nissan','Huyndai','Ford','GMC'];
+$result = [3,20,31,4,99];
 
-
+asort($result);
 
 echo "<pre>";
-print_r(sizeof($arrays['Uzbekistan']['Tashkent']));
+print_r($result);
 echo "</pre>";
-
-
-
-
