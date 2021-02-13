@@ -9,15 +9,10 @@
 </head>
 <body>
 <?php
-if (isset($_GET['name'])) {
-    $name = $_GET['name'];
-}else{
-    $name = 'Zarina';
-}
-
-//$name = $_GET['name']??'Zarina';
+    $name = $_GET['name']??'Alex';
+    $country = $_GET['country']??'Uzbekistan';
 ?>
-<h3>Welcome to Page 2: <?php echo $name;?></h3>
+<h3>Welcome to <?php echo strtoupper($country);?>, <?php echo $name;?>!</h3>
 <hr>
 <nav>
     <a href="february10.php">Page 1</a> |

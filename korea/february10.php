@@ -18,7 +18,7 @@ $name = 'Jessica';
 <hr>
 <nav>
     <a href="february10.php">Page 1</a> |
-    <a href="february10a.php?name=<?php echo $name;?>">Page 2</a> |
+    <a href="february10a.php?name=<?php echo $name;?>&country=usa">Page 2</a> |
 </nav>
 
 
