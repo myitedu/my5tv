@@ -1,6 +1,13 @@
-<<<<<<< HEAD
 <?php
-sizeof()
-=======
 
->>>>>>> dd8690d95a59c87b72c5cca79ed0981633e092af
+echo "New York time: ".  date('m/d/Y H:i:s A');
+
+echo "<hr>";
+
+ini_set('date.timezone','Asia/Tashkent');
+
+echo "Chicago Time: ".date('m/d/Y H:i:s A');
+
+echo "<hr>";
+
+phpinfo();
