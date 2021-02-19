@@ -1,0 +1,12 @@
+body{
+    background-color: #f19595;
+}
+#backround_frame{
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190830/pngtree-white-flower-frame-lace-ornament-image_308325.jpg");
+    background-repeat: no-repeat;
+    margin: auto;
+}
+#birthday_card{
+    width: 200px;
+
+}

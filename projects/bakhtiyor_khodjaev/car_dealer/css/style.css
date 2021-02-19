@@ -1,0 +1,62 @@
+.bahalogo{
+    width: 150px;
+}
+body{
+    background-color: #d8d1d1;
+}
+.w-100{
+    height: 700px;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+#bahaheader{
+    position: fixed;
+    top: 0px;
+    z-index: 10000;
+    width: 100%;
+ }
+#bahaheader, #bahacarousel_home, #bahajumbotron_aboutus, #bahacards, #bahacontactus{
+    border-bottom: 10px solid #5c6ef7;
+}
+#bahacards_service{
+    border-bottom: 10px solid #5c6ef7;
+}
+
+.mycard{
+    display: inline-block;
+    width: 100%;
+    height: 450px;
+}
+.mycard:first-child{
+    float: left;
+    width: 33% !important;
+}
+.mycard:nth-child{
+    float: left;
+    width: 33% !important;
+}
+.mycard:last-child{
+    float: right;
+    width: 33% !important;
+}
+
+.bahabox{
+    width: 550px;
+    height: 200px;
+    margin: 15px auto;
+}
+.leftbox{
+    width: 60%;
+    height: 300px;
+    margin: 50px auto;
+    background-color: #0a2998;
+}
+
+
+
+

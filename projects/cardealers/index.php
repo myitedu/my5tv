@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Baha's Car Dealers</title>
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
-    <script src="/js/jquery-3.5.1.js"></script>
+    <script src="/bootstrap/js/jquery-3.5.1.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jonjs.js"></script>
 </head>

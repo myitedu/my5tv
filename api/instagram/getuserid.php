@@ -13,7 +13,7 @@ function get_userid($username='myitedu')
         CURLOPT_CUSTOMREQUEST => "GET",
         CURLOPT_HTTPHEADER => [
             "x-rapidapi-host: easy-instagram-data.p.rapidapi.com",
-            "x-rapidapi-key: 9997xMayFzkf7mshXdoD9ndBCxTd8W1p1qjCs3jsn1Hu3R7Y5pOCE"
+            "x-rapidapi-key: a6c2319ce4msh1cbc7142c41b661p1a1989jsna28c2dcca890"
         ],
     ]);
 
