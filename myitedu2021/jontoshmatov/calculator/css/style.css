@@ -1,0 +1,17 @@
+.cols{
+    display: inline-block;
+    height: 450px;
+    overflow: auto;
+}
+.left_col{
+    width: 33%;
+    background-color: red;
+}
+.middle_col{
+    width: 34%;
+    background-color: green;
+}
+.right_col{
+    width: 33%;
+    background-color: blue;
+}
