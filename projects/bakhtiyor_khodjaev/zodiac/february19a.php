@@ -14,9 +14,6 @@
 
 $today = date('m/d/Y');
 
-echo $today;
-
-
 $horoscopes1 = [
     'virgo' => [
         'image' => 'https://www.ecomagazine.com/images/Newsletter/0_2019/Week_11-18-19/birdseyeview_ocean.jpg',
@@ -86,7 +83,12 @@ $horoscopes3 = [
 ?>
 <div class="father">
     <div>
-        <input  data-date-format="YMD" id="pick_date" type="date" name="pick_date">
+        <select id="horoscope_names" name="horoscope_names">
+            <option value="virgo">Virgo</option>
+            <option value="leo">Leo</option>
+            <option value="other">Other</option>
+        </select>
+        <input value="<?php echo date('Y-m-d');?>"  data-date-format="YMD" id="pick_date" type="date" name="pick_date">
     </div>
     <table class="table">
         <tr>
@@ -127,6 +129,11 @@ $horoscopes3 = [
 </div>
 <style>
 
+    #pick_date{
+        display: none;
+    }
+
+
     .horoscope img{
         width: 100%;
         height: 100%;
@@ -162,6 +169,18 @@ $horoscopes3 = [
 </style>
 <script>
     $(function () {
+
+        $("#horoscope_names").change(function () {
+           var val = $(this).val();
+
+           if (val == 'other'){
+               $("#pick_date").fadeIn('slow');
+           }else{
+               $("#pick_date").fadeOut('fast');
+           }
+        });
+
+
         $(".horoscope").click(function () {
             var dateObj = new Date();
             var month = dateObj.getUTCMonth()+1; //months from 1-12
@@ -175,7 +194,8 @@ $horoscopes3 = [
             var default_date = year + "-" + new_month + "-" + day;
 
             var name = $(this).data('name');
-           var pick_date = $("#pick_date").val();
+           var pick_date = $("#pick_date").val() || default_date;
+
           if (pick_date==''){
               pick_date = default_date;
           }
