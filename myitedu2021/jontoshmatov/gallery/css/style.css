@@ -1,0 +1,74 @@
+body{
+    background-color: #181f3b;
+    background-image: url("../img/stars_bg.jpg");
+}
+#mytitle{
+    color: white;
+    width: 650px;
+    margin: auto;
+    margin-bottom: 40px;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 30px;
+    font-family: "Lucida Handwriting";
+}
+#mygallery{
+    color: white;
+    width: 1000px;
+    height: 500px;
+    border: 5px double #5f5b5b;
+    margin: auto;
+    background-color: #181f3bf2;
+}
+.left_window{
+    width: 20%;
+    height: 100%;
+    background-color: #000000;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    padding-top: 10px;
+    overflow: auto;
+}
+.right_window{
+    width: 80%;
+    height: 80%;
+    background-color: peachpuff;
+    display: inline-block;
+    float: right;
+    text-align: center;
+}
+.right_window_bottom{
+    width: 80%;
+    height: 20%;
+    background-color: #af1c1c;
+    float: right;
+    position: relative;
+    top: -98px;
+    padding: 5px;
+    overflow: auto;
+    border-top: 4px solid goldenrod;
+}
+.right_window_bottom:first-letter{
+    font-size: 40px;
+    color: gold;
+    font-weight: bolder;
+    padding-right: 2px;
+    font-family: "Lucida Handwriting";
+}
+.city_thumbnail{
+    width: 70%;
+    height: 110px;
+    border: 5px double darkorchid;
+}
+.city_large{
+    width: 60%;
+    height: 344px;
+    border: 10px solid black;
+    box-shadow: 5px 5px 5px 5px #5b595b;
+    border-radius: 20px;
+}
+.city_large_title{
+    color: darkgreen;
+
+}
