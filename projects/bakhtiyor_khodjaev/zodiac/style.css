@@ -1,42 +1,35 @@
 body{
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Andromeda_Galaxy_%28with_h-alpha%29.jpg/1200px-Andromeda_Galaxy_%28with_h-alpha%29.jpg");
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Andromeda_Galaxy_%28with_h-alpha%29.jpg/1200px-Andromeda_Galaxy_%28with_h-alpha%29.jpg ");
     background-repeat: no-repeat;
-   background-size: 100% 100%;
+    background-size: 100%;
+    height: 100%;
 }
 .salovha{
     text-align: center;
-    margin: 20px auto;
-    color: #00bbff;
+    margin-top: 20px;
+    color: #f38b8b;
 }
-.zodiak1 img{
+.garaskoplar{
+    width: 1300px;
+    height: 650px;
+    margin: 15px auto;
+    border: 5px double red;
+    border-radius: 10px;
+}
+.zadiak img{
     width: 150px;
-    border: 5px solid #e20cee;
+    border: 5px solid #f32fdb;
     border-radius: 80px;
-    text-align: center;
+    margin: 5px;
 }
-.zodiak1 {
+
+.zadiaklar1{
+    text-align: center;
     display: inline-block;
-    margin: 10px 65px;
 }
-.zodiak2 img{
-    width: 150px;
-    border: 5px solid #e20cee;
-    border-radius: 80px;
-    text-align: center;
-    margin: 100px 0px 0px 70px;
-}
-.forma{
-    color: lightgrey;
-    text-align: center;
-}
-.zodiak4 img{
-    width: 150px;
-    border: 5px solid #e20cee;
-    border-radius: 80px;
-    text-align: center;
-}
-.zodiak4 {
-    display: inline-block;
-    margin: 40px 65px;
-}
+
+
+
+
+
 
