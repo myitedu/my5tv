@@ -40,21 +40,47 @@ body{
     float: right;
     margin-right: 110px;
 }
-.ekran1{
-    width: 400px;
-    height: 150px;
-    border: 5px solid darkgrey;
-    border-radius: 10px;
+.ekran1 {
+    width: 690px;
+    height: 249px;
+    border: 5px solid #0000004a;
+    border-radius: 69px;
     position: relative;
-    left: 450px;
-
+    left: 610px;
+    top: -460px;
+    background-color: #483d8bb0;
+    padding: 25px;
+    color: lightskyblue;
+    font-size: 20px;
+    overflow: auto;
+    scrollbar-color: red yellow;
 }
 .ekran{
-   margin: 10px auto;
+   width: 100%;
+}
+.pick_date{
+    display: none;
 }
 
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #9c0303;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #f1e033;
+}
 
 
