@@ -48,6 +48,7 @@ $zadioks = [
     </div>
 </div>
 <div class="garaskoplar">
+
     <?php
     foreach ($zadioks as $zadiok){
     ?>
@@ -55,10 +56,10 @@ $zadioks = [
         <div class="zadiak">
             <img src="<?php echo $zadiok ?>">
         </div>
-        <?php
-        }
-        ?>
     </div>
+        <?php
+    }
+    ?>
 </div>
 
 </body>
