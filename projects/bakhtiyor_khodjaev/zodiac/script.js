@@ -1,9 +1,9 @@
 $(function () {
 
-    $("#horoscope_names").change(function () {
+    $("#garaskop_nomlari").change(function () {
         var val = $(this).val();
 
-        if (val == 'other'){
+        if (val == 'Other'){
             $("#pick_date").fadeIn('slow');
         }else{
             $("#pick_date").fadeOut('fast');
@@ -11,7 +11,7 @@ $(function () {
     });
 
 
-    $(".horoscope").click(function () {
+    $(".zadiak").click(function () {
         var dateObj = new Date();
         var month = dateObj.getUTCMonth()+1; //months from 1-12
         var day = dateObj.getUTCDate();
@@ -34,7 +34,7 @@ $(function () {
             'pick_date' : pick_date,
             'name': name
         };
-        $.post('february19b.php', parms, function (response) {
+        $.post('index.php', parms, function (response) {
             console.log(response);
         });
 

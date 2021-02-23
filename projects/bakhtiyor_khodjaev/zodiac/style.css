@@ -1,8 +1,7 @@
 body{
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Andromeda_Galaxy_%28with_h-alpha%29.jpg/1200px-Andromeda_Galaxy_%28with_h-alpha%29.jpg ");
     background-repeat: no-repeat;
-    background-size: 100%;
-    height: 100%;
+    background-size: 100% 100%;
 }
 .salovha{
     text-align: center;
@@ -15,17 +14,43 @@ body{
     margin: 15px auto;
     border: 5px double red;
     border-radius: 10px;
+    text-align: center;
 }
 .zadiak img{
     width: 150px;
     border: 5px solid #f32fdb;
     border-radius: 80px;
-    margin: 5px;
+    margin: 30px;
+    cursor: pointer;
 }
-
-.zadiaklar1{
-    text-align: center;
+.zadiak{
     display: inline-block;
+}
+.zadiaklar1{
+    display: inline-block;
+}
+.zadiaklar3{
+    display: inline-block;
+}
+.zadiak_chap{
+    float: left;
+    margin-left: 115px;
+}
+.zadiak_ong{
+    float: right;
+    margin-right: 110px;
+}
+.ekran1{
+    width: 400px;
+    height: 150px;
+    border: 5px solid darkgrey;
+    border-radius: 10px;
+    position: relative;
+    left: 450px;
+
+}
+.ekran{
+   margin: 10px auto;
 }
 
 
