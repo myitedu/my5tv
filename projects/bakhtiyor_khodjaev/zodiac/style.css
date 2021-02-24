@@ -1,0 +1,86 @@
+body{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Andromeda_Galaxy_%28with_h-alpha%29.jpg/1200px-Andromeda_Galaxy_%28with_h-alpha%29.jpg ");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.salovha{
+    text-align: center;
+    margin-top: 20px;
+    color: #f38b8b;
+}
+.garaskoplar{
+    width: 1300px;
+    height: 650px;
+    margin: 15px auto;
+    border: 5px double red;
+    border-radius: 10px;
+    text-align: center;
+}
+.zadiak img{
+    width: 150px;
+    border: 5px solid #f32fdb;
+    border-radius: 80px;
+    margin: 30px;
+    cursor: pointer;
+}
+.zadiak{
+    display: inline-block;
+}
+.zadiaklar1{
+    display: inline-block;
+}
+.zadiaklar3{
+    display: inline-block;
+}
+.zadiak_chap{
+    float: left;
+    margin-left: 115px;
+}
+.zadiak_ong{
+    float: right;
+    margin-right: 110px;
+}
+.ekran1 {
+    width: 690px;
+    height: 249px;
+    border: 5px solid #0000004a;
+    border-radius: 69px;
+    position: relative;
+    left: 610px;
+    top: -460px;
+    background-color: #483d8bb0;
+    padding: 25px;
+    color: lightskyblue;
+    font-size: 20px;
+    overflow: auto;
+    scrollbar-color: red yellow;
+}
+.ekran{
+   width: 100%;
+}
+.pick_date{
+    display: none;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #9c0303;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #f1e033;
+}
+
+

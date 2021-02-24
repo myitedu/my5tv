@@ -8,7 +8,7 @@
     <title>November 28, 2020</title>
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css/november30.css">
-    <script src="/js/jquery-3.5.1.js"></script>
+    <script src="/bootstrap/js/jquery-3.5.1.js"></script>
     <script src="js/november30.js"></script>
 </head>
 <body>

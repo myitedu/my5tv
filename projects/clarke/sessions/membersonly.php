@@ -15,7 +15,7 @@ if (!$is_user_logged_on){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
-    <script src="/js/jquery-3.5.1.js"></script>
+    <script src="/bootstrap/js/jquery-3.5.1.js"></script>
 </head>
 <body>
 <div id="buttons">

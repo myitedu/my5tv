@@ -1,0 +1,33 @@
+.w-100{
+    height: 450px;
+}
+.card{
+    display: inline-block;
+    width: 33%;
+    margin-right: 20px;
+}
+.card:first-child{
+    width: 33%;
+}
+.card:nth-child(2){
+    width: 34%;
+}
+.card:last-child{
+    width: 33%;
+}
+.cards{
+    text-align: center;
+}
+.card-img-top{
+    height: 200px;
+}
+footer{
+    height: 85px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.social_media_icons{
+    width: 250px;
+    margin-top: 30px;
+}

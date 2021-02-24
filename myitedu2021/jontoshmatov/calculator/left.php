@@ -1,0 +1,1 @@
+<div class="left_col cols"><?php include "lorem.txt"?></div>

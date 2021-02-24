@@ -8,7 +8,7 @@
     <title>Cities</title>
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
-    <script src="/js/jquery-3.5.1.js"></script>
+    <script src="/bootstrap/js/jquery-3.5.1.js"></script>
     <script src="script.js"></script>
 </head>
 <body>

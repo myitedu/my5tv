@@ -1,0 +1,62 @@
+body{
+    background-color: #02445b;
+}
+#mycars{
+    width: 1000px;
+    height: 700px;
+    background-color: lightcyan;
+    border: 10px solid #3b0303;
+    margin: 100px auto;
+    border-radius: 20px;
+}
+#window_left{
+    width: 22%;
+    height: 100%;
+    background-color: #000000;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    overflow: auto;
+    padding: 5px;
+}
+#window_right{
+    width: 77%;
+    height: 100%;
+    background-color: #000000;
+    display: inline-block;
+    float: right;
+    background-size: 100% 86%;
+    background-repeat: no-repeat;
+
+}
+.car img{
+    width: 95%;
+    height: 150px;
+    margin-top: 15px;
+    border: 3px double #f3b71b;
+    border-radius: 14px;
+}
+.car_description{
+width: 100%;
+    height: 100px;
+    position: relative;
+    top: 449px;
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+}
+.car_price{
+    width: 200px;
+    height: 150px;
+    position: relative;
+    top: 40px;
+    left: 530px;
+    background-image: url("../img/price_sticker.png");
+    background-size: 100% 100%;
+    font-size: 32px;
+    color: darkred;
+    font-family: "Lucida Handwriting";
+    text-align: center;
+    line-height: 59px;
+}

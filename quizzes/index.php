@@ -8,7 +8,7 @@
     <title>MYITEDU Quizzes Center</title>
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="/js/jquery-3.5.1.js"></script>
+    <script src="/bootstrap/js/jquery-3.5.1.js"></script>
     <script src="js/scripts.js"></script>
 </head>
 <body>
