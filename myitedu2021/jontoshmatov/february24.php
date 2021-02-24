@@ -10,11 +10,22 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+<?php
+$msg = $_GET['msg']??null;
+?>
 <div id="mywrapper">
     <h5 class="form_title">Sign up form</h5>
-<form method="post">
+<form method="post" action="signup.php">
     <table>
+        <?php if (!empty($msg)):?>
+        <tr>
+            <td class="td_error" colspan="2">
+                <div class="alert alert-danger">
+                    <?=$msg;?>
+                </div>
+            </td>
+        </tr>
+        <?php endif;?>
         <tr>
             <td>First Name:</td>
             <td><input name="first_name" placeholder="Your First Name" type="text"></td>
@@ -28,6 +39,10 @@
             <td><input name="email" placeholder="Your Email Address" type="email"></td>
         </tr>
         <tr>
+            <td>Age</td>
+            <td><input value="" name="age" placeholder="Your Age" type="number"></td>
+        </tr>
+        <tr>
             <td class="form_buttons" colspan="2">
                 <button class="btn btn-dark" type="reset">Reset</button>
                 <button class="btn btn-success" type="submit">Sign Up</button>
@@ -36,6 +51,5 @@
     </table>
 </form>
 </div>
-
 </body>
 </html>
