@@ -1,0 +1,76 @@
+.top_letters{
+    position: relative;
+    left: 155px;
+    top: 34px;
+    color: #f1e966;
+}
+.bottom_letters{
+    position: relative;
+    left: 155px;
+    top: -30px;
+    color: #f1e966;
+}
+.row_num_right{
+    color: #f1e966;
+    text-align: right;
+    padding: 2px;
+    font-size: 20px !important;
+    border: 1px solid #880069 !important;
+    background: none !important;
+    background-color: #880069 !important;
+    position: relative;
+    background-color: #0b7fa8;
+    z-index: 1000;
+    left: 1000px;
+    top: 10px;
+}
+.row_num{
+    color: #f1e966;
+    text-align: right;
+    padding: 2px;
+    font-size: 20px !important;
+    border: 1px solid #000 !important;
+    background: none !important;
+
+}
+.icon img{
+    width: 90%;
+}
+.icon {
+    width: 80px;
+    text-align: center;
+}
+.jon{
+    background-color: #0acf0d;
+}
+.black_td{
+    background-color: #067022;
+    text-align: center;
+    color: white;
+}
+.white_td{
+    background-color: #e5e0e0;
+    text-align: center;
+    color: black;
+}
+table{
+    background-color: #000;
+    margin: auto;
+
+}
+td{
+    width: 100px;
+    height: 100px;
+}
+.exercise{
+    width: 90%;
+    margin: 100px auto;
+    height: auto;
+    padding: 5px;
+}
+body{
+    background-color: #880069;
+}
+.chess_cell img{
+    width: 35%;
+}
