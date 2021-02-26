@@ -34,16 +34,23 @@
     $count= 0;
     $white_td = null;
     $black_td = null;
-    $letters = range('A','H');
-    for($row=1; $row<9; $row++){
+    $letters = range('a','h');
     ?>
     <tr>
-        <?php
-        for($col=1; $col<9; $col++){
-            $count++;
+        <?php foreach ($letters as $letter):?>
+            <td class="top_letters"><?=$letter;?></td>
+        <?php endforeach;?>
+    </tr>
 
+    <?php for($row=1; $row<9; $row++):?>
+    <tr>
+        <?php
+        $row_down = 1;
+        for($col=1; $col<9; $col++):
+            $count++;
+            $row_down = 9 - $row;
             if ($col===1){
-                echo "<td class='row_num'>$row</td>";
+                echo "<td class='row_num'>$row_down</td>";
             }
             if ($row%2==0){ //even numbers
                 if ($count%2==0){ //even numbers
@@ -58,26 +65,22 @@
                     $white_td = "white_td";
                 }
             }
-        ?>
-        <td class="<?php echo $white_td;?> droppable" >
-        </td>
-        <?php
-        }
+
+            $data_row = $row_down;
+            $data_letter = $letters[$col-1];
+
         ?>
 
+        <td data-row="<?php echo $data_row;?>" data-letter="<?php echo $data_letter;?>"  class="chess_cell <?php echo $white_td;?> droppable" >&nbsp;</td>
+        <?php endfor;?>
+
     </tr>
-    <?php
-    }
-    ?>
+    <?php endfor;?>
+
     <tr>
-        <td class="letters">A</td>
-        <td class="letters">B</td>
-        <td class="letters">C</td>
-        <td class="letters">D</td>
-        <td class="letters">E</td>
-        <td class="letters">F</td>
-        <td class="letters">G</td>
-        <td class="letters">H</td>
+        <?php foreach ($letters as $letter):?>
+        <td class="bottom_letters"><?=$letter;?></td>
+        <?php endforeach;?>
     </tr>
 </table>
 </div>
@@ -87,11 +90,31 @@
 
 
 <style>
-    .letters{
+    .top_letters{
+        position: relative;
+        left: 155px;
+        top: 34px;
+        color: #f1e966;
+    }
+    .bottom_letters{
         position: relative;
         left: 155px;
         top: -30px;
         color: #f1e966;
+    }
+    .row_num_right{
+        color: #f1e966;
+        text-align: right;
+        padding: 2px;
+        font-size: 20px !important;
+        border: 1px solid #880069 !important;
+        background: none !important;
+        background-color: #880069 !important;
+        position: relative;
+        background-color: #0b7fa8;
+        z-index: 1000;
+        left: 1000px;
+        top: 10px;
     }
     .row_num{
         color: #f1e966;
@@ -114,9 +137,13 @@
     }
     .black_td{
         background-color: #000000;
+        text-align: center;
+        color: white;
     }
     .white_td{
         background-color: #ffffff;
+        text-align: center;
+        color: black;
     }
     table{
 
