@@ -34,6 +34,7 @@
     $count= 0;
     $white_td = null;
     $black_td = null;
+    $letters = range('A','H');
     for($row=1; $row<9; $row++){
     ?>
     <tr>
@@ -44,9 +45,6 @@
             if ($col===1){
                 echo "<td class='row_num'>$row</td>";
             }
-
-
-
             if ($row%2==0){ //even numbers
                 if ($count%2==0){ //even numbers
                     $white_td = "black_td";
@@ -60,16 +58,8 @@
                     $white_td = "white_td";
                 }
             }
-
-
         ?>
         <td class="<?php echo $white_td;?> droppable" >
-
-
-
-
-
-
         </td>
         <?php
         }
@@ -79,8 +69,16 @@
     <?php
     }
     ?>
-
-
+    <tr>
+        <td class="letters">A</td>
+        <td class="letters">B</td>
+        <td class="letters">C</td>
+        <td class="letters">D</td>
+        <td class="letters">E</td>
+        <td class="letters">F</td>
+        <td class="letters">G</td>
+        <td class="letters">H</td>
+    </tr>
 </table>
 </div>
 <div class="icon">
@@ -89,6 +87,12 @@
 
 
 <style>
+    .letters{
+        position: relative;
+        left: 155px;
+        top: -30px;
+        color: #f1e966;
+    }
     .row_num{
         color: #f1e966;
         text-align: right;
