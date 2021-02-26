@@ -23,7 +23,7 @@
         $count= 0;
         $white_td = null;
         $black_td = null;
-        $letters = range('a','i');
+        $letters = range('a','h');
         ?>
         <tr>
             <?php foreach ($letters as $letter):?>
@@ -31,7 +31,7 @@
             <?php endforeach;?>
         </tr>
 
-        <?php for($row=1; $row<10; $row++):?>
+        <?php for($row=1; $row<9; $row++):?>
             <tr>
                 <?php
                 $row_down = 1;
@@ -39,7 +39,7 @@
                     $count++;
                     $row_down = 9 - $row;
                     if ($col===1){
-                        echo "<td class='row_num'>$row_down</td>";
+                        echo "<td class='row_numbers'>$row_down</td>";
                     }
                     if ($row%2==0){ //even numbers
                         if ($count%2==0){ //even numbers
@@ -57,13 +57,13 @@
 
                     $data_row = $row_down;
                     $data_letter = $letters[$col-1];
-                    $player = null;
+                    $player = '&nbsp';
 
                     if ($row==2){
-                        $player = "<img src='img/white_pawn.png'>";
+                        $player = "<img class='icon' src='img/white_pawn.png'>";
                     }
                     if ($row==7){
-                        $player = "<img src='img/black_pawn.png'>";
+                        $player = "<img class='icon' src='img/black_pawn.png'>";
                     }
 
                     ?>
@@ -71,6 +71,12 @@
                     <td data-row="<?php echo $data_row;?>" data-letter="<?php echo $data_letter;?>"  class="chess_cell <?php echo $white_td;?> droppable" >
                         <?php echo $player;?>
                     </td>
+
+                    <?php
+                        if($col==8){
+                            echo "<td class='row_numbers'>{$row_down}</td>";
+                        }
+                    ?>
                 <?php endfor;?>
 
             </tr>

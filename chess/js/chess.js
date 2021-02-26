@@ -11,7 +11,7 @@ $( function() {
     $(".chess_cell").click(function () {
        var row = $(this).data(('row'));
        var letter = $(this).data(('letter'));
-       $(this).html(row+' '+letter);
+
     });
 
 
