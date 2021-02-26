@@ -24,7 +24,6 @@ $videos = [
     'https://www.youtube.com/embed/PfjcgcOfgww',
     'https://www.youtube.com/embed/qeiKKgsvHyY',
     'https://www.youtube.com/embed/Wr4v1wFS_OY',
-
 ];
 ?>
 <?php
@@ -78,6 +77,8 @@ $logo = [
         display: inline-block;
         width: 1150px;
         height: 700px;
+        border: 5px solid gold;
+        border-radius: 20px;
         margin: 50px auto;
         background-image: url("https://kitv.images.worldnow.com/images/19425976_G.jpeg?auto=webp&disable=upscale&height=560&fit=bounds&lastEditedDate=1589897453000");
         background-size: 100% 100%;
@@ -93,7 +94,9 @@ $logo = [
         border-radius: 40px;
         border: 5px solid gold;
         margin-top: 30px;
+        padding: 3px;
         margin-bottom: 10px;
+        background-color: #f48787;
     }
 </style>
 
