@@ -16,14 +16,22 @@ $text = file_get_contents("lorem");
 
 $find_pattern = "#$keyword#i";
 $replace_pattern = "<span class='highlighted_words'>$0</span>";
-$newtext = preg_replace($find_pattern,$replace_pattern,$text,-1, $total);
+if (empty($keyword)) {
+    $newtext = $text;
+    $total = 0;
+}else{
+    $newtext = preg_replace($find_pattern, $replace_pattern, $text, -1, $total);
+}
 ?>
 <div class="seach_form">
     <form>
         <p><h4>Our Search Text Function</h4></p>
-        <hr>
-        <p><?php echo "There are total of $total <span class='highlighted_words'>$keyword</span> found";?></p>
-        <hr>
+        <p><?php
+            if (!empty($keyword)){
+                echo "<hr>There are total of $total <span class='highlighted_words'>$keyword</span> found<hr>";
+            }
+
+            ?></p>
 
         <p>Search: <input value="<?=$keyword;?>" name="keyword" type="text" placeholder="Your keyword">
         <button class="btn btn-success" type="submit">GO</button>
