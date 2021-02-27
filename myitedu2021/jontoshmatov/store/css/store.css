@@ -1,0 +1,43 @@
+
+tr:hover{
+    background-color: #81ddf3 !important;
+    cursor: pointer;
+}
+
+.product_icon{
+    width: 100px;
+    height: 80px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 5px #424141;
+}
+
+tr:nth-child(even){
+    background-color: white;
+}
+
+th{
+    background-color: darkred;
+    color: #eebe47;
+    text-shadow: 2px 3px #000000;
+}
+
+.store_title{
+    text-align: center;
+    font-size: 24px;
+    color: yellow;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-shadow: 2px 3px #3a390b;
+}
+
+table{
+    background-color: #eff0f0;
+}
+
+body{
+    background-color: #032828;
+}
+td, th{
+    width: 200px;
+    text-align: center;
+}
