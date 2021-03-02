@@ -1,0 +1,95 @@
+body{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Andromeda_Galaxy_%28with_h-alpha%29.jpg/1200px-Andromeda_Galaxy_%28with_h-alpha%29.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+}
+.salovha{
+    color: #f48f8f;
+    text-align: center;
+    margin-top: 50px;
+}
+.ota{
+    width: 1200px;
+    height: 550px;
+    border: 5px double red;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+.zodiacs{
+    width: 150px;
+    height: 150px;
+    margin: 8px;
+    border: 5px solid #f32fdb;
+    border-radius: 50%;
+    background-size: 100% 100%;
+    display: inline-block !important;
+    cursor: pointer;
+}
+.zadiak_aries{
+    background-image: url("https://media.istockphoto.com/vectors/zodiac-sign-aries-vector-id539240628?k=6&m=539240628&s=612x612&w=0&h=q3z6Zi3PEdIGwF3BH5F6jrcLYxmOuFKhNIus0FesWr8=");
+}
+.zadiak_taurus{
+    background-image: url("https://media.istockphoto.com/vectors/zodiac-sign-taurus-vector-id539017004?b=1&k=6&m=539017004&s=612x612&w=0&h=OvPYCD3rdC36TGJEgiDRALpUWl3vho-5BVLZoFtLkoY=");
+}
+.zadiak_gemini{
+    background-image: url("https://cdn.images.express.co.uk/img/dynamic/130/590x/secondary/Daily-horoscope-May-29-star-sign-reading-astrology-zodiac-forecast-today-1890250.jpg?r=1559079184006");
+}
+.zadiak_cancer{
+    background-image: url("https://media.istockphoto.com/vectors/zodiac-sign-cancer-vector-id538871860?k=6&m=538871860&s=612x612&w=0&h=TBUm_5jBozFkuh7aooHi-NGb83wfldZ2ZT5utNmmBgU=");
+}
+.zadiak_leo{
+    background-image: url("https://pixfeeds.com/images/18/463850/1200-538872042-zodiac-sign-leo.jpg");
+}
+.display{
+    width: 500px;
+    height: 200px;
+    border: 3px solid lime;
+    border-radius: 10px;
+    position: relative;
+    left: 350px;
+}
+.zadiak_virgo{
+    background-image: url("https://static.langimg.com/thumb/msid-75032511,width-540,resizemode-4/samayam-tamil.jpg");
+}
+.zadiak_libra{
+    background-image: url("https://i.pinimg.com/originals/6e/9b/37/6e9b3747b7bbc6f551deb0b2e9044ce5.jpg");
+}
+.left{
+    position: relative;
+    float: left;
+    left: 173px;
+    top: -190px;
+
+}
+.right{
+    position: relative;
+    float: right;
+    right: 173px;
+    top: -190px;
+}
+.zadiak_scorpio{
+    background-image: url("https://www.thesun.co.uk/wp-content/uploads/2020/07/GettyImages-539016968-1.jpg?strip=all&w=960");
+}
+.zadiak_sagittarius{
+    background-image: url("https://media.istockphoto.com/vectors/zodiac-sign-sagittarius-vector-id539016936?k=6&m=539016936&s=612x612&w=0&h=PfB1dd7M3coqaYMUy07UO_LFIVFNl_7a0Uyz27iaFD4=");
+}
+.zadiak_capricon{
+    background-image: url("https://media.istockphoto.com/vectors/zodiac-capricorn-sign-vector-id538871926?k=6&m=538871926&s=612x612&w=0&h=eO4_0uBOW7UlgxooPrjw44F7Gi_J6WX4NSGtFWLkDnw=");
+}
+.zadiak_aquarius{
+    background-image: url("https://media.istockphoto.com/vectors/zodiac-sign-aquarius-vector-id539240576?k=6&m=539240576&s=170667a&w=0&h=Dig-AzLXrEeVA4s3e7WX7ECTMlcPmuR6UuWq8ouQ_QI=");
+}
+.zadiak_pisces{
+    background-image: url("https://media.istockphoto.com/vectors/zodiac-sign-pisces-vector-id539016914?k=6&m=539016914&s=612x612&w=0&h=sfbFVw3F2YMoZErQWWPO5370vRVbueoSeGs72A2sHtA=");
+}
+.display img{
+    width: 120px;
+    border: 2px solid gold;
+    border-radius: 50%;
+    position: relative;
+    float: left;
+    margin: 5px;
+
+}
+
