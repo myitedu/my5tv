@@ -1,12 +1,10 @@
-body{
-    background-color: #02445b;
-}
+
 #mycars{
     width: 1000px;
     height: 700px;
     background-color: lightcyan;
     border: 10px solid #3b0303;
-    margin: 100px auto;
+    margin: 5px auto;
     border-radius: 20px;
 }
 #window_left{
@@ -59,4 +57,13 @@ width: 100%;
     font-family: "Lucida Handwriting";
     text-align: center;
     line-height: 59px;
+}
+#myheader{
+    width: 1000px;
+    height: 100px;
+    background-color: #fefbef;
+    border: 4px solid #0c0236;
+    margin: 2px auto;
+    border-radius: 20px;
+    padding:5px;
 }

@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/scripts.js"></script>
 </head>
-<body>
 <?php
 $id = $_GET['car']??0;
+$color = $_GET['color']??"#000";
 $id = (int) $id;
 $cars = [
     [
@@ -58,6 +58,12 @@ if ($id<0){
     $id = 0;
 }
 ?>
+<body bgcolor="<?=$color?>" style="background-image: url(https://cdn2.vectorstock.com/i/1000x1000/95/16/elegant-black-background-with-gold-lace-ornament-vector-2269516.jpg)">
+<div id="myheader">
+    <form>
+        <p>Color: <input name="color" type="color"><button type="submit">Change</button></p>
+    </form>
+</div>
 <div id="mycars">
     <div id="window_left">
         <?php
