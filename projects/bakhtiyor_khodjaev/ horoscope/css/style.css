@@ -92,4 +92,8 @@ body{
     margin: 5px;
 
 }
-
+.display{
+    overflow: auto;
+    background-color: black;
+    color: goldenrod;
+}

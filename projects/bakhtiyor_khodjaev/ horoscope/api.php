@@ -1,10 +1,10 @@
 <?php
-function get_zodiakname($zodiakname)
+function get_zodiakname($zodiakname, $date) //2020-05-02
 {
 $curl = curl_init();
 
 curl_setopt_array($curl, [
-    CURLOPT_URL => "https://horoscope5.p.rapidapi.com/general/daily?sign=cancer&date=$zodiakname",
+    CURLOPT_URL => "https://horoscope5.p.rapidapi.com/general/daily?sign=$zodiakname&date=$date",
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_ENCODING => "",
@@ -27,6 +27,7 @@ if ($err) {
     return false;
 } else {
     $response = json_decode($response, 1);
-    return $response['result']['date']['description'];
+    return $response['result']['description'];
+    //return $response;
 }
 }
