@@ -1,0 +1,120 @@
+body{
+    background-color: #f1f1f1;
+}
+#comments{
+    width: 700px;
+    height: auto;
+    border: 1px solid darkgray;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+.post{
+    background-color: white;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid darkgray;
+}
+.post_url{
+    background-color: #f1f1f1;
+    border-bottom: 1px solid darkgray;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.display_likes{
+    padding-left: 20px;
+    background-color: white;
+}
+.display_likes_left{
+    width: 40%;
+    float: left;
+    text-align: left;
+}
+.display_likes_right{
+    width: 40%;
+    float: right;
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+.display_likes_left img{
+    width: 100px;
+}
+.mytable{
+    width: 90% !important;
+    margin: auto;
+
+}
+.mytable th, .table td {
+    border-top: none !important;
+}
+.mytable td:first-child{
+    text-align: left;
+}
+.mytable td:last-child{
+    text-align: right;
+}
+.user_action{
+    background-color: whitesmoke;
+    text-align: center;
+    border-top: 1px solid darkgray;
+    border-bottom: 1px solid darkgray;
+}
+.filter{
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 10px;
+    background-color: white;
+}
+.myform{
+    background-color: white;
+    padding-top: 10px;
+}
+.icon{
+    float: left;
+    margin-left: 5px;
+}
+.icon img{
+    width: 40px;
+}
+.form_input{
+    width: auto;
+    text-align: left;
+}
+.form_input input{
+    width: 89%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: #f3f3f3;
+    margin-left: 20px;
+    margin-top: 5px;
+    padding:7px;
+}
+.mycomments{
+    background-color: white;
+    padding-top: 10px;
+}
+.users_feedback{
+    padding-left: 70px;
+    width: 85%;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    height: 100px;
+    margin: auto;
+    overflow: auto;
+    border: 1px solid lightgrey;
+
+}
+.icon2{
+    float: left;
+    margin-left: 5px;
+}
+.icon2 img{
+    width: 40px;
+}
