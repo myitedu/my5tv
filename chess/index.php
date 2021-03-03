@@ -30,7 +30,6 @@
                 <td class="top_letters"><?=$letter;?></td>
             <?php endforeach;?>
         </tr>
-
         <?php for($row=1; $row<9; $row++):?>
             <tr>
                 <?php
@@ -60,10 +59,10 @@
                     $player = '&nbsp';
 
                     if ($row==2){
-                        $player = "<img class='icon' src='img/white_pawn.png'>";
+                        $player = "<img data-name='pawn' class='icon' src='img/white_pawn.png'>";
                     }
                     if ($row==7){
-                        $player = "<img class='icon' src='img/black_pawn.png'>";
+                        $player = "<img data-name='pawn' class='icon' src='img/black_pawn.png'>";
                     }
 
                     ?>
@@ -78,20 +77,14 @@
                         }
                     ?>
                 <?php endfor;?>
-
             </tr>
         <?php endfor;?>
-
         <tr>
             <?php foreach ($letters as $letter):?>
                 <td class="bottom_letters"><?=$letter;?></td>
             <?php endforeach;?>
         </tr>
-
     </table>
-</div>
-<div class="icon">
-    <img src="https://iconarchive.com/download/i94452/blackvariant/button-ui-system-apps/Chess.ico">
 </div>
 </body>
 </html>
