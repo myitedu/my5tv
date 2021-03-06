@@ -1,3 +1,12 @@
+<?php
+session_start();
+$_SESSION['user'] = [
+        'id' => 1,
+        'name' => 'Jon Toshmatov'
+];
+$user = $_SESSION['user'];
+$user_id = $user['id'];
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,16 +24,23 @@
 <?php
 require_once "database.php";
 $obj = new \Database\database('myitedu');
+$post_id = $_GET['post']??null;
+$msg = $_GET['msg']??null;
+
+    if (empty($post_id)){
+        exit("The post id is missing");
+    }
+$post = $obj->sql("SELECT * FROM blogs WHERE id = $post_id;");
 $comments = $obj->sql("SELECT * FROM comments order by id desc;");
 ?>
 <div class="container-fluid">
     <div id="comments">
         <div class="post">
-            What is Lorem Ipsum?
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            <?php echo $post[0]['content'];?>
         </div>
+        <?php if (!empty($msg)):?>
+        <div class="alert alert-danger"><?=$msg;?></div>
+        <?php endif;?>
         <div class="post_url">
             <span>ny.gov</span><br>
             <span>NY State Website</span>
@@ -39,7 +55,7 @@ $comments = $obj->sql("SELECT * FROM comments order by id desc;");
         <div class="user_action">
         <table class="table mytable">
             <tr>
-                <td> Like </td>
+                <td> <a href="backend.php?post=<?=$post_id;?>"> Like </a></td>
                 <td> Comment </td>
                 <td> Share </td>
                 <td> Profile </td>

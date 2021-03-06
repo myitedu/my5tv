@@ -1,6 +1,4 @@
 <?php
-namespace Toshmatovs;
-
 class Parents{
     public function study(){
         return "Study for Mechanical Enginnering";
