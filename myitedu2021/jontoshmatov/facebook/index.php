@@ -24,14 +24,14 @@ $user_id = $user['id'];
 <?php
 require_once "database.php";
 $obj = new \Database\database('myitedu');
-$post_id = $_GET['post']??null;
+$post_id = $_GET['post']??1;
 $msg = $_GET['msg']??null;
 
     if (empty($post_id)){
         exit("The post id is missing");
     }
 $post = $obj->sql("SELECT * FROM blogs WHERE id = $post_id;");
-$comments = $obj->sql("SELECT * FROM comments order by id desc;");
+$comments = $obj->sql("SELECT * FROM comments WHERE blog_id = $post_id order by id desc;");
 ?>
 <div class="container-fluid">
     <div id="comments">
