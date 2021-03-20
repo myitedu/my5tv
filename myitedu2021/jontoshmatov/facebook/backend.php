@@ -1,5 +1,5 @@
 <?php
-ini_set("display_errors",1);
+ini_set("display_errors",1); //errors and exception and how to handle the errors in PHP
 session_start();
 require_once "database.php";
 $obj = new \Database\database("myitedu");
@@ -8,7 +8,7 @@ $user = $_SESSION['user'];
 $post_id = $parms['post']??null;
 $post_id = (int) $post_id;
 if (empty($user)){
-    back("login.php", $post_id, "Please login to like the posts");
+    back("login.php", $post_id, "Please login to like the posts", 1);
 }
 $user_id = $user['id'];
 //Likes Functions
@@ -17,10 +17,14 @@ if ($post_id){
     addLikes($obj, $post_id, $user_id);
 }
 function addLikes($obj, $post_id, $user_id){
-   if(isThisFirstTime($obj, $post_id, $user_id)){
-       updatePostLike($obj, $post_id);
+
+    $is_first_time = isThisFirstTime($obj, $post_id, $user_id);
+
+
+   if($is_first_time){
+       insertLikeFirstTime($obj, $post_id, $user_id); //If the function false
    }else{
-       insertLikeFirstTime($obj, $post_id, $user_id);
+       updatePostLike($obj, $post_id); //If the function returns true
    }
 }
 ###########################################
@@ -29,11 +33,11 @@ function addLikes($obj, $post_id, $user_id){
 ###########################################
 function isThisFirstTime($obj ,$post_id, $user_id){
     $votedBefore = $obj->sql("SELECT id FROM user_likes WHERE blog_id=$post_id and user_id=$user_id limit 1;");
-    $votedBefore =  (bool) $votedBefore;
+    $votedBefore =  (bool) $votedBefore; //Empty = false; not empty = true
     $liked_before = likedBefore($obj, $post_id);
 
     if ($votedBefore){
-        back("index.php", $post_id,"can not vote because you voted before");
+        back("index.php", $post_id,"can not vote because you voted before",1);
     }
 
     if ($liked_before){
@@ -41,8 +45,6 @@ function isThisFirstTime($obj ,$post_id, $user_id){
     }else{
         return false;
     }
-
-
 }
 ###########################################
 
@@ -58,7 +60,7 @@ function likedBefore($obj ,$post_id){
 ###########################################
 function updatePostLike($obj ,$post_id){
     $like = $obj->sql("UPDATE likes SET likes=likes+1, blog_id=$post_id WHERE blog_id=$post_id;");
-    back("index.php",$post_id, "Your Like has been applied. Thank you!");
+    back("index.php",$post_id, "Your Like has been updated. Thank you!");
 }
 ###########################################
 
@@ -67,17 +69,17 @@ function updatePostLike($obj ,$post_id){
 function insertLikeFirstTime($obj ,$post_id, $user_id){
     $like = $obj->sql("INSERT INTO likes (likes, blog_id) VALUES(1, $post_id);");
     $user_likes = $obj->sql("INSERT INTO user_likes (user_id, blog_id) VALUES($user_id, $post_id);");
-    back("index.php",$post_id, "Your Like has been applied. Thank you!");
+    back("index.php",$post_id, "Your Like has been inserted. Thank you!");
 }
 ###########################################
 
 //return to main page
 ###########################################
-function back($to, $post_id, $msg=null){
+function back($to, $post_id, $msg=null, $error=0){
     if ($to=='index.php'){
-        header("Location: $to?post=$post_id&msg=$msg");
+        header("Location: $to?post=$post_id&msg=$msg&error=$error");
     }else{
-        header("Location: $to?post=$post_id&msg=$msg");
+        header("Location: $to?post=$post_id&msg=$msg&error=$error");
     }
     exit($msg);
 }
