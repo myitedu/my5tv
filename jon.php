@@ -1,13 +1,41 @@
-<?php
+Explaining Form Select <br>
+<form>
+    <select name="field">
 
-echo "New York time: ".  date('m/d/Y H:i:s A');
+        <?php
+        $field = $_GET['field']??'A';
 
-echo "<hr>";
+        $columns = range('A','Z');
 
-ini_set('date.timezone','Asia/Tashkent');
+        foreach ($columns as $column){
+            if ($field==$column){
+                echo "<option selected value=\"$column\">$column</option>";
+            }else{
+                echo "<option value=\"$column\">$column</option>";
+            }
 
-echo "Chicago Time: ".date('m/d/Y H:i:s A');
+        }
 
-echo "<hr>";
+        ?>
 
-phpinfo();
+
+
+
+    </select>
+
+    <button type="submit">GO</button>
+</form>
+
+<hr>
+<div class="letter">
+    <?php echo $field;?>
+</div>
+
+<style>
+    .letter{
+        text-align: center;
+        font-size: 180px;
+        color: rebeccapurple;
+        font-weight: bolder;
+    }
+</style>

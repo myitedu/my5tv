@@ -16,6 +16,7 @@ $msg = $_GET['msg']??null;
 ?>
 <div id="login">
     <div class="form_title">Members Login Page</div>
+    <?php include_once "nav.php";?>
     <form method="post" action="process_login.php">
         <hr>
         <?php if (!empty($msg)):?>

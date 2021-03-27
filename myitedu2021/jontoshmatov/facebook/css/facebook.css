@@ -138,3 +138,17 @@ body{
 .form_buttons{
     text-align: center;
 }
+nav{
+    text-align: center;
+}
+.user_avatar_div{
+    text-align: center;
+}
+.user_avatar{
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    padding:3px;
+    background-color: red;
+    border-radius: 50%;
+}

@@ -1,9 +1,5 @@
 <?php
 session_start();
-$_SESSION['user'] = [
-        'id' => 1,
-        'name' => 'Jon Toshmatov'
-];
 $user = $_SESSION['user'];
 $user_id = $user['id'];
 ?>
@@ -35,6 +31,9 @@ $post = $obj->sql("SELECT * FROM blogs WHERE id = $post_id;");
 $comments = $obj->sql("SELECT * FROM comments WHERE blog_id = $post_id order by id desc;");
 ?>
 <div class="container-fluid">
+
+    <div class="form_title">Members Page</div>
+    <?php include_once "nav.php";?>
     <div id="comments">
         <div class="post">
             <?php echo $post[0]['content'];?>
