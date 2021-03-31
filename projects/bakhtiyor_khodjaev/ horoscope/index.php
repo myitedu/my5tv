@@ -36,7 +36,7 @@ $zadiaks_img = [
 if ($id > count($zodiakname) - 1) {
     $id = 0;
 }
-$mydate = $_GET ['mydate']??date('Y-m-d');
+$mydate = $_GET ['mydate'] ?? date('Y-m-d');
 $description = get_zodiakname($zodiakname[$id], $mydate);
 ?>
 
@@ -46,56 +46,57 @@ $description = get_zodiakname($zodiakname[$id], $mydate);
         <div>
             <form action="index.php" method="get">
 
-                <input class="pick_date" value="<?php echo $zodiakname;?>" data-date-format="YMD" id="pick_date" type="date" name="mydate">
+                <input class="pick_date" value="<?php echo $zodiakname; ?>" data-date-format="YMD" id="pick_date"
+                       type="date" name="mydate">
                 <button class="btn btn-success" type="submit">Search</button>
             </form>
 
             <div class="ota">
                 <div class="zadiak_top">
-                    <a href="index.php?id=0&mydate=<?=$mydate;?>">
+                    <a href="index.php?id=0&mydate=<?= $mydate; ?>">
                         <div class="zodiacs zadiak_aries"></div>
                     </a>
-                    <a href="index.php?id=1&mydate=<?=$mydate;?>">
+                    <a href="index.php?id=1&mydate=<?= $mydate; ?>">
                         <div class="zodiacs zadiak_taurus"></div>
                     </a>
-                    <a href="index.php?id=2&mydate=<?=$mydate;?>">
+                    <a href="index.php?id=2&mydate=<?= $mydate; ?>">
                         <div class="zodiacs zadiak_gemini"></div>
                     </a>
-                    <a href="index.php?id=3&mydate=<?=$mydate;?>">
+                    <a href="index.php?id=3&mydate=<?= $mydate; ?>">
                         <div class="zodiacs zadiak_cancer"></div>
                     </a>
-                    <a href="index.php?id=4&mydate=<?=$mydate;?>">
+                    <a href="index.php?id=4&mydate=<?= $mydate; ?>">
                         <div class="zodiacs zadiak_leo"></div>
                     </a>
                 </div>
                 <div class="display">
-                    <div class="display_title"><?= ucfirst($zodiakname[$id]);?></div>
-                        <img src="<?php echo $zadiaks_img[$id];?>">
-                    <?=$description;?>
+                    <div class="display_title"><?= ucfirst($zodiakname[$id]); ?></div>
+                    <img src="<?php echo $zadiaks_img[$id]; ?>">
+                    <?= $description; ?>
 
                 </div>
                 <div class="zadiak_middle">
-                    <a href="index.php?id=5&mydate=<?=$mydate;?>">
+                    <a href="index.php?id=5&mydate=<?= $mydate; ?>">
                         <div class="zodiacs zadiak_virgo left"></div>
                     </a>
-                    <a href="index.php?id=6&mydate=<?=$mydate;?>">
+                    <a href="index.php?id=6&mydate=<?= $mydate; ?>">
                         <div class="zodiacs zadiak_libra right"></div>
                     </a>
                 </div>
                 <div class="zadiak_bootom">
-                    <a href="index.php?id=7&mydate=<?=$mydate;?>">
+                    <a href="index.php?id=7&mydate=<?= $mydate; ?>">
                         <div class="zodiacs zadiak_scorpio"></div>
                     </a>
-                    <a href="index.php?id=8&mydate=<?=$mydate;?>">
+                    <a href="index.php?id=8&mydate=<?= $mydate; ?>">
                         <div class="zodiacs zadiak_sagittarius"></div>
                     </a>
-                    <a href="index.php?id=9&mydate=<?=$mydate;?>">
+                    <a href="index.php?id=9&mydate=<?= $mydate; ?>">
                         <div class="zodiacs zadiak_capricon"></div>
                     </a>
-                    <a href="index.php?id=10&mydate=<?=$mydate;?>">
+                    <a href="index.php?id=10&mydate=<?= $mydate; ?>">
                         <div class="zodiacs zadiak_aquarius"></div>
                     </a>
-                    <a href="index.php?id=11&mydate=<?=$mydate;?>">
+                    <a href="index.php?id=11&mydate=<?= $mydate; ?>">
                         <div class="zodiacs zadiak_pisces"></div>
                     </a>
                 </div>

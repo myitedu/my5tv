@@ -1,0 +1,8 @@
+.display{
+    width: 800px;
+    height: 500px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: lime;
+    margin: 100px auto;
+}

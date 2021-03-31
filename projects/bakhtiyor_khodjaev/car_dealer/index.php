@@ -116,7 +116,9 @@
     </div>
     <div id="bahacontactus">
         <div class="bahabox" id="contactus">
+            <h3>Contact Us</h3></div>
             <div class="leftbox"></div>
+            <div class="righttbox">
         </div>
     </div>
 </div>
