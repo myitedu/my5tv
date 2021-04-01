@@ -1,3 +1,6 @@
+.btn_asc_desc img{
+    width: 20px;
+}
 .airports_search input, select{
     height: 35px;
     position: relative;
@@ -38,7 +41,7 @@ table{
     font-family: cursive;
 }
 #airports{
-    width: 800px;
+    width: 1000px;
     height: 500px;
     background-color: whitesmoke;
     border: 2px solid #003e80;
