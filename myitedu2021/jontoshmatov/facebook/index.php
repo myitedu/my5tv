@@ -1,9 +1,5 @@
 <?php
 session_start();
-$_SESSION['user'] = [
-        'id' => 1,
-        'name' => 'Jon Toshmatov'
-];
 $user = $_SESSION['user'];
 $user_id = $user['id'];
 ?>
@@ -24,23 +20,35 @@ $user_id = $user['id'];
 <?php
 require_once "database.php";
 $obj = new \Database\database('myitedu');
-$post_id = $_GET['post']??null;
+$post_id = $_GET['post']??1;
 $msg = $_GET['msg']??null;
-
-    if (empty($post_id)){
-        exit("The post id is missing");
-    }
+$error = $_GET['error']??0;
+$error = (bool) $error;
+if (empty($post_id)){
+    exit("The post id is missing");
+}
 $post = $obj->sql("SELECT * FROM blogs WHERE id = $post_id;");
-$comments = $obj->sql("SELECT * FROM comments order by id desc;");
+$comments = $obj->sql("SELECT * FROM comments WHERE blog_id = $post_id order by id desc;");
 ?>
 <div class="container-fluid">
+
+    <div class="form_title">Members Page</div>
+    <?php include_once "nav.php";?>
     <div id="comments">
         <div class="post">
             <?php echo $post[0]['content'];?>
         </div>
-        <?php if (!empty($msg)):?>
-        <div class="alert alert-danger"><?=$msg;?></div>
+
+        <?php if(!empty($msg)):?>
+            <?php if($error):?>
+                <div class="alert alert-danger"><?=$msg;?></div>
+            <?php else:?>
+                <div class="alert alert-success"><?=$msg;?></div>
+            <?php endif;?>
         <?php endif;?>
+
+
+
         <div class="post_url">
             <span>ny.gov</span><br>
             <span>NY State Website</span>

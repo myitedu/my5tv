@@ -1,0 +1,57 @@
+.btn_asc_desc img{
+    width: 20px;
+}
+.airports_search input, select{
+    height: 35px;
+    position: relative;
+    top: 3px;
+}
+.airports_search{
+    text-align: center;
+    background-color: #fcf8f8;
+    padding:5px;
+    border-top: 1px dotted black;
+    border-bottom: 1px dotted black;
+    margin-bottom: 5px;
+}
+tr:hover{
+    background-color: rosybrown !important;
+    cursor: pointer;
+}
+tr:nth-child(even){
+    background-color: #e0f3c7;
+}
+tr:first-child:hover{
+    background-color: #800404 !important;
+}
+tr:first-child{
+    background-color: #800404;
+    color: #f5c13e;
+}
+table{
+    background-color: white;
+}
+.airports_list{
+    text-align: center;
+}
+.airports_title{
+    /*background-color: yellow;*/
+    text-align: center;
+    font-size: 25px;
+    font-family: cursive;
+}
+#airports{
+    width: 1000px;
+    height: 500px;
+    background-color: whitesmoke;
+    border: 2px solid #003e80;
+    margin: 50px auto;
+    border-radius: 20px;
+    overflow: auto;
+    padding:20px;
+}
+
+body{
+    background-color: #ebeced;
+    background-image: url("../img/bg_moroccan_flower.png");
+}

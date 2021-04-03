@@ -1,5 +1,6 @@
 body{
-    background-color: #f1f1f1;
+    background-color: #9acdfa;
+    background-image: url("https://www.publicdomainpictures.net/pictures/60000/nahled/geometric-pattern-background-blue.jpg");
 }
 #comments{
     width: 700px;
@@ -117,4 +118,37 @@ body{
 }
 .icon2 img{
     width: 40px;
+}
+#login{
+    width: 90%;
+    margin: 50px auto;
+    border: 2px solid black;
+    padding: 5px;
+    background-color: #e8e8e8;
+
+}
+.form_title{
+    text-align: center;
+    color: firebrick;
+    font-size: 17px;
+    background-color: #99cefa;
+    border: 1px solid black;
+    border-radius: 9px;
+}
+.form_buttons{
+    text-align: center;
+}
+nav{
+    text-align: center;
+}
+.user_avatar_div{
+    text-align: center;
+}
+.user_avatar{
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    padding:3px;
+    background-color: red;
+    border-radius: 50%;
 }
