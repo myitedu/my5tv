@@ -8,6 +8,8 @@
     <title>The World Airports</title>
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css/airports.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script src="/js/jquery-3.5.1.js"></script>
     <script src="js/airports.js"></script>
 </head>
@@ -88,10 +90,11 @@ $link = "index.php?keyword=$keyword&field=$field";
             <?php foreach ($airports as $airport):?>
             <tr>
                 <td><?php echo $airport['id'];?></td>
-                <td contenteditable="true"><?php echo $airport['city'];?></td>
+                <td data-id="<?=$airport['id']?>" id="city_<?=$airport['id']?>" class="airport_city" contenteditable="true"><?php echo $airport['city'];?></td>
                 <td><?php echo $airport['country'];?></td>
                 <td><?php echo $airport['name'];?></td>
                 <td>
+                    <button data-id="<?php echo $airport['id'];?>" class="btn btn-success btn_airport_update airport_<?=$airport['id']?>" type="button">Update</button>
                     <a data-id="<?php echo $airport['id'];?>" class="btn btn-danger btn_delete"  href="delete.php?id=<?php echo "{$airport['id']}&field=$field&order=$order&orderby=$orderby&keyword=$keyword"?>">Delete</a>
                 </td>
             </tr>
@@ -100,5 +103,10 @@ $link = "index.php?keyword=$keyword&field=$field";
     </div>
 </div>
 
+
+<?php
+include_once "modal.php";
+?>
+<script src="/bootstrap/js/bootstrap.js"></script>
 </body>
 </html>
