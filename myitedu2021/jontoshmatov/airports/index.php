@@ -69,6 +69,12 @@ $link = "index.php?keyword=$keyword&field=$field";
     <div class="airports_list">
         <table class="table table-bordered">
             <tr>
+                <td class="airports_filters" colspan="5">
+                    <button id="btn_create_new" type="button" class="btn btn-info">Create Form</button>
+                </td>
+            </tr>
+
+            <tr>
                 <th>ID
                     <a class="btn_asc_desc" href="<?php echo $link;?>&order=id&orderby=asc"><img src="img/btn_arrow_up.png"></a>
                     <a class="btn_asc_desc" href="<?php echo $link;?>&order=id&orderby=desc"><img src="img/btn_arrow_down.png"></a>
@@ -87,18 +93,30 @@ $link = "index.php?keyword=$keyword&field=$field";
                 </th>
                 <th>Action</th>
             </tr>
-            <?php foreach ($airports as $airport):?>
+            <?php foreach ($airports as $row=>$airport):?>
+                <?php if ($row==0):?>
+                    <tr id="form_create_new_airport">
+                        <td>&nbsp;</td>
+                        <td><input id="city_name" name="city_name" placeholder="City" type="text"></td>
+                        <td><input id="country_name" name="country_name" placeholder="Country Name" type="text"></td>
+                        <td><input id="airport_name" name="airport_name" placeholder="Airport Name" type="text"></td>
+                        <td><button id="btn_insert" type="button" class="btn btn-dark">INSERT</button></td>
+                    </tr>
+                <?php endif;?>
+
+
             <tr>
                 <td><?php echo $airport['id'];?></td>
                 <td data-id="<?=$airport['id']?>" id="city_<?=$airport['id']?>" class="airport_city" contenteditable="true"><?php echo $airport['city'];?></td>
-                <td><?php echo $airport['country'];?></td>
-                <td><?php echo $airport['name'];?></td>
+                <td data-id="<?=$airport['id']?>" id="country_<?=$airport['id']?>" class="airport_country" contenteditable="true"><?php echo $airport['country'];?></td>
+                <td data-id="<?=$airport['id']?>" id="name_<?=$airport['id']?>" class="airport_name" contenteditable="true"><?php echo $airport['name'];?></td>
                 <td>
                     <button data-id="<?php echo $airport['id'];?>" class="btn btn-success btn_airport_update airport_<?=$airport['id']?>" type="button">Update</button>
                     <a data-id="<?php echo $airport['id'];?>" class="btn btn-danger btn_delete"  href="delete.php?id=<?php echo "{$airport['id']}&field=$field&order=$order&orderby=$orderby&keyword=$keyword"?>">Delete</a>
                 </td>
             </tr>
             <?php endforeach; ?>
+
         </table>
     </div>
 </div>

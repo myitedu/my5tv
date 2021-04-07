@@ -1,0 +1,29 @@
+.logo{
+    width: 100px;
+}
+#left_window p{
+    text-align: center;
+}
+#left_window{
+   width: 20%;
+    height: 100%;
+    display: inline-block;
+    float: left;
+    background-color: lightgrey;
+}
+#right_window{
+    width: 80%;
+    height: 100%;
+    display: inline-block;
+    float: right;
+}
+
+#jumboq{
+    background-color: whitesmoke;
+    width: 1000px;
+    height: 600px;
+    margin: 80px auto;
+}
+body{
+    background-color: black;
+}

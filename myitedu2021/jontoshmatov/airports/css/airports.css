@@ -1,3 +1,9 @@
+#form_create_new_airport{
+    display: none;
+}
+.airports_filters{
+    text-align: right;
+}
 .btn_airport_update{
     display: none;
 }
@@ -17,17 +23,17 @@
     border-bottom: 1px dotted black;
     margin-bottom: 5px;
 }
-tr:hover{
+tr:not(:first-child):hover{
     background-color: rosybrown !important;
     cursor: pointer;
 }
 tr:nth-child(even){
     background-color: #e0f3c7;
 }
-tr:first-child:hover{
+tr:nth-child(2):hover{
     background-color: #800404 !important;
 }
-tr:first-child{
+tr:nth-child(2){
     background-color: #800404;
     color: #f5c13e;
 }
