@@ -1,0 +1,61 @@
+.navbar{
+    width: 100%;
+    height: 50px;
+}
+.main-nav li {
+    display: inline-block;
+    margin: 10px;
+}
+.row {
+    position: relative;
+    right: -650px;
+    margin: 10px;
+}
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: #1d1c1c;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #e67e22;
+}
+.logo {
+    width: 150px;
+    margin-top: 0px;
+    position: absolute;
+    left: -440px;
+    z-index: auto;
+}
+.home_page{
+    width: 100%;
+    height: 300px;
+    background-color: #282727;
+    margin-top: 25px;
+}
+.name{
+    color: #e67E22;
+    position: relative;
+    left: 233px;
+    bottom: -150px;
+}
+.social_icons img{
+    width: 40px;
+    border: 2px solid darkgrey;
+    border-radius: 50%;
+    padding: 0px;
+    margin: 5px;
+}
+.social_icons{
+    position: relative;
+    left: 230px;
+    bottom: -100px;
+}
+
+
+

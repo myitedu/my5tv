@@ -1,0 +1,36 @@
+body{
+    background-color: #07656e;
+}
+#chess{
+    width: 1000px;
+    height: auto;
+    margin: 40px auto;
+    padding: 5px;
+}
+
+td{
+    width: 100px;
+    height: 100px;
+}
+.black_cell{
+    background-color: black;
+}
+.white_cell{
+    background-color: #e8e8ba;
+}
+.chess_num{
+    text-align: right;
+    padding:3px;
+    border:none !important;
+    color: lightcyan;
+    line-height: 75px;
+}
+.col_let{
+    position: relative;
+    left: 111px;
+    top: -10px;
+    text-align: center;
+    padding:3px;
+    border:none !important;
+    color: lightcyan;
+}

@@ -1,0 +1,469 @@
+/* From big tablets to 1200 px: From 1024 */
+@media only screen and (max-width: 1200px) {
+    .hero-text-box {
+        width: 100%;
+        padding: 0 2%;
+    }
+
+    .row {
+        padding: 0 2%;
+    }
+}
+
+/* From small tablets to: from 768 to 1023 px */
+@media only screen and (max-width: 1023px) {
+    body {
+        font-size: 16px;
+    }
+    section {
+        padding: 60px 0;
+    }
+
+    .logo {
+        height: 90px;
+    }
+
+    .long-copy {
+        width: 85%;
+        margin-left: 7.5%;
+        text-align: center;
+    }
+
+    /* How it works */
+    .steps-box:first-child {
+        margin-top: 20px;
+    }
+
+    .steps-box:last-child {
+        margin-top: 40px;
+    }
+
+    .app-screen {
+        width: 50%;
+    }
+
+    /* Cities */
+
+    .icon-for-li {
+        margin-right: 0;
+    }
+
+    .city-fact {
+        font-size: 90%;
+    }
+
+    /* Membership */
+
+    .plan-box {
+        width: 100%;
+        margin: auto;
+    }
+
+    .plan-price {
+        font-size: 250%;
+    }
+
+    .plan-price span {
+        font-size: 50%;
+    }
+
+    .plan-price-meal {
+        font-size: 100%;
+    }
+
+    /* Contact form */
+
+    .contact-form {
+        width: 80%;
+    }
+}
+/* Small phones to small tablets: from 481 to 767 px */
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+    section {
+        padding: 25px 0;
+    }
+
+    .hero-text-box {
+        padding: 4%;
+    }
+
+    .col {
+        width: 100%;
+        margin: 0 0 4% 0;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .mobile-nav-icon {
+        display: inline-block;
+    }
+
+    .main-nav {
+        float: left;
+        margin-left: 25px;
+        margin-top: 35px;
+    }
+    .main-nav li {
+        display: block;
+    }
+
+    .main-nav li a:link,
+    .main-nav li a:visited {
+        display: block;
+        border: 0;
+        padding: 10px 0;
+        font-size: 100%;
+    }
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited {
+        padding: 10px 0;
+    }
+
+    .sticky .mobile-nav-icon {
+        margin-top: 10px;
+    }
+
+    .sticky #reorder-three-outline {
+        color: #555555;
+    }
+    .sticky .main-nav {
+        margin-top: 10px;
+    }
+
+    .logo {
+        height: 75px;
+    }
+
+    .long-copy {
+        width: 100%;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 180%;
+    }
+    h2 {
+        font-size: 150%;
+    }
+
+    /* How it works */
+
+    .app-screen {
+        width: 40%;
+    }
+
+    .works-step {
+        margin-bottom: 35px;
+    }
+
+    .works-step:last-of-type {
+        margin-bottom: 35px;
+    }
+
+    .works-step div {
+        height: 40px;
+        width: 40px;
+        margin-right: 15px;
+    }
+
+    .steps-box:first-child {
+        text-align: center;
+        margin-top: -20px;
+    }
+
+    h2:after {
+        margin-bottom: -10px;
+    }
+}
+
+/* Small phones: from 0 to 480ox */
+
+@media only screen and (max-width: 480px) {
+    section {
+        padding: 20px 0;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ddd;
+}
+
+#logo-facebook:hover {
+    color: #3b5998;
+    transform: scale(1.2);
+}
+
+#logo-twitter:hover {
+    color: #1da1f2;
+}
+
+#logo-google:hover {
+    color: #dd4b39;
+}
+
+#logo-instagram:hover {
+    color: #ffdc80;
+}
+
+#logo-facebook,
+#logo-twitter,
+#logo-google,
+#logo-instagram {
+    color: #555;
+    /* transition: color 0.2s, font-size 0.2s; */
+    transition: all 0.2s;
+}
+
+footer p {
+    color: #888;
+    text-align: center;
+    font-size: 90%;
+    margin-top: 20px;
+}
+
+/*----------------------
+/*Animations*/
+/*----------------------*/
+
+.js--wp-1 {
+    opacity: 0;
+}
+.js--wp-1.animated {
+    opacity: 1;
+}
+querues.css
+/* From big tablets to 1200 px: From 1024 */
+@media only screen and (max-width: 1200px) {
+    .hero-text-box {
+        width: 100%;
+        padding: 0 2%;
+    }
+
+    .row {
+        padding: 0 2%;
+    }
+}
+
+/* From small tablets to: from 768 to 1023 px */
+@media only screen and (max-width: 1023px) {
+    body {
+        font-size: 16px;
+    }
+    section {
+        padding: 60px 0;
+    }
+
+    .logo {
+        height: 90px;
+    }
+
+    .long-copy {
+        width: 85%;
+        margin-left: 7.5%;
+        text-align: center;
+    }
+
+    /* How it works */
+    .steps-box:first-child {
+        margin-top: 20px;
+    }
+
+    .steps-box:last-child {
+        margin-top: 40px;
+    }
+
+    .app-screen {
+        width: 50%;
+    }
+
+    /* Cities */
+
+    .icon-for-li {
+        margin-right: 0;
+    }
+
+    .city-fact {
+        font-size: 90%;
+    }
+
+    /* Membership */
+
+    .plan-box {
+        width: 100%;
+        margin: auto;
+    }
+
+    .plan-price {
+        font-size: 250%;
+    }
+
+    .plan-price span {
+        font-size: 50%;
+    }
+
+    .plan-price-meal {
+        font-size: 100%;
+    }
+
+    /* Contact form */
+
+    .contact-form {
+        width: 80%;
+    }
+}
+/* Small phones to small tablets: from 481 to 767 px */
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+    section {
+        padding: 25px 0;
+    }
+
+    .hero-text-box {
+        padding: 4%;
+    }
+
+    .col {
+        width: 100%;
+        margin: 0 0 4% 0;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .mobile-nav-icon {
+        display: inline-block;
+    }
+
+    .main-nav {
+        float: left;
+        margin-left: 25px;
+        margin-top: 35px;
+    }
+    .main-nav li {
+        display: block;
+    }
+
+    .main-nav li a:link,
+    .main-nav li a:visited {
+        display: block;
+        border: 0;
+        padding: 10px 0;
+        font-size: 100%;
+    }
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited {
+        padding: 10px 0;
+    }
+
+    .sticky .mobile-nav-icon {
+        margin-top: 10px;
+    }
+
+    .sticky #reorder-three-outline {
+        color: #555555;
+    }
+    .sticky .main-nav {
+        margin-top: 10px;
+    }
+
+    .logo {
+        height: 75px;
+    }
+
+    .long-copy {
+        width: 100%;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 180%;
+    }
+    h2 {
+        font-size: 150%;
+    }
+
+    /* How it works */
+
+    .app-screen {
+        width: 40%;
+    }
+
+    .works-step {
+        margin-bottom: 35px;
+    }
+
+    .works-step:last-of-type {
+        margin-bottom: 35px;
+    }
+
+    .works-step div {
+        height: 40px;
+        width: 40px;
+        margin-right: 15px;
+    }
+
+    .steps-box:first-child {
+        text-align: center;
+        margin-top: -20px;
+    }
+
+    h2:after {
+        margin-bottom: -10px;
+    }
+}
+
+/* Small phones: from 0 to 480ox */
+
+@media only screen and (max-width: 480px) {
+    section {
+        padding: 20px 0;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+}

@@ -1,0 +1,9 @@
+img{
+    width: 400px;
+    height: 300px;
+    border: 5px solid #951784;
+}
+body{
+    background-color: #b56496;
+    color: yellow;
+}
