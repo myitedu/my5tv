@@ -36,8 +36,8 @@
                                 Cars
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">New cars</a></li>
-                                <li><a class="dropdown-item" href="#">Used cars</a></li>
+                                <li><a class="dropdown-item" href="new_cars.php">New cars</a></li>
+                                <li><a class="dropdown-item" href="used_cars.php">Used cars</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">

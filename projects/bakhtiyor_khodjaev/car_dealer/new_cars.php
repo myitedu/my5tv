@@ -10,6 +10,13 @@
     <script src="/bootstrap/js/jquery-3.5.1.js"></script>
 </head>
 <body>
+<?php
+include_once "database.php";
+$db = new \Database\database('myitedu');
+$sql = "SELECT * FROM cars WHERE year >= 2021 and miles >= 200;";
+$cars = $db->sql($sql);
+$cars = $cars[0]??null;
+?>
 
 <div id="newcar">
     <div class="newcar_title">NEW CARS LIST</div>
@@ -21,33 +28,37 @@
                 <th>DESCRIPTION</th>
                 <th>MAKE</th>
                 <th>MODEL</th>
+                <th>YEAR</th>
                 <th>MILE</th>
                 <th>PRICE</th>
             </tr>
+            <?php
+            foreach ($cars as $id=>$car){
+            ?>
             <tr>
-                <td>ID</td>
-                <td>IMAGE</td>
-                <td>DESCRIPTION</td>
-                <td>MAKE</td>
-                <td>MODEL</td>
-                <td>MILE</td>
-                <td>PRICE</td>
+                <td><?php echo $id['id']?></td>
+                <td><img class="carimg" src="<?php echo $id['image']?>"></td>
+                <td><?php echo $id['description']?></td>
+                <td><?php echo $id['make']?></td>
+                <td><?php echo $id['model']?></td>
+                <td><?php echo $id['year']?></td>
+                <td><?php echo $id['miles']?></td>
+                <td><?php echo $id['price']?></td>
             </tr>
-            <tr>
-                <td>ID</td>
-                <td>IMAGE</td>
-                <td>DESCRIPTION</td>
-                <td>MAKE</td>
-                <td>MODEL</td>
-                <td>MILE</td>
-                <td>PRICE</td>
-            </tr>
+            <?php
+            }
+            ?>
         </table>
     </div>
 </div>
 
 </body>
 <style>
+    .carimg{
+        width: 70px;
+        border: 3px solid black;
+        border-radius: 10px;
+    }
     .newcar_list{
         text-align: center;
     }
