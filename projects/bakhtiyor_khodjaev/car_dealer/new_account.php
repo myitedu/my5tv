@@ -25,13 +25,13 @@
                     <td><input placeholder="Last name" type="text" name="last_name"></td>
                 </tr>
                 <tr>
-                    <td colspan="2" class="email"><input placeholder="Email Address" type="email" name="email address"></td>
+                    <td colspan="2" class="email"><input required="required" placeholder="Email Address" type="email" name="email"></td>
                 </tr>
                 <tr>
                     <td colspan="2" class="password"><input placeholder="Password" type="password" name="password"></td>
                 </tr>
                 <tr>
-                    <td colspan="2" class="confirmpassword"><input placeholder="Confirm Password" type="password" name="confirm password"></td>
+                    <td colspan="2" class="confirmpassword"><input placeholder="Confirm Password" type="password" name="password_confirm"></td>
                 </tr>
                 <tr>
                     <td colspan="2" class="links">
@@ -78,6 +78,7 @@
         background-image: url("https://i.ytimg.com/vi/lpN_bdqTYNU/maxresdefault.jpg");
         background-repeat: no-repeat;
         background-size: 100%;
+        height: auto;
     }
     .accountform input{
         border: none;
@@ -102,7 +103,7 @@
     .newaccount{
         width: 800px;
         height: 600px;
-        margin: 100px auto;
+        margin: 85px auto;
         background-color: white;
         opacity: 0.8!important;
         border-radius: 10px;

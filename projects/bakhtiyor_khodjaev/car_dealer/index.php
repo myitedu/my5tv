@@ -31,15 +31,27 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#aboutus">About Us</a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Cars
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">New cars</a></li>
+                                <li><a class="dropdown-item" href="#">Used cars</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#service">Service</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contactus">Contact Us</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.php">Sing in</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="new_account.php">Sing up</a>
+                            </li>
                     </ul>
                     <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+#form_create_new_airport{
+    display: none;
+}
+.airports_filters{
+    text-align: right;
+}
+.btn_airport_update{
+    display: none;
+}
+>>>>>>> fa7760fc49f98f043af85e8d5542d89e82d2fe9e
 .btn_asc_desc img{
     width: 20px;
 }
@@ -14,17 +26,17 @@
     border-bottom: 1px dotted black;
     margin-bottom: 5px;
 }
-tr:hover{
+tr:not(:first-child):hover{
     background-color: rosybrown !important;
     cursor: pointer;
 }
 tr:nth-child(even){
     background-color: #e0f3c7;
 }
-tr:first-child:hover{
+tr:nth-child(2):hover{
     background-color: #800404 !important;
 }
-tr:first-child{
+tr:nth-child(2){
     background-color: #800404;
     color: #f5c13e;
 }
@@ -41,7 +53,7 @@ table{
     font-family: cursive;
 }
 #airports{
-    width: 800px;
+    width: 1000px;
     height: 500px;
     background-color: whitesmoke;
     border: 2px solid #003e80;
