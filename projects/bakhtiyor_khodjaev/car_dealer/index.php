@@ -1,3 +1,12 @@
+<?php
+session_start();
+$is_user_loggedon = 0;
+
+if ($_SESSION['is_user_loggedon']){
+    $is_user_loggedon = 1;
+}
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,8 +19,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script src="/js/jquery-3.5.1.js"></script>
 </head>
-<body>
+<body data-userloggedin="<?php echo $is_user_loggedon;?>">
 
 <div class="bahacontainer">
     <div id="bahaheader">
@@ -134,6 +144,39 @@
         </div>
     </div>
 </div>
+<?php
+include_once "modal.php";
+?>
+<script>
+    $(function () {
+       $("body").click(function () {
+          var link_name = $(this).text();
 
+          //This is for some links only
+         //if (link_name == 'New cars' || link_name == 'Used cars'){
+             //$("#exampleModal").modal("show");
+             //return false;
+         //}
+
+           var userloggedin = $("body").data("userloggedin");
+           if (userloggedin==0){
+               var ask = confirm("You must login first, do you want to go to login?");
+               if (ask) {
+                   document.location = "login.php";
+               }
+               return false;
+           }
+
+
+       });
+    });
+</script>
+
+<style>
+    .modal{
+        z-index: 10000;
+        top: 100px;
+    }
+</style>
 </body>
 </html>
