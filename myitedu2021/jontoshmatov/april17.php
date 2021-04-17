@@ -22,9 +22,10 @@ if ($month<1 || $month>12){
     $month = date('m');
 }
 $today_date = date('d');
-$last_day = date('t');
+$last_day = date('t', strtotime("$month/$today_date/$year"));
 $month_name = date('F', strtotime("$month/$today_date/$year"));
 $first_weekday_number = date('w', strtotime("$month/1/$year"));
+$holidays = ['USA','Uzbekistan','Russia'];
 ?>
 <div id="calendar">
 
@@ -57,6 +58,7 @@ $first_weekday_number = date('w', strtotime("$month/1/$year"));
         $cols = range(0, 6);
         $counter = 0;
         $counter2 = 1;
+        $today_class_name = null;
         foreach ($rows as $row) {
 
             if ($row==1){
@@ -72,14 +74,18 @@ $first_weekday_number = date('w', strtotime("$month/1/$year"));
             echo "<tr>";
 
             foreach ($cols as $col) {
-
                 if ($counter>$first_weekday_number){
                     $counter2++;
+                }
+                if ($month == date('m') && $year == date('Y') && $counter2==date('d')){
+                    $today_class_name = "class='today_class'";
+                }else{
+                    $today_class_name = null;
                 }
                 if ($counter<$first_weekday_number || $counter2>$last_day){
                     echo "<td>&nbsp;</td >";
                 }else{
-                    echo "<td>$counter2</td >";
+                    echo "<td $today_class_name>$counter2</td >";
                 }
                 $counter++;
 
@@ -91,9 +97,22 @@ $first_weekday_number = date('w', strtotime("$month/1/$year"));
 </div>
 
 <style>
+    select{
+        height: 44px !important;
+        position: relative;
+        top: 4px;
+
+    }
+    .today_class{
+        background-color: darkgreen !important;
+        color: pink;
+    }
     #calendar_header input, select{
         background-color: #f5eeca;
-        height: 40px;
+        height: 44px;
+        border-radius: 7px;
+        padding: 3px;
+        color: #056706;
     }
     #calendar_header{
         text-align: center;
@@ -101,8 +120,16 @@ $first_weekday_number = date('w', strtotime("$month/1/$year"));
         font-weight: bolder;
         margin-top: 50px;
     }
+    td:hover{
+        background-color: #dce6e6;
+        cursor: pointer;
+        color: darkred;
+    }
     td{
         text-align: center;
+        font-size: 30px;
+        font-weight: bolder;
+        background-color: #edf8f8;
     }
 
     tr:nth-child(2) th{
@@ -116,6 +143,14 @@ tr:first-child th{
     background-color: darkgreen;
     color: yellow;
     font-size: 27px;
+}
+#calendar{
+    width: 70%;
+    margin: auto;
+}
+body{
+    color: #16b716;
+    background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/5-dots.png");
 }
 </style>
 
