@@ -26,6 +26,19 @@ $last_day = date('t', strtotime("$month/$today_date/$year"));
 $month_name = date('F', strtotime("$month/$today_date/$year"));
 $first_weekday_number = date('w', strtotime("$month/1/$year"));
 $holidays = ['USA','Uzbekistan','Russia'];
+$holidays['Uzbekistan'] = [
+    1=>[
+        1=>['Holiday 1','Holiday 2'],
+        28=>['Qurolli Kuchlar Kuni'],
+    ],
+    2=>[
+        14=>['Anaqalar bayrami'],
+        28=>['Qurolli Kuchlar Kuni'],
+    ],
+    8=>[
+        26=>['Awesome day','Birthday']
+    ]
+];
 ?>
 <div id="calendar">
 
