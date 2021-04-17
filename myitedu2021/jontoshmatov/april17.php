@@ -27,6 +27,27 @@ $month_name = date('F', strtotime("$month/$today_date/$year"));
 $first_weekday_number = date('w', strtotime("$month/1/$year"));
 ?>
 <div id="calendar">
+
+    <div id="calendar_header">
+        <form>
+            <p>Select:
+                <select name="month">
+                <?php for ($m=1; $m<=12; $m++) {
+                    if ($m==$month){
+                        echo "<option selected value = \"$m\">".date('F', strtotime("$m/1/$year"))."</option >";
+                    }else{
+                        echo "<option value = \"$m\">".date('F', strtotime("$m/1/$year"))."</option >";
+                    }
+
+                }
+                ?>
+                </select>
+                <input name="year" type="number" placeholder="<?php echo date('Y');?>" value="<?php echo date('Y');?>">
+                <button type="submit" class="btn btn-success">GO</button>
+            </p>
+        </form>
+    </div>
+
     <table class="table table-bordered">
         <tr>
             <th colspan="7"><?php echo $month_name." ".$year;?> </th>
@@ -70,6 +91,16 @@ $first_weekday_number = date('w', strtotime("$month/1/$year"));
 </div>
 
 <style>
+    #calendar_header input, select{
+        background-color: #f5eeca;
+        height: 40px;
+    }
+    #calendar_header{
+        text-align: center;
+        font-size: 30px;
+        font-weight: bolder;
+        margin-top: 50px;
+    }
     td{
         text-align: center;
     }
