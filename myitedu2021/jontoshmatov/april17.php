@@ -18,6 +18,7 @@
         $rows = range(1, 6);
         $cols = range(1, 7);
         $counter = 0;
+        $counter2 = 1;
         foreach ($rows as $row) {
 
             if ($row==1){
@@ -34,13 +35,13 @@
 
             foreach ($cols as $col) {
                 $counter++;
-
-
-
-                if ($counter<4){
+                if ($counter>4){
+                    $counter2++;
+                }
+                if ($counter<4 || $counter2>30){
                     echo "<td>&nbsp;</td >";
                 }else{
-                    echo "<td>$counter</td >";
+                    echo "<td>$counter2</td >";
                 }
 
             }
