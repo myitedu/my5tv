@@ -11,6 +11,7 @@
     <script src="/js/jquery-3.5.1.js"></script>
 </head>
 <?php
+ini_set("display_errors", 0);
 $body_bg = "/img/spring_bg2.jpeg";
 $seasons = [
     'winter' => [1, 2, 12],
