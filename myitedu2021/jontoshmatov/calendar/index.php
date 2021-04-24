@@ -44,6 +44,13 @@ if (in_array($month, $seasons['fall'])) {
     $season_name = 'fall';
     $body_bg = "/img/fall_bg.jpeg";
 }
+require_once 'database.php';
+$conn = new \Database\database('myitedu');
+if ($month<10){
+    $mymonth = "0".$month;
+}
+$sql = "SELECT * FROM events WHERE event_date LIKE '$year-$mymonth%';;";
+$events = $conn->sql($sql);
 $today_date = date('d');
 $last_day = date('t', strtotime("$month/$today_date/$year"));
 $month_name = date('F', strtotime("$month/$today_date/$year"));
@@ -81,6 +88,9 @@ $holidays['USA'] = [
     1 => [
         1 => ['New Year'],
         18 => ['Martin Luther King Jr. Day']
+    ],
+    4 => [
+        17 => ['Today is April 17th, 2021']
     ],
     5 => [
         31 => ['Memorial Day']
@@ -122,6 +132,13 @@ $holidays['Russia'] = [
         4 => ['Unity Day'],
     ],
 ];
+$days = [];
+$event_titles = [];
+foreach ($events as $event){
+    $date = date('d', strtotime($event['event_date']));
+    $days[$date][] = $event;
+    $event_titles[$date][] = $event['title']??null;
+}
 ?>
 <body style="background-image: url('<?php echo $body_bg;?>')">
 <div id="calendar" data-month="<?php echo $month;?>" data-year="<?php echo $year;?>">
@@ -182,7 +199,7 @@ $holidays['Russia'] = [
                 if ($counter < $first_weekday_number || $counter2 > $last_day) {
                     echo "<td>&nbsp;</td >";
                 } else {
-                     $show_holiday = count($holidays['USA'][$month][$counter2]);
+                     $show_holiday = count($holidays['USA'][$month][$counter2]) + count($days[$counter2]);
 
                      if ($show_holiday) {
                          echo "<td $today_class_name><div class='today_events'>$show_holiday</div>$counter2</td >";
@@ -202,7 +219,8 @@ $holidays['Russia'] = [
     <div class="calendar_footer">
         <ul>
             <?php
-            foreach ($holidays['USA'][$month] as $days){
+            $allevents = array_merge($holidays['USA'][$month], $event_titles);
+            foreach ($allevents as $days){
                 foreach ($days as $day){
                     echo "<li>$day</li>";
                 }
