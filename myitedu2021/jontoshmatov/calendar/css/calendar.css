@@ -1,3 +1,4 @@
+
 .today_events {
     width: 46px;
     background-color: #c7c7b9;
@@ -76,7 +77,7 @@ tr:first-child th {
     margin: auto;
 }
 
-#calendar table{
+#calendar table {
     background-color: #f4f4e5;
 }
 
@@ -92,6 +93,7 @@ html, body {
     padding-left: 0px;
     margin: 0px;
 }
-#calendar_modal{
+
+#calendar_modal {
     color: darkred;
 }

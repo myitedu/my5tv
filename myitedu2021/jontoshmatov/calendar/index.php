@@ -95,6 +95,9 @@ $holidays['USA'] = [
     5 => [
         31 => ['Memorial Day']
     ],
+    6 => [
+        1 => ['Bollar kuni']
+    ],
     7 => [
         4 => ['Independence Day']
     ],
@@ -136,9 +139,11 @@ $days = [];
 $event_titles = [];
 foreach ($events as $event){
     $date = date('d', strtotime($event['event_date']));
+    $date = (int) $date;
     $days[$date][] = $event;
     $event_titles[$date][] = $event['title']??null;
 }
+
 ?>
 <body style="background-image: url('<?php echo $body_bg;?>')">
 <div id="calendar" data-month="<?php echo $month;?>" data-year="<?php echo $year;?>">
@@ -219,7 +224,14 @@ foreach ($events as $event){
     <div class="calendar_footer">
         <ul>
             <?php
-            $allevents = array_merge($holidays['USA'][$month], $event_titles);
+            $allevents = [];
+
+            if ($holidays['USA'][$month]) {
+                $allevents = array_merge($holidays['USA'][$month], $event_titles);
+            }else{
+                $allevents = $event_titles;
+            }
+
             foreach ($allevents as $days){
                 foreach ($days as $day){
                     echo "<li>$day</li>";
@@ -249,6 +261,34 @@ include_once "modal.php";
           }
           var display_date = year + '-' + month + '-' + day;
           $("#calendar_modal_day").val(display_date);
+       });
+
+       $(document).on("click","#btn_save_events", function () {
+          var calendar_modal_title = $("#calendar_modal_title").val();
+          var calendar_modal_day = $("#calendar_modal_day").val();
+          var calendar_modal_time = $("#calendar_modal_time").val();
+          if (calendar_modal_title.length<3){
+              alert("Your event title is too short");
+              return false;
+          }
+           if (calendar_modal_day.length<3){
+               alert("You must enter correct date");
+               return false;
+           }
+           if (calendar_modal_time.length<3){
+               alert("You must enter correct time");
+               return false;
+           }
+
+           var parms = {
+               'event_title':calendar_modal_title,
+               'event_day':calendar_modal_day,
+               'event_time':calendar_modal_time,
+           };
+           var api = $.post('backend.php', parms, function (response) {
+              document.location = '/myitedu2021/jontoshmatov/calendar';
+           });
+
        });
     });
 </script>
