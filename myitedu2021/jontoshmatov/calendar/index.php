@@ -6,8 +6,12 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Calendar - April - 2021</title>
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+            crossorigin="anonymous"></script>
     <script src="/js/jquery-3.5.1.js"></script>
 </head>
 <?php
@@ -47,8 +51,8 @@ if (in_array($month, $seasons['fall'])) {
 }
 require_once 'database.php';
 $conn = new \Database\database('myitedu');
-if ($month<10){
-    $mymonth = "0".$month;
+if ($month < 10) {
+    $mymonth = "0" . $month;
 }
 $sql = "SELECT * FROM events WHERE event_date LIKE '$year-$mymonth%';;";
 $events = $conn->sql($sql);
@@ -90,9 +94,6 @@ $holidays['USA'] = [
         1 => ['New Year'],
         18 => ['Martin Luther King Jr. Day']
     ],
-    4 => [
-        17 => ['Today is April 17th, 2021']
-    ],
     5 => [
         31 => ['Memorial Day']
     ],
@@ -103,7 +104,7 @@ $holidays['USA'] = [
         4 => ['Independence Day']
     ],
     8 => [
-        26 => ['Jon Toshmatov\'s Birthday','Global IT Conference','Earth Day']
+        26 => ['Jon Toshmatov\'s Birthday', 'Global IT Conference', 'Earth Day']
     ],
     9 => [
         6 => ['Labor Day']
@@ -138,16 +139,16 @@ $holidays['Russia'] = [
 ];
 $days = [];
 $event_titles = [];
-foreach ($events as $event){
+foreach ($events as $event) {
     $date = date('d', strtotime($event['event_date']));
-    $date = (int) $date;
+    $date = (int)$date;
     $days[$date][] = $event;
-    $event_titles[$date][] = $event['title']??null;
+    $event_titles[$date][] = $event['title'] ?? NULL;
 }
 
 ?>
-<body style="background-image: url('<?php echo $body_bg;?>')">
-<div id="calendar" data-month="<?php echo $month;?>" data-year="<?php echo $year;?>">
+<body style="background-image: url('<?php echo $body_bg; ?>')">
+<div id="calendar" data-month="<?php echo $month; ?>" data-year="<?php echo $year; ?>">
     <div id="calendar_header">
         <form>
             <p>Select:
@@ -168,7 +169,6 @@ foreach ($events as $event){
             </p>
         </form>
     </div>
-
     <table class="table table-bordered">
         <tr>
             <th colspan="7"><?php echo $month_name . " " . $year; ?> </th>
@@ -205,13 +205,13 @@ foreach ($events as $event){
                 if ($counter < $first_weekday_number || $counter2 > $last_day) {
                     echo "<td>&nbsp;</td >";
                 } else {
-                     $show_holiday = count($holidays['USA'][$month][$counter2]) + count($days[$counter2]);
+                    $show_holiday = count($holidays['USA'][$month][$counter2]) + count($days[$counter2]);
 
-                     if ($show_holiday) {
-                         echo "<td $today_class_name><div class='today_events'>$show_holiday</div>$counter2</td >";
-                     }else{
-                         echo "<td $today_class_name></div>$counter2</td >";
-                     }
+                    if ($show_holiday) {
+                        echo "<td $today_class_name><div data-clicked='no' data-month='$month' data-year='$year' data-date='$counter2' class='today_events'>$show_holiday</div>$counter2</td >";
+                    } else {
+                        echo "<td $today_class_name></div>$counter2</td >";
+                    }
 
                 }
                 $counter++;
@@ -221,7 +221,6 @@ foreach ($events as $event){
         }
         ?>
     </table>
-
     <div class="calendar_footer">
         <ul>
             <?php
@@ -229,12 +228,12 @@ foreach ($events as $event){
 
             if ($holidays['USA'][$month]) {
                 $allevents = array_merge($holidays['USA'][$month], $event_titles);
-            }else{
+            } else {
                 $allevents = $event_titles;
             }
 
-            foreach ($allevents as $days){
-                foreach ($days as $day){
+            foreach ($allevents as $days) {
+                foreach ($days as $day) {
                     echo "<li>$day</li>";
                 }
             }
@@ -246,51 +245,86 @@ foreach ($events as $event){
 <link rel="stylesheet" href="css/calendar.css">
 <?php
 include_once "modal.php";
+include_once "modal2.php";
 ?>
+
 <script>
     $(function () {
-       $(".active_days").click(function () {
-          var day = $(this).text();
-          var month = $("#calendar").data("month");
-          var year = $("#calendar").data("year");
-          $("#calendar_modal").modal("show");
-          if (month<9) {
-              month = '0' + month;
-          }
-          if (day<10){
-              day = '0'+day;
-          }
-          var display_date = year + '-' + month + '-' + day;
-          $("#calendar_modal_day").val(display_date);
-       });
 
-       $(document).on("click","#btn_save_events", function () {
-          var calendar_modal_title = $("#calendar_modal_title").val();
-          var calendar_modal_day = $("#calendar_modal_day").val();
-          var calendar_modal_time = $("#calendar_modal_time").val();
-          if (calendar_modal_title.length<3){
-              alert("Your event title is too short");
-              return false;
-          }
-           if (calendar_modal_day.length<3){
-               alert("You must enter correct date");
-               return false;
-           }
-           if (calendar_modal_time.length<3){
-               alert("You must enter correct time");
-               return false;
-           }
+        var clicked_today_event = false;
 
-           var parms = {
-               'event_title':calendar_modal_title,
-               'event_day':calendar_modal_day,
-               'event_time':calendar_modal_time,
-           };
-           var api = $.post('backend.php', parms, function (response) {
-              document.location = '/myitedu2021/jontoshmatov/calendar';
-           });
+        $(".active_days").click(function () {
+            var day = $(this).text();
+            var month = $("#calendar").data("month");
+            var year = $("#calendar").data("year");
+            var clicked = $(this).children('.today_events').data('clicked');
+            $("#calendar_modal").modal("hide");
 
-       });
+
+            if (typeof clicked == 'undefined' && clicked != 'no') {
+                $("#calendar_modal").modal("show");
+            }
+
+            console.error(clicked);
+
+
+            if (month < 9) {
+                month = '0' + month;
+            }
+            if (day < 10) {
+                day = '0' + day;
+            }
+            var display_date = year + '-' + month + '-' + day;
+            $("#calendar_modal_day").val(display_date);
+            // $(this).children('.today_events').data('clicked','no');
+        });
+
+        $(document).on("click", "#btn_save_events", function () {
+            var calendar_modal_title = $("#calendar_modal_title").val();
+            var calendar_modal_day = $("#calendar_modal_day").val();
+            var calendar_modal_time = $("#calendar_modal_time").val();
+            if (calendar_modal_title.length < 3) {
+                alert("Your event title is too short");
+                return false;
+            }
+            if (calendar_modal_day.length < 3) {
+                alert("You must enter correct date");
+                return false;
+            }
+            if (calendar_modal_time.length < 3) {
+                alert("You must enter correct time");
+                return false;
+            }
+
+            var parms = {
+                'event_title': calendar_modal_title,
+                'event_day': calendar_modal_day,
+                'event_time': calendar_modal_time,
+                'action': 'create'
+            };
+            var api = $.post('backend.php', parms, function (response) {
+                document.location = '/myitedu2021/jontoshmatov/calendar';
+            });
+
+        });
+
+        $(document).on("click", ".today_events", function () {
+            clicked_today_event = true;
+            $("#calendar_modal").modal("hide");
+            var m = $(this).data('month');
+            var d = $(this).data('date');
+            var y = $(this).data('year');
+
+            var clicked = $(this).data('clicked');
+            var parms = {'m': m, 'd': d, 'y': y, 'action': 'fetch'};
+            var api = $.post('backend.php', parms, function (response) {
+                $("#calendar_modal2").modal("show");
+                $(".modal-body2").html(response);
+            });
+            $(this).data('clicked', 'no');
+            //$("#calendar_modal2").modal("show");
+
+        });
     });
 </script>
 </body>
