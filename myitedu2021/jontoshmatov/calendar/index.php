@@ -250,9 +250,7 @@ include_once "modal2.php";
 
 <script>
     $(function () {
-
         var clicked_today_event = false;
-
         $(document).on("click", ".active_days", function () {
             var day = $(this).text();
             var month = $("#calendar").data("month");
@@ -275,7 +273,6 @@ include_once "modal2.php";
             $("#calendar_modal_day").val(display_date);
             // $(this).children('.today_events').data('clicked','no');
         });
-
         $(document).on("click", "#btn_save_events", function () {
             var calendar_modal_title = $("#calendar_modal_title").val();
             var calendar_modal_day = $("#calendar_modal_day").val();
@@ -304,7 +301,6 @@ include_once "modal2.php";
             });
 
         });
-
         $(document).on("click", ".today_events", function () {
             clicked_today_event = true;
 
