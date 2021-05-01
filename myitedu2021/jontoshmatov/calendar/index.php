@@ -54,7 +54,7 @@ $conn = new \Database\database('myitedu');
 if ($month < 10) {
     $mymonth = "0" . $month;
 }
-$sql = "SELECT * FROM events WHERE event_date LIKE '$year-$mymonth%';;";
+$sql = "SELECT * FROM events WHERE event_date LIKE '$year-$mymonth%';";
 $events = $conn->sql($sql);
 $today_date = date('d');
 $last_day = date('t', strtotime("$month/$today_date/$year"));
@@ -253,7 +253,7 @@ include_once "modal2.php";
 
         var clicked_today_event = false;
 
-        $(".active_days").click(function () {
+        $(document).on("click", ".active_days", function () {
             var day = $(this).text();
             var month = $("#calendar").data("month");
             var year = $("#calendar").data("year");
@@ -261,12 +261,9 @@ include_once "modal2.php";
             $("#calendar_modal").modal("hide");
 
 
-            if (typeof clicked == 'undefined' && clicked != 'no') {
+            if (typeof clicked == 'undefined' || clicked == 'no') {
                 $("#calendar_modal").modal("show");
             }
-
-            console.error(clicked);
-
 
             if (month < 9) {
                 month = '0' + month;
@@ -310,7 +307,7 @@ include_once "modal2.php";
 
         $(document).on("click", ".today_events", function () {
             clicked_today_event = true;
-            $("#calendar_modal").modal("hide");
+
             var m = $(this).data('month');
             var d = $(this).data('date');
             var y = $(this).data('year');
@@ -318,11 +315,13 @@ include_once "modal2.php";
             var clicked = $(this).data('clicked');
             var parms = {'m': m, 'd': d, 'y': y, 'action': 'fetch'};
             var api = $.post('backend.php', parms, function (response) {
-                $("#calendar_modal2").modal("show");
                 $(".modal-body2").html(response);
+                $("#calendar_modal2").modal("show");
+                $("#calendar_modal").modal("hide");
             });
             $(this).data('clicked', 'no');
             //$("#calendar_modal2").modal("show");
+            return false;
 
         });
     });
