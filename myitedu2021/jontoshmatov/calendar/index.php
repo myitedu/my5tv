@@ -320,6 +320,11 @@ include_once "modal2.php";
             return false;
 
         });
+        //btn_delete
+        $(document).on("click", ".btn_delete", function () {
+            var id = $(this).data('id');
+            alert("You are about to delete the event id : " +id);
+        });
     });
 </script>
 </body>

@@ -53,14 +53,14 @@ class Backend
         foreach ($events as $event){
         $desc = substr($event['description'], 0, 20);
         $title = substr($event['title'], 0, 20);
-
+        $id = $event['id'];
 
         echo "<tr>";
         echo "<td>$title</td><td>2021-05-12 12:00 PM</td>
         <td>1.00</td>
         <td class='table_img_icons'>
-        <img src='https://img.flaticon.com/icons/png/512/1159/1159633.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF'>
-        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX9MPStXYs1LeHwyMHoiWkIJ3FffpQqVtHjg&usqp=CAU'>
+        <img data-id='$id' class='btn_edit' src='https://img.flaticon.com/icons/png/512/1159/1159633.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF'>
+        <img data-id='$id' class='btn_delete' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX9MPStXYs1LeHwyMHoiWkIJ3FffpQqVtHjg&usqp=CAU'>
         </td>";
         echo "</tr>";
 
