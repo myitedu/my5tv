@@ -323,8 +323,56 @@ include_once "modal2.php";
         //btn_delete
         $(document).on("click", ".btn_delete", function () {
             var id = $(this).data('id');
-            alert("You are about to delete the event id : " +id);
+            var parms = {'id': id, 'action': 'delete'};
+            var ask = confirm("Is it ok to delete this event?");
+            if (!ask) {
+                return false;
+            }
+            var api = $.post('backend.php', parms, function (response) {
+                console.log(response);
+                $("#event_" + id).remove();
+            });
         });
+
+        $(document).on("click", ".btn_edit", function () {
+            var id = $(this).data('id');
+            $(".calendar_modal2_form").show();
+            $(".modal-body2").hide();
+            var parms = {'id': id, 'action': 'modifyfetch'};
+            var api = $.post('backend.php', parms, function (response) {
+                let result = JSON.parse(response);
+                $("#modify_event_id").val(result.id);
+                $("#modify_event_title").val(result.title);
+                $("#modify_event_description").val(result.description);
+                $("#modify_event_date").val(result.event_date);
+                $("#modify_event_time").val(result.event_time);
+                $("#modify_event_duration").val(result.duration);
+            });
+        });
+
+        $(document).on("click", "#modify_event_btn_submit", function () {
+            var id = $("#modify_event_id").val();
+            var event_title = $("#modify_event_title").val();
+            var event_description = $("#modify_event_description").val();
+            var event_date = $("#modify_event_date").val();
+            var event_time = $("#modify_event_time").val();
+            var event_duration = $("#modify_event_duration").val();
+            var parms = {
+                'action': 'modifyevent',
+                'id': id,
+                'event_title': event_title,
+                'event_description': event_description,
+                'event_date': event_date,
+                'event_time': event_time,
+                'event_duration': event_duration,
+
+            };
+            var api = $.post('backend.php', parms, function (response) {
+                console.log(response);
+            });
+            return false;
+        });
+
     });
 </script>
 </body>

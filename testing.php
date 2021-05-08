@@ -1,21 +1,7 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<input placeholder="Your input">
-<span class="asterisk_input"></span>
+<?php
+$input = '2021-05-20';
+$pattern = "#([0-9]{4}-[0-9]{2}-[0-9]{2})#";
+$result = preg_match($pattern, $input, $date);
 
-<style>
-    .asterisk_input:before{
-        content: " *****";
-        color: red;
-    }
-</style>
-</body>
-</html>
+echo "<pre>";
+print_r($date[0]);

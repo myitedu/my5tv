@@ -55,7 +55,7 @@ class Backend
         $title = substr($event['title'], 0, 20);
         $id = $event['id'];
 
-        echo "<tr>";
+        echo "<tr id='event_$id'>";
         echo "<td>$title</td><td>2021-05-12 12:00 PM</td>
         <td>1.00</td>
         <td class='table_img_icons'>
@@ -69,14 +69,53 @@ class Backend
         echo "</table>";
     }
 
+    public function fetchEvent()
+    {
+        $id = $this->parms['id'];
+        $id = (int) $id;
+        $sql = "SELECT * FROM events WHERE id = $id;";
+        $event = $this->db->sql($sql);
+
+        if (empty($event)){
+            return null;
+        }
+        if (!empty($event[0]['event_date'])){
+            $pattern = "#([0-9]{4}-[0-9]{2}-[0-9]{2})#";
+            $result = preg_match($pattern, $event[0]['event_date'], $date);
+            $event[0]['event_date'] = $date[0];
+        }
+        return json_encode($event[0]);
+    }
+
     public function modifyEvent()
     {
-        return FALSE;
+        $id = $this->parms['id'];
+        $id = (int) $id;
+        $event_title = $this->parms['event_title'];
+        $event_description = $this->parms['event_description'] ?? 'TBD';
+        $event_title = addslashes($event_title);
+        $event_description = addslashes($event_description);
+        $event_date = $this->parms['event_date'];
+        $event_time = $this->parms['event_time'];
+        $event_duration = $this->parms['event_duration'] ?? 0;
+        $sql = "UPDATE events SET 
+        title = '$event_title',
+        description = '$event_description',
+        event_date = '$event_date',
+        event_time = '$event_time',
+        duration = $event_duration
+        WHERE id = $id;";
+        $this->db->sql($sql);
+        return $sql;
     }
 
     public function deleteEvent()
     {
-        return FALSE;
+        $id = $this->parms['id'];
+        $id = (int) $id;
+        $sql = "DELETE FROM events WHERE id = $id";
+        $this->db->sql($sql);
+        return "deleted";
     }
 
     public function shareEvent()
@@ -96,5 +135,14 @@ if ($backend->parms['action'] == 'create') {
 }
 if ($backend->parms['action'] == 'fetch') {
     echo $backend->fetchEvents();
+}
+if ($backend->parms['action'] == 'modifyfetch') {
+    print_r($backend->fetchEvent());
+}
+if ($backend->parms['action'] == 'modifyevent') {
+    echo $backend->modifyEvent();
+}
+if ($backend->parms['action'] == 'delete') {
+    echo $backend->deleteEvent();
 }
 
