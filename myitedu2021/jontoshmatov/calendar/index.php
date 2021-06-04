@@ -15,6 +15,7 @@
     <script src="/js/jquery-3.5.1.js"></script>
 </head>
 <?php
+exit("Work in progress");
 ini_set("display_errors", 0);
 $body_bg = "/img/spring_bg2.jpeg";
 $seasons = [
