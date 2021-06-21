@@ -11,40 +11,30 @@
     <script src="/js/jquery-3.5.1.js"></script>
 </head>
 <body>
-<div id="mybox">BOX</div>
-<hr>
 
+<h1>Welcome to Dubai!</h1>
 <hr>
-<form id="myform">
-    <p>
-        How old are you? <br> <input required="required" maxlength="3" min="18" max="99" type="number" class="your_age" name="your_age" placeholder="Your Age">
-        <button type="submit" class="btn btn-danger">GO</button>
-    </p>
-</form>
-
+<div id="div_dubai">
+    <div class="txt_dubai">Dubai is the final destination</div>
+    <img id="img_dubai" src="http://cdn.cnn.com/cnnnext/dam/assets/200924183413-dubai-9-1.jpg" alt="Dubai Image">
+<hr>
+    <button class="btn-success" id="btn_show">SHOW</button>
+    <button class="btn btn-danger" id="btn_hide">HIDE</button>
+</div>
 
 
 <script>
 
     $(function () {
-
-        /*
-        $("#btn_click_me").mouseover(function () {
-            $("body").css("background-color","#f00");
+        $("#btn_show").click(function () {
+            $("#img_dubai").show();
+            $(".txt_dubai").show();
         });
 
-       */
-
-
-        $("#myform").submit(function () {
-            let age = $(".your_age").val();
-            let dob = 2021 - age;
-            $("#mybox").html("You were born in " + dob);
-            return false;
-
+        $("#btn_hide").click(function () {
+            $("#img_dubai").hide();
+            $(".txt_dubai").hide();
         });
-
-
 
 
     });
@@ -52,6 +42,33 @@
 
 
 </script>
+
+<style>
+
+    #txt_dubai{
+        background-color: #8b000063;
+        color: yellow;
+        width: 60%;
+        height: 100px;
+        margin: auto;
+        border: 1px solid black;
+        position: relative;
+        top: 210px;
+        font-size: 30px;
+        line-height: 84px;
+    }
+
+    h1{
+        text-align: center;
+        color: rebeccapurple;
+    }
+    #div_dubai img{
+        width: 70%;
+    }
+    #div_dubai{
+        text-align: center;
+    }
+</style>
 
 </body>
 </html>

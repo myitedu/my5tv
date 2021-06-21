@@ -1,0 +1,50 @@
+.operator:hover{
+	background-color: #bb662f;
+	cursor: pointer;
+}
+.sign:hover{
+	background-color: #c0c0c0;
+	cursor: pointer;
+}
+.number:hover{
+	background-color: #c0c0c0;
+	cursor: pointer;
+}
+td:last-child{
+	background-color: #f79231;
+	color: white;
+}
+td{
+	height: 55px;
+	width: 60px !important;
+	text-align: center;
+	font-size: 25px;
+	font-weight: bolder;
+	background-color: #e0e0e0;
+	border: 1px solid grey !important;
+	font-family: -webkit-pictograph;
+}
+tr:first-child td{
+	height: 91px;
+	background-color: #4c4c4c;
+	color: white;
+	font-weight: bold;
+	font-size: 42px;
+	text-align: right;
+	line-height: 68px;
+
+}
+.mytable{
+	 background-color: #e0e0e0;
+}
+#calculator{
+background-image: url("https://cdn-0.idownloadblog.com/wp-content/uploads/2016/03/Screen-Shot-2016-03-06-at-1.07.53-AM.png");
+	width: 268px;
+	height: 367px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+    margin: 100px auto;
+}
+body{
+	background-color: #0e0e0e;
+}
