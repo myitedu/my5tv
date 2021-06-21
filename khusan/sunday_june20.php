@@ -15,11 +15,11 @@
 <div id="calculator">
 <table class="table table-bordered mytable">
     <tr>
-        <td colspan="4">0</td>
+        <td class="result" colspan="4">0</td>
     </tr>
 
     <tr>
-        <td class="sign">&#67</td>
+        <td class="sign reset">&#67</td>
         <td class="sign">&plus;&#47&#45</td>
         <td class="sign">&percnt;</td>
         <td class="operator">&divide;</td>
@@ -48,7 +48,7 @@
     <tr>
         <td colspan="2" class="number">0</td>
         <td class="sign">&#46</td>
-        <td class="operator">&#61</td>
+        <td class="operator calculate">&#61</td>
     </tr>
 </table>
 </div>
